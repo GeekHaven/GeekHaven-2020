@@ -1,9 +1,116 @@
-body{
-    background-color: #252628;
+:root{
+    --text_color:#13F7D2;
+    --background_color:#252628;
 }
-.font-color{
-    color: #13F7D2;
-    
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+} 
+
+body::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--background_color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+nav{
+    overflow: hidden;
+    margin: 49px 96px;
+    margin-right: 35px;
+    margin-top: 66px;
+}
+
+.nav-logo{
+    float: left;
+    position: absolute;
+    top: 50px;
+    left:76px;
+}
+
+.logo{
+    width: 112px;
+    height: 100px;
+}
+
+.svg-white
+{
+    filter: invert(82%) sepia(100%) saturate(15%) hue-rotate(120deg) brightness(106%) contrast(105%);
+}
+
+.nav-right{
+    float: right;
+    text-align: right;
+
+}
+
+.nav-a{
+    color: var(--text_color);
+    text-decoration: none;
+    padding: 14px 39px;
+    font-weight: 510;
+    font-size: 23px;
+    line-height: 32px;
+}
+
+
+.intro-header .sub-heading{
+    text-align: left;
+    left: 110px;
+    margin-left: 6%;
+    color: var(--text_color);
+    font-weight: lighter;
+    font-size: 36px;
+    margin-bottom: 0px;
+}
+
+.intro-header .main-heading{
+    color: #FFFFFF;
+    font-size: 150px;
+    margin-left: 6%;
+    text-align: left;
+    left: 94px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.intro-header p{
+    text-align: left;
+    color: #FFFFFF;
+    position: relative;
+    margin-left: 100px;
+    margin-right: 300px;
+    line-height: 1.53;
+    font-size: 18px;
+}
+
+.dots-1 img{
+    width: 200px;
+    height: 95px;
+    position: relative;
+    left: 45%;
 }
 .view-all{
     font-family: 'Montserrat', sans-serif;
@@ -49,7 +156,7 @@ body{
 }
 .wing-image{
     width: 80px;
-    height: 67px;
+    height: 80px;
 }
 .more{
     font-family: 'Poppins', sans-serif;
@@ -72,7 +179,6 @@ body{
     margin-top: 100px;
     margin-bottom: 100px;
 }
-
 .overall-heading{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -121,24 +227,74 @@ body{
     background-color: #C4C4C4;
     margin-left: 17%;
 }
+.overall-icon-div{
+    width: 90%;
+    margin-left: 10%;
+    display: inline-block;
+}
+.overall-icon{
+    border-radius: 100%;
+    border: 3px solid #9AA6A5;
+    font-size: 25px;
+    color: #9AA6A5;
+    padding: 10px;
+    margin-left:10%;
+    display: inline;
+    float: left;
+}
+.overall-section-dots{
+    margin-left: 3%;
+    padding: 20px;
+    margin-top: 100px;
+}
 @media only screen and (max-width: 800px) {
     .wing-box{
-        width: 40%;
+        width: 37%;
         padding: 20px;
         margin-left: 3%;
         margin-top: 5%;
         display: inline;
         float: left;
     }
+    .wing-title{
+        font-size: 18px;
+    }
+    .wing-dis{
+        font-size: 12px;
+    }
     .overall-box-cover{
         width: 100%;
         margin-left: 0px;
-        margin-top: 100px;
+        margin-top: 50px;
     }
     .dot-image{
         margin-left: 6%;
+        width: 150px;
+    }
+    .overall-image{
+        width: 100px;
+        height: 100px;
     }
     .overall-box{
         margin-left: 6.66%;
+    }
+    .overall-heading{
+        font-size: 40px;
+    }
+    .overall-icon-div{
+        margin-left: 0px;
+    }
+    .overall-icon{
+        padding: 5px;
+        font-size: 19px;
+    }
+    .overall-title{
+        font-size: 20px;
+    }
+    .overall-post{
+        font-size: 14px;
+    }
+    .overall-section-dots{
+        width: 100px;
     }
   } 
