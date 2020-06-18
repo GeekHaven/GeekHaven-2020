@@ -30,6 +30,11 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+.main-section{
+    width: 99vw;
+    height: 100vh;
+}
+
 .wrapper {
     width: 100%;
     max-width: 90rem;
@@ -89,6 +94,9 @@ nav{
     display: none;
 }
 
+.intro-header{
+    margin-top: 150px;
+}
 
 .intro-header .sub-heading{
     text-align: left;
@@ -121,12 +129,6 @@ nav{
     font-size: 18px;
 }
 
-.dots-1 img{
-    width: 200px;
-    height: 95px;
-    position: relative;
-    left: 84%;
-}
 .view-all{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
