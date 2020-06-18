@@ -63,6 +63,7 @@ nav{
 .nav-right{
     float: right;
     text-align: right;
+    display: inline;
 
 }
 
@@ -73,6 +74,19 @@ nav{
     font-weight: 510;
     font-size: 23px;
     line-height: 32px;
+    display: inline;
+}
+
+.nav-a:hover{
+    background-color:#181a19;
+}
+
+.toggle-button i{
+    color:#FFFFFF;
+    font-size: 35px;
+    position: absolute;
+    right:20px;
+    display: none;
 }
 
 
@@ -100,8 +114,9 @@ nav{
     text-align: left;
     color: #FFFFFF;
     position: relative;
-    margin-left: 100px;
-    margin-right: 300px;
+    max-width:85ch;
+    margin:10px 80px;
+    margin-bottom: 50px;
     line-height: 1.53;
     font-size: 18px;
 }
@@ -110,7 +125,7 @@ nav{
     width: 200px;
     height: 95px;
     position: relative;
-    left: 45%;
+    left: 84%;
 }
 .view-all{
     font-family: 'Montserrat', sans-serif;
@@ -250,6 +265,46 @@ nav{
 }
 
 @media only screen and (max-width: 800px) {
+
+    .logo{
+        transform: scale(0.7);
+    }
+
+    .nav-logo{
+        top:20px;
+        left:50px;
+    }
+
+    .nav-a{
+        font-size: 18px;
+        padding: 10px 16px;
+    }
+
+    .nav-right{
+        position: relative;
+        top:-8px;
+    }
+
+    .intro-header .main-heading{
+        font-size: 67px;
+        position: relative;
+        left:4%;
+    }
+
+    .intro-header .sub-heading{
+        font-size: 25px;
+        position: relative;
+        left:4.5%;
+    }
+
+    .intro-header p{
+        font-size: 17px;
+    }
+
+    .dots-1 img{
+        left:70%;
+    }
+
     .wing-box{
         width: 37%;
         padding: 20px;
@@ -258,7 +313,7 @@ nav{
         display: inline;
         float: left;
     }
-    .wing-title{
+    .wing-title {
         font-size: 18px;
     }
     .wing-dis{
@@ -280,6 +335,7 @@ nav{
     .overall-box{
         margin-left: 6.66%;
     }
+
     .overall-heading{
         font-size: 40px;
     }
@@ -300,3 +356,51 @@ nav{
         width: 100px;
     }
   } 
+
+  
+
+  @media screen and (max-width: 600px) {
+
+    nav{
+        margin-right: 10px;
+    }
+
+    .nav-a {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-right{
+        position: relative;
+        margin-top:40px;
+        left: -100px
+    }
+
+    .nav-a.active{
+        display:flex ;
+    }
+
+    .toggle-button i{
+        top:55px;
+        display: flex;
+    }
+
+    .dots-1 img{
+        display: none;
+    }
+
+    .intro-header .sub-heading{
+        margin-left: 11%;
+    }
+
+    .intro-header .main-heading{
+        margin-left: 11%;
+    }
+
+    .intro-header p{
+        font-size: 15px;
+    }
+
+}
+
