@@ -359,7 +359,7 @@ nav{
 
   
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
 
     nav{
         margin-right: 10px;
