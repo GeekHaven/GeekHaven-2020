@@ -20,10 +20,13 @@ body{
     font-size: 24px;
     font-weight:800px ;
 }
+.wing-section{
+    display:inline-block;
+}
 .wing-box{
     width: 25%;
     padding: 20px;
-    margin-left: 5%;
+    margin-left: 4%;
     margin-top: 5%;
     display: inline;
     float: left;
@@ -57,6 +60,67 @@ body{
     text-decoration: none;
     color: #13F7D2;
 }
+.dot-image{
+    margin-left: 44%;
+    margin-top: 100px;
+}
+.overall-section{
+    width: 90%;
+    margin-left: 5%;
+    display: inline-block;
+    background-color: #343538;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.overall-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 79px;
+    color: #13F7D2;
+    display: inline;
+    float: left;
+    padding: 20px;
+    margin-left: 3%;
+}
+.overall-box-cover{
+    margin-left: 10%;
+    display: inline-block;
+    width:55%;
+    margin-top: 150px;
+}
+.overall-box{
+    display: inline;
+    float: left;
+    margin-left: 4%;
+    width: 40%;
+}
+.overall-title{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.overall-post{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #13F7D2;
+    text-align: center;
+}
+.overall-image{
+    width: 200px;
+    height: 200px;
+    background-color: #C4C4C4;
+    margin-left: 17%;
+}
 @media only screen and (max-width: 800px) {
     .wing-box{
         width: 40%;
@@ -65,5 +129,16 @@ body{
         margin-top: 5%;
         display: inline;
         float: left;
+    }
+    .overall-box-cover{
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 100px;
+    }
+    .dot-image{
+        margin-left: 6%;
+    }
+    .overall-box{
+        margin-left: 6.66%;
     }
   } 
