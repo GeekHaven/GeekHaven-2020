@@ -22,7 +22,7 @@ body::-webkit-scrollbar-thumb
 }
 
 
-body{
+html,body{
     margin: 0;
     padding: 0;
     height: 100%;
@@ -39,14 +39,31 @@ body{
     width: 100%;
     max-width: 90rem;
     margin: 0 auto;
+    height: 100%;
+    background-color: #252628;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 nav{
     overflow: hidden;
-    margin: 49px 96px;
-    margin-right: 35px;
-    margin-top: 66px;
+    margin-left:55px;
+    margin-right: 38px !important;
+    margin-top: 36px;
 }
+
+.navbar-nav{
+    position: relative;
+    top:-20px;
+    font-size: 23px;
+}
+
+.nav-item a{
+    color: #13F7D2 !important;
+    padding:40px !important;
+}
+
+
 
 .nav-logo{
     float: left;
@@ -65,37 +82,10 @@ nav{
     filter: invert(82%) sepia(100%) saturate(15%) hue-rotate(120deg) brightness(106%) contrast(105%);
 }
 
-.nav-right{
-    float: right;
-    text-align: right;
-    display: inline;
-
-}
-
-.nav-a{
-    color: var(--text_color);
-    text-decoration: none;
-    padding: 14px 39px;
-    font-weight: 510;
-    font-size: 23px;
-    line-height: 32px;
-    display: inline;
-}
-
-.nav-a:hover{
-    background-color:#181a19;
-}
-
-.toggle-button i{
-    color:#FFFFFF;
-    font-size: 35px;
-    position: absolute;
-    right:20px;
-    display: none;
-}
 
 .intro-header{
-    margin-top: 150px;
+    margin-top: 100px;
+    position: relative;
 }
 
 .intro-header .sub-heading{
@@ -110,6 +100,7 @@ nav{
 
 .intro-header .main-heading{
     color: #FFFFFF;
+    font-weight: 700;
     font-size: 150px;
     margin-left: 6%;
     text-align: left;
@@ -124,9 +115,12 @@ nav{
     position: relative;
     max-width:85ch;
     margin:10px 80px;
-    margin-bottom: 50px;
     line-height: 1.53;
     font-size: 18px;
+}
+
+.all-button{
+    margin:60px 0;
 }
 
 .view-all{
@@ -276,16 +270,6 @@ nav{
         left:50px;
     }
 
-    .nav-a{
-        font-size: 18px;
-        padding: 10px 16px;
-    }
-
-    .nav-right{
-        position: relative;
-        top:-8px;
-    }
-
     .intro-header .main-heading{
         font-size: 67px;
         position: relative;
@@ -364,31 +348,6 @@ nav{
 
     nav{
         margin-right: 10px;
-    }
-
-    .nav-a {
-        display: none;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .nav-right{
-        position: relative;
-        margin-top:40px;
-        left: -100px
-    }
-
-    .nav-a.active{
-        display:flex ;
-    }
-
-    .toggle-button i{
-        top:55px;
-        display: flex;
-    }
-
-    .dots-1 img{
-        display: none;
     }
 
     .intro-header{
