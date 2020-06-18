@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2020 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="48.0439mm" height="36.6809mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 98.47 75.18"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID0" horiz-adv-x="709" font-variant="normal" style="fill-rule:nonzero" font-weight="900">
+	<font-face 
+		font-family="Proxima Nova Bl">
+		<font-face-src>
+			<font-face-name name="Proxima Nova Black"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="/" horiz-adv-x="362" d="M125 -19.9988l237.001 706.998 -125 0 -237.001 -706.998 125 0z"/>
+   <glyph unicode="&lt;" horiz-adv-x="510" d="M481 90.0017l0 125 -334 118.999 334 121.001 0 125 -451.999 -180 0 -129.999 451.999 -180z"/>
+   <glyph unicode="&gt;" horiz-adv-x="510" d="M481 270.001l0 129.999 -451.999 180 0 -125 334 -121.001 -334 -118.999 0 -125 451.999 180z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Proxima Nova Bl";font-variant:normal;font-weight:900;src:url("#FontID0") format(svg)}
+    .fil1 {fill:#2B2A29}
+    .fil0 {fill:#2B2A29}
+    .fnt0 {font-weight:900;font-size:58.17px;font-family:'Proxima Nova Bl'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M4.63 0l89.22 0c2.54,0 4.63,2.08 4.63,4.63l0 65.93c0,2.54 -2.08,4.63 -4.63,4.63l-89.22 0c-2.54,0 -4.63,-2.08 -4.63,-4.63l0 -65.93c0,-2.54 2.08,-4.63 4.63,-4.63zm9.18 2.01c1.54,0 2.78,1.24 2.78,2.78 0,1.54 -1.24,2.78 -2.78,2.78 -1.54,0 -2.78,-1.24 -2.78,-2.78 0,-1.54 1.24,-2.78 2.78,-2.78zm7.55 0c1.54,0 2.78,1.24 2.78,2.78 0,1.54 -1.24,2.78 -2.78,2.78 -1.54,0 -2.78,-1.24 -2.78,-2.78 0,-1.54 1.24,-2.78 2.78,-2.78zm7.37 0c1.54,0 2.78,1.24 2.78,2.78 0,1.54 -1.24,2.78 -2.78,2.78 -1.54,0 -2.78,-1.24 -2.78,-2.78 0,-1.54 1.24,-2.78 2.78,-2.78zm-18.62 7.63l78.27 0c2.01,0 3.66,1.65 3.66,3.66l0 52.15c0,2.01 -1.65,3.66 -3.66,3.66l-78.27 0c-2.01,0 -3.66,-1.65 -3.66,-3.66l0 -52.15c0,-2.01 1.65,-3.66 3.66,-3.66z"/>
+  <text x="9.04" y="58.77"  class="fil1 fnt0">&lt;/&gt;</text>
+ </g>
+</svg>

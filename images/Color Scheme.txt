@@ -1,0 +1,8 @@
+Green : 13F7D2    (For all texts that are in green)
+Backgorund : 252628
+
+
+Fonts:
+(Different weights)
+Montserrat 
+Poppins 
