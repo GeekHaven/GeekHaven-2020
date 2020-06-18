@@ -229,9 +229,6 @@ nav{
     height: 200px;
     background-color: #C4C4C4;
 }
-.overall-icon-div{
-    
-}
 .overall-icon{
     border-radius: 100%;
     border: 3px solid #9AA6A5;
@@ -317,9 +314,6 @@ nav{
     .overall-heading{
         font-size: 40px;
     }
-    .overall-icon-div{
-        
-    }
     .overall-icon{
         padding: 5px;
         font-size: 19px;
@@ -334,9 +328,6 @@ nav{
         width: 100px;
     }
   } 
-
-  
-
   @media screen and (max-width: 800px) {
 
     nav{
@@ -381,4 +372,3 @@ nav{
     }
 
 }
-
