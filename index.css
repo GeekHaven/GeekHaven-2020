@@ -1,3 +1,119 @@
+:root{
+    --text_color:#13F7D2;
+    --background_color:#252628;
+}
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+}
+
+body::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    background-color: var(--background_color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+nav{
+    overflow: hidden;
+    margin: 49px 96px;
+    margin-right: 35px;
+    margin-top: 66px;
+}
+
+.nav-logo{
+    float: left;
+    position: absolute;
+    top: 50px;
+    left:76px;
+}
+
+img{
+    width: 112px;
+    height: 100px;
+}
+
+.svg-white
+{
+    filter: invert(82%) sepia(100%) saturate(15%) hue-rotate(120deg) brightness(106%) contrast(105%);
+}
+
+.nav-right{
+    float: right;
+    text-align: right;
+
+}
+
+a{
+    color: var(--text_color);
+    text-decoration: none;
+    padding: 14px 39px;
+    font-weight: 510;
+    font-size: 23px;
+    line-height: 32px;
+}
+
+
+.intro-header .sub-heading{
+    text-align: left;
+    left:110px;
+    position: relative;
+    color: var(--text_color);
+    font-weight: lighter;
+    font-size: 36px;
+    margin-bottom: 0px;
+}
+
+.intro-header .main-heading{
+    position: relative;
+    color: #FFFFFF;
+    font-size: 150px;
+    margin-top: -25px;
+    text-align: left;
+    left:94px;
+}
+
+.intro-header p{
+    text-align: left;
+    color: #FFFFFF;
+    position: relative;
+    top:-100px;
+    margin-left:100px;
+    margin-right: 300px;
+    line-height: 1.53;
+    font-size: 18px;
+}
+
+.dots-1 img{
+    width: 200px;
+    height: 95px;
+    position: relative;
+    left: 45%;
+}
+
 body{
     background-color: #252628;
 }
@@ -22,12 +138,20 @@ body{
 }
 .wing-box{
     width: 25%;
+    text-align: left;
     padding: 20px;
     margin-left: 5%;
     margin-top: 5%;
     display: inline;
     float: left;
 }
+
+.dots img{
+    width: 190px;
+    position: relative;
+    left:20%;
+}
+
 .wing-title{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -54,6 +178,8 @@ body{
     font-weight: 500;
     font-size: 23px;
     line-height: 34px;
+    position: relative;
+    right:13%;
     text-decoration: none;
     color: #13F7D2;
 }
