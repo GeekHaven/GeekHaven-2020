@@ -1,0 +1,60 @@
+body{
+    background-color: #252628;
+}
+.font-color{
+    color: #13F7D2;
+    
+}
+.view-all{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: #13F7D2;
+    margin-bottom: 0px;
+}
+.arrow-down{
+    text-align: center;
+    color: #13F7D2;
+    font-size: 24px;
+    font-weight:800px ;
+}
+.wing-box{
+    width: 25%;
+    padding: 20px;
+    margin-left: 5%;
+    margin-top: 5%;
+    display: inline;
+    float: left;
+}
+.wing-title{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    color: #FFFFFF;
+}
+.wing-dis{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+.wing-image{
+    width: 20%;
+    height: 20%;
+    filter: invert(95%) sepia(79%) saturate(5961%) hue-rotate(89deg) brightness(101%) contrast(93%);
+}
+.more{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 34px;
+    text-decoration: none;
+    color: #13F7D2;
+}
