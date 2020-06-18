@@ -58,3 +58,13 @@ body{
     text-decoration: none;
     color: #13F7D2;
 }
+@media only screen and (max-width: 800px) {
+    .wing-box{
+        width: 40%;
+        padding: 20px;
+        margin-left: 3%;
+        margin-top: 5%;
+        display: inline;
+        float: left;
+    }
+  } 
