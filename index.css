@@ -45,9 +45,8 @@ body{
     color: #FFFFFF;
 }
 .wing-image{
-    width: 20%;
-    height: 20%;
-    filter: invert(95%) sepia(79%) saturate(5961%) hue-rotate(89deg) brightness(101%) contrast(93%);
+    width: 100px;
+    height: 77px;
 }
 .more{
     font-family: 'Poppins', sans-serif;
