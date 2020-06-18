@@ -409,3 +409,32 @@ nav{
 
 }
 
+@media screen and (max-width: 480px) {
+    .toggle-button i{
+        right: 10%;
+    }
+
+    .nav-logo{
+        top:3.94%;
+        left:10%;
+    }
+
+    .logo{
+        width: 80px;
+        height: 80px;
+    } 
+
+    .intro-header .sub-heading{
+        font-size: 26px;
+    }
+
+    .intro-header .main-heading{
+        font-size: 46px;
+    }
+
+    .intro-header p{
+        margin-left:59px;
+        margin-right: 40px;
+    }
+
+}
