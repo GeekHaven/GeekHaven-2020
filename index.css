@@ -204,7 +204,6 @@ nav{
     line-height: 79px;
     color: #13F7D2;
     display: inline;
-    float: left;
     padding: 20px;
     margin-left: 3%;
 }
@@ -390,6 +389,10 @@ nav{
 
     .dots-1 img{
         display: none;
+    }
+
+    .intro-header{
+        margin-top: 20px;
     }
 
     .intro-header .sub-heading{
