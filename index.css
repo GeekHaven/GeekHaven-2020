@@ -191,7 +191,7 @@ nav{
     display: inline-block;
     background-color: #343538;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
 }
 .overall-heading{
     font-family: 'Montserrat', sans-serif;
@@ -273,7 +273,7 @@ nav{
 
 .footer{
     display: inline-block;
-    background-color: #1D1D1F;
+    background-color: #252628;
     width: 99%;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
@@ -463,7 +463,7 @@ nav{
     }
 
     .footer{
-        padding-top: 10px;
+        padding-top: -20px;
     }
 
     .blogs{
@@ -480,6 +480,6 @@ nav{
     }
 
     .contacts a{
-        margin: 0 2px;
+        margin: 0 4.1px;
     }
 }
