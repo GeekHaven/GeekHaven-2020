@@ -34,8 +34,20 @@ body{
 
 .wrapper {
     width: 100%;
-    max-width: 90rem;
+    max-width: 100rem;
     margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+
+}
+
+
+.navbar img{
+    position: absolute;
+ 
+    width:80px;
+    height: 70px;
 }
 
 nav{
@@ -45,21 +57,28 @@ nav{
     margin-top: 66px;
 }
 
-.nav-logo{
-    float: left;
-    position: absolute;
-    top: 50px;
-    left:76px;
+.navbar-right{
+    position: relative;
 }
 
-.logo{
-    width: 112px;
-    height: 100px;
+.navbar-nav li a{
+    color: #13F7D2;
+    padding-left: 50px !important;
+    font-weight: bolder;
+
 }
 
-.svg-white
+.navbar-nav li a:hover{
+    color: #000000;
+}
+
+@media screen and (max-width:1400px)
 {
-    filter: invert(82%) sepia(100%) saturate(15%) hue-rotate(120deg) brightness(106%) contrast(105%);
+    .navbar{
+        margin-left: -20px;
+        width: 100%;
+        padding-bottom: 90px ;
+    }
 }
 
 .nav-right{
@@ -83,6 +102,10 @@ nav{
     background-color:#181a19;
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+    background-color:white;
+}
+
 .toggle-button i{
     color:#FFFFFF;
     font-size: 35px;
@@ -95,7 +118,7 @@ nav{
 .intro-header .sub-heading{
     text-align: left;
     left: 110px;
-    margin-left: 6%;
+    margin-left: 1%;
     color: var(--text_color);
     font-weight: lighter;
     font-size: 36px;
@@ -105,7 +128,8 @@ nav{
 .intro-header .main-heading{
     color: #FFFFFF;
     font-size: 150px;
-    margin-left: 6%;
+    margin-left: 1%;
+    font-weight: bold;
     text-align: left;
     left: 94px;
     margin-top: 0px;
@@ -118,17 +142,13 @@ nav{
     position: relative;
     max-width:85ch;
     margin:10px 80px;
+    margin-left: 1%;
     margin-bottom: 50px;
     line-height: 1.53;
     font-size: 18px;
 }
 
-.dots-1 img{
-    width: 200px;
-    height: 95px;
-    position: relative;
-    left: 84%;
-}
+
 .view-all{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -250,39 +270,33 @@ nav{
 }
 @media only screen and (max-width: 800px) {
 
-    .logo{
-        transform: scale(0.7);
+    .navbar img{
+        width: 60px;
+        height: 50px;
+        left:70px;
     }
 
-    .nav-logo{
-        top:20px;
-        left:50px;
-    }
-
-    .nav-a{
-        font-size: 18px;
-        padding: 10px 16px;
-    }
-
-    .nav-right{
-        position: relative;
-        top:-8px;
+    .navbar{
+        margin-left: -10px;
+        width: 100%;
+        padding-bottom: 30px ;
     }
 
     .intro-header .main-heading{
         font-size: 67px;
         position: relative;
-        left:4%;
+        left:65px;
     }
 
     .intro-header .sub-heading{
         font-size: 25px;
         position: relative;
-        left:4.5%;
+        left:65px;
     }
 
     .intro-header p{
         font-size: 17px;
+        padding-left: 70px;
     }
 
     .dots-1 img{
@@ -359,16 +373,33 @@ nav{
         display: none;
     }
 
+}
+
+@media screen and (max-width:400px)
+{
+
+    .navbar img{
+        top:7px;
+        left:50px;
+    }
+
     .intro-header .sub-heading{
-        margin-left: 11%;
+        font-size: 25px;
+        left:9%;
+        padding-bottom: 15px;
     }
 
     .intro-header .main-heading{
-        margin-left: 11%;
+        font-size: 55px;
+        left:9%;
     }
 
     .intro-header p{
         font-size: 15px;
+        margin:0 auto;
+        max-width: 100ch;
+        left:-8%;
+        padding-bottom: 20px;
     }
 
 }
