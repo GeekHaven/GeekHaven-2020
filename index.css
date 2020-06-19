@@ -34,12 +34,10 @@ body{
 
 .wrapper {
     width: 100%;
-    max-width: 100rem;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     line-height: 30px;
-
 }
 
 
@@ -47,6 +45,7 @@ body{
     position: absolute;
     width:80px;
     height: 70px;
+    left:10%;
 }
 
 nav{
@@ -75,50 +74,34 @@ nav{
 {
     .navbar{
         margin-left: -20px;
-        width: 110%;
+        width: 100%;
         padding-bottom: 90px ;
     }
-
-    .intro-header{
-        width: 100%;
-    }
 }
-
-
-
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color:white;
 }
 
-.toggle-button i{
-    color:#FFFFFF;
-    font-size: 35px;
-    position: absolute;
-    right:20px;
-    display: none;
+.intro-header{
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 70px;
 }
 
 
 .intro-header .sub-heading{
     text-align: left;
-    left: 110px;
-    margin-left: 1%;
     color: var(--text_color);
     font-weight: lighter;
     font-size: 36px;
-    margin-bottom: 0px;
 }
 
 .intro-header .main-heading{
     color: #FFFFFF;
     font-size: 150px;
-    margin-left: 1%;
     font-weight: bold;
     text-align: left;
-    left: 94px;
-    margin-top: 0px;
-    margin-bottom: 10px;
 }
 
 .intro-header p{
@@ -126,13 +109,27 @@ nav{
     color: #FFFFFF;
     position: relative;
     max-width:85ch;
-    margin:10px 80px;
-    margin-left: 1%;
-    margin-bottom: 50px;
     line-height: 1.53;
     font-size: 18px;
 }
 
+@media screen and (min-width:1900px)
+{
+    .intro-header .sub-heading{
+        font-size: 215%;
+        padding-left: 150px;
+    }
+
+    .intro-header .main-heading{
+        font-size: 615%;
+        padding-left: 150px;
+    }
+
+    .intro-header p{
+        font-size: 120%;
+        padding-left: 150px;
+    }
+}
 
 .view-all{
     font-family: 'Montserrat', sans-serif;
@@ -264,24 +261,28 @@ nav{
     .navbar{
         margin-left: -10px;
         width: 100%;
-        padding-bottom: 30px ;
+        padding-bottom: 0px ;
+    }
+
+    .intro-header{
+        position: relative;
+        top:-40px;
+        padding-left: 30px;
+        padding-bottom: 60px;
     }
 
     .intro-header .main-heading{
         font-size: 67px;
-        position: relative;
-        left:65px;
     }
 
     .intro-header .sub-heading{
         font-size: 25px;
-        position: relative;
-        left:65px;
     }
 
     .intro-header p{
         font-size: 17px;
-        padding-left: 70px;
+        padding-left: 29px;
+        padding-top: 15px;
     }
 
     .dots-1 img{
@@ -301,9 +302,6 @@ nav{
     .dot-image{
         margin-left: 6%;
         width: 150px;
-    }
-    .display-dot{
-        display: none;
     }
     .overall-image{
         width: 100px;
@@ -330,40 +328,15 @@ nav{
         width: 100px;
     }
   } 
-  @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
 
     nav{
         margin-right: 10px;
     }
 
-    .nav-a {
-        display: none;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .nav-right{
-        position: relative;
-        margin-top:40px;
-        left: -100px
-    }
-
-    .nav-a.active{
-        display:flex ;
-    }
-
-    .toggle-button i{
-        top:55px;
-        display: flex;
-    }
-
-    .dots-1 img{
-        display: none;
-    }
-
 }
 
-@media screen and (max-width:400px)
+@media screen and (max-width:420px)
 {
 
     .navbar img{
@@ -371,10 +344,18 @@ nav{
         left:50px;
     }
 
+    .navbar-nav li a{
+        font-size: 15px;
+    }
+
+    .intro-header{
+        padding-top: 60px;
+        padding-bottom:50px;
+    }
+
     .intro-header .sub-heading{
         font-size: 25px;
         left:9%;
-        padding-bottom: 15px;
     }
 
     .intro-header .main-heading{
@@ -384,7 +365,6 @@ nav{
 
     .intro-header p{
         font-size: 15px;
-        margin:0 auto;
         max-width: 100ch;
         left:-8%;
         padding-bottom: 20px;
