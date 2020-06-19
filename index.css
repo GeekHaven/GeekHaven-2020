@@ -45,7 +45,6 @@ body{
 
 .navbar img{
     position: absolute;
- 
     width:80px;
     height: 70px;
 }
@@ -72,35 +71,21 @@ nav{
     color: #000000;
 }
 
-@media screen and (max-width:1400px)
+@media screen and (max-width:2600px)
 {
     .navbar{
         margin-left: -20px;
-        width: 100%;
+        width: 120%;
         padding-bottom: 90px ;
+    }
+
+    .intro-header{
+        width: 100%;
     }
 }
 
-.nav-right{
-    float: right;
-    text-align: right;
-    display: inline;
 
-}
 
-.nav-a{
-    color: var(--text_color);
-    text-decoration: none;
-    padding: 14px 39px;
-    font-weight: 510;
-    font-size: 23px;
-    line-height: 32px;
-    display: inline;
-}
-
-.nav-a:hover{
-    background-color:#181a19;
-}
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color:white;
