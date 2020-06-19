@@ -302,6 +302,9 @@ nav{
         margin-left: 6%;
         width: 150px;
     }
+    .display-dot{
+        display: none;
+    }
     .overall-image{
         width: 100px;
         height: 100px;
