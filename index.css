@@ -115,6 +115,11 @@ nav{
 
 @media screen and (min-width:1900px)
 {
+
+    .navbar{
+        margin-left: -130px;
+    }
+
     .intro-header .sub-heading{
         font-size: 215%;
         padding-left: 150px;
@@ -186,7 +191,6 @@ nav{
     display: inline-block;
     background-color: #343538;
     margin-top: 100px;
-    margin-bottom: 100px;
 }
 .overall-heading{
     font-family: 'Montserrat', sans-serif;
@@ -250,6 +254,68 @@ nav{
 .margin-div-bottom{
     margin-bottom: 50px;
 }
+
+.footer{
+    display: inline-block;
+    width: 97vw;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-left: 40px;
+    padding-top:60px;
+    height: 300px;
+}
+
+
+.blogs h2{
+    color: #FFFFFF;
+    font-weight: 700 !important;
+    font-size: 35px;
+}
+
+.blogs button{
+    position: relative;
+    background-color: #13F7D2;
+    border-color: #13F7D2;
+    top:20px;
+    height: 55px;
+    width: 400px;
+}
+
+.blogs .btn{
+    text-align: left !important;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.blogs span{
+    position: relative;
+    color: #000000;
+    top: 0px;
+}
+
+.contacts .icons{
+    position: relative;
+    top:29px;
+}
+
+.contacts a{
+    padding: 10px 15px;
+    font-size: 20px;
+    color:#13F7D2;
+    border-radius: 100%;
+    border: 2px solid #13F7D2;
+    margin:0 10px;
+}
+
+
+.contacts h2{
+    color: #FFFFFF;
+    font-weight: 700 !important;
+    font-size: 35px;
+}  
+
+
 @media only screen and (max-width: 800px) {
 
     .navbar img{
@@ -370,4 +436,24 @@ nav{
         padding-bottom: 20px;
     }
 
+    .footer{
+        padding-top: 10px;
+    }
+
+    .blogs{
+        transform: scale(0.7);
+    }
+
+    .blogs button{
+        width: 300px;
+    }
+
+    .contacts{
+        transform: scale(0.7);
+        padding-bottom: 50px;
+    }
+
+    .contacts a{
+        margin: 0 2px;
+    }
 }
