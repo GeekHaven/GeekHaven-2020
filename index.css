@@ -315,6 +315,9 @@ nav{
     font-size: 35px;
 }  
 
+.fb-icon{
+    padding:10px 15px;
+}
 
 @media only screen and (max-width: 800px) {
 
@@ -344,7 +347,9 @@ nav{
     .intro-header .sub-heading{
         font-size: 25px;
     }
-
+    .display-dot{
+        display: none;
+    }
     .intro-header p{
         font-size: 17px;
         padding-left: 29px;
@@ -384,6 +389,10 @@ nav{
         padding: 5px;
         font-size: 19px;
     }
+    .fb-icon{
+        padding:5px 8px;
+    }
+    
     .overall-title{
         font-size: 20px;
     }
