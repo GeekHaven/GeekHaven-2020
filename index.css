@@ -191,6 +191,7 @@ nav{
     display: inline-block;
     background-color: #343538;
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 .overall-heading{
     font-family: 'Montserrat', sans-serif;
@@ -272,13 +273,14 @@ nav{
 
 .footer{
     display: inline-block;
-    width: 97vw;
+    background-color: #1D1D1F;
+    width: 99%;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     padding-left: 40px;
     padding-top:60px;
-    height: 300px;
+    height: 330px;
 }
 
 
