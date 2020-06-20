@@ -57,7 +57,7 @@ nav{
 }
 
 .navbar-fixed-top.scrolled {
-    background-color:rgba(0,0,0,0.96) !important;
+    background-color:#343538 !important;
     margin-top:0px;
     transition: all 0.3s ease;
     font-size:25px !important ;
@@ -239,7 +239,7 @@ nav{
     display: inline-block;
     background-color: #343538;
     margin-top: 100px;
-    margin-bottom: 0px;
+    margin-bottom: 100px;
 }
 .overall-heading{
     font-family: 'Montserrat', sans-serif;
@@ -310,18 +310,38 @@ nav{
     padding: 20px;
     border-radius: 17px;
 }
+.margin-div-bottom1{
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 17px;
+}
+.margin-div-bottom{
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 17px;
+}
+
 .margin-div-bottom:hover{
-    background-color:#343538;
-    /* transform: scale(1.02); */
+    background-color: #343538;
+    transform: scale(1.02);
     transition:ease 0.3s ;
 }
-/* .margin-div-bottom:hover>p{
-    color: black;
-} */
+.margin-div-bottom>img{
+    transition: 1s ease;
+}
+
+.margin-div-bottom>p{
+    transition: 1s ease;
+}
+
+.margin-div-bottom:hover>a{
+    text-decoration: none;
+    transition:1s ease ;
+}
 
 .footer{
     display: inline-block;
-    background-color: #252628;
+    background-color: #1D1D1F;
     width: 99%;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
@@ -330,7 +350,6 @@ nav{
     padding-top:60px;
     height: 330px;
 }
-
 
 .blogs h2{
     color: #FFFFFF;

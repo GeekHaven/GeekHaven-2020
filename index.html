@@ -32,7 +32,7 @@
                       <li><a href="#">Wings</a></li>
                       <li><a href="#">Coordinators</a></li>
                       <li><a href="#">Contacts</a></li>
-                     
+                      <i class="fa fa-sun-o theme" style="color: #13F7D2;padding: 10px;" aria-hidden="true"></i>  
                     </ul>
                   </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -42,7 +42,7 @@
             <div class="intro-header">
                 <h1 class="sub-heading">IIIT ALLAHABAD</h1>
                 <h1 class="main-heading">GeekHaven</h1>
-                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p class="intro-heading"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             </div>
         </div>
 
@@ -205,7 +205,7 @@
             <div class="blogs col-lg-6 col-xl-6">
                 <h2>Get some good reads!</h2>
                 <button class="btn btn-default text-left">
-                    <span>Blogs by us >></span>
+                    <span>Blogs by us <i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i><i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i></span>
                 </button>
             </div>
             <div class="contacts col-12 col-lg-6 col-xl-6">
@@ -235,7 +235,40 @@
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
   });
 });
-</script>
+    var i = 0;
+    var j=0;
+    $('.margin-div-bottom')
+      .mouseover(function() {
+        $(this).children('img').css("margin-left","40%" );
+        $(this).children('p').css("text-align","center" );
+        $(this).children('a').css("margin-left","45%" );
+      })
+      .mouseout(function() {
+        $(this).children('img').css("margin-left","0%" );
+        $(this).children('p').css("text-align","left" );
+        $(this).children('a').css("margin-left","0%" );
+      });
 
+    $('.theme').click(function(){
+        
+        if(j==1){
+            $(document.body).attr('style', 'background-color: #252628 !important');
+            $(".margin-div-bottom").children('p').css('color','white');
+            $('.intro-heading').css('color','white')
+            $('.main-heading').css('color','white')
+            $('.nav-logo').attr('src','images/gh.png')
+            $(".more").css('color','#13F7D2')
+            j=0;
+        }else{
+            $(document.body).attr('style', 'background-color: white !important');
+            $(".margin-div-bottom").children('p').css('color','black'); 
+            $('.intro-heading').css('color','black')
+            $('.main-heading').css('color','black')
+            $('.nav-logo').attr('src','images/gh.svg')
+            $(".more").css('color','#78e0cf')
+            j=1;
+        }
+    }); 
+    </script>
 </body>
 </html>
