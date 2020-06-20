@@ -63,12 +63,43 @@ nav{
 .navbar-nav li a{
     color: #13F7D2;
     padding-left: 50px !important;
+    padding-right: 50px !important;
     font-weight: bolder;
 
 }
 
+.navbar-nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    align-self: center;
+    left: 22.5px;
+    width: 80%;
+    height: 3px;
+    background: #6098FF;
+    display: block;
+    -webkit-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+  }
+  
+.navbar-nav a:hover::before {
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1)
+  }
+
+
 .navbar-nav li a:hover{
-    color: #000000;
+    background: transparent !important;
 }
 
 @media screen and (max-width:2600px)
@@ -308,37 +339,10 @@ nav{
 
 .blogs button:hover{
     border-color: #13F7D2;
-    background-color: #13F7D2;
+    background-color: aqua;
     text-decoration: none;
 }
 
-.blogs .btn::before {
-    content: '';
-    position: absolute;
-    bottom: -20%;
-    left: 0px;
-    width: 100%;
-    height: 3px;
-    background: #6098FF;
-    display: block;
-    -webkit-transform-origin: right top;
-    -ms-transform-origin: right top;
-    transform-origin: right top;
-    -webkit-transform: scale(0, 1);
-    -ms-transform: scale(0, 1);
-    transform: scale(0, 1);
-    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
-    transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
-  }
-  
-.blogs .btn:hover::before {
-    -webkit-transform-origin: left top;
-    -ms-transform-origin: left top;
-    transform-origin: left top;
-    -webkit-transform: scale(1, 1);
-    -ms-transform: scale(1, 1);
-    transform: scale(1, 1)
-  }
 
 .blogs span{
     position: relative;
