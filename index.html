@@ -14,9 +14,9 @@
 </head>
 <body>
     <div class="wrapper">
-            <nav class="navbar">
+            <nav class="navbar navbar-fixed-top">
                 <div class="container-fullwidth">
-                  <img src="./images/gh.png" >
+                  <img class="nav-logo" src="./images/gh.png" >
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -223,6 +223,19 @@
 
 <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+  $(document).scroll(function () {
+
+    var $logo = $(".nav-logo");
+    $logo.toggleClass('scroll-img', $(this).scrollTop() > $logo.height());
+
+    var $nav = $(".navbar-fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+</script>
 
 </body>
 </html>

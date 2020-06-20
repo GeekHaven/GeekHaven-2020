@@ -45,15 +45,30 @@ body{
     position: absolute;
     width:80px;
     height: 70px;
-    left:10%;
+    left:5%;
 }
 
 nav{
-    position: sticky !important;
     overflow: hidden;
     margin: 49px 96px;
-    margin-right: 35px;
-    margin-top: 66px;
+    margin-top: 0px;
+    margin-right: 0px;
+    padding-top: 60px;
+}
+
+.navbar-fixed-top.scrolled {
+    background-color:rgba(0,0,0,0.96) !important;
+    margin-top:0px;
+    transition: all 0.3s ease;
+    font-size:25px !important ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav-logo.scroll-img{
+    width: 70px;
+    height: 60px;
+    transition: all 0.3s ease;
 }
 
 .navbar-right{
@@ -104,9 +119,11 @@ nav{
 @media screen and (max-width:2600px)
 {
     .navbar{
-        margin-left: -20px;
+        margin-top:30px;
+        margin-right: 0px;
+        margin-left: 0px;
         width: 100%;
-        padding-bottom: 90px ;
+        padding: 30px 20px;
     }
 }
 
@@ -116,7 +133,7 @@ nav{
 
 .intro-header{
     padding-left: 80px;
-    padding-top: 20px;
+    padding-top: 200px;
     padding-bottom: 70px;
 }
 
@@ -148,7 +165,7 @@ nav{
 {
 
     .navbar{
-        margin-left: -130px;
+        padding-right: 80px;
     }
 
     .intro-header .sub-heading{
@@ -463,28 +480,49 @@ nav{
 @media screen and (max-width: 800px) {
 
     nav{
-        margin-right: 10px;
+        margin-right: 0px;
     }
 
 }
 
 @media screen and (max-width:420px)
 {
+
+    .navbar-fixed-top{
+        width: 102%;
+        padding-bottom: 9px !important;
+    }
+
+    .nav-logo.scroll-img{
+        top: 20px !important;
+        transform: scale(0.8);
+        /* left:40px !important; */
+    }
+
+    .navbar{
+        width: 106% !important;
+        /* margin-right: -40px !important; */
+    }
+
     .navbar-nav a::before{
         display: none;
     }
 
-    .navbar img{
-        top:7px;
-        left:50px;
+    .nav-logo{
+        top:35px !important; 
+        left:50px !important;
     }
 
     .navbar-nav li a{
         font-size: 15px;
     }
 
+    .navbar-right{
+        background-color: #000000 !important;
+    }
+
     .intro-header{
-        padding-top: 60px;
+        padding-top:200px;
         padding-bottom:50px;
     }
 
@@ -494,12 +532,12 @@ nav{
     }
 
     .intro-header .main-heading{
-        font-size: 55px;
+        font-size: 50px;
         left:9%;
     }
 
     .intro-header p{
-        font-size: 15px;
+        font-size: 13px;
         max-width: 100ch;
         left:-8%;
         padding-bottom: 20px;
