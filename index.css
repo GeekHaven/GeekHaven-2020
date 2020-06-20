@@ -49,6 +49,7 @@ body{
 }
 
 nav{
+    position: sticky !important;
     overflow: hidden;
     margin: 49px 96px;
     margin-right: 35px;
@@ -263,13 +264,13 @@ nav{
     border-radius: 17px;
 }
 .margin-div-bottom:hover{
-    background-color: white;
-    transform: scale(1.02);
+    background-color:#343538;
+    /* transform: scale(1.02); */
     transition:ease 0.3s ;
 }
-.margin-div-bottom:hover>p{
+/* .margin-div-bottom:hover>p{
     color: black;
-}
+} */
 
 .footer{
     display: inline-block;
@@ -304,6 +305,40 @@ nav{
     font-size: 28px;
     font-weight: 800;
 }
+
+.blogs button:hover{
+    border-color: #13F7D2;
+    background-color: #13F7D2;
+    text-decoration: none;
+}
+
+.blogs .btn::before {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background: #6098FF;
+    display: block;
+    -webkit-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+  }
+  
+.blogs .btn:hover::before {
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1)
+  }
 
 .blogs span{
     position: relative;
