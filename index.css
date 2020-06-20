@@ -65,6 +65,14 @@ nav{
     padding-bottom: 20px;
 }
 
+.mode-change-color{
+    filter: invert(100%) sepia(55%) saturate(2%) hue-rotate(241deg) brightness(110%) contrast(100%);
+}
+
+.toggle-change-color{
+    color: #FFFFFF;
+}
+
 .nav-logo.scroll-img{
     width: 70px;
     height: 60px;
@@ -564,6 +572,10 @@ nav{
 
     .footer{
         padding-top: -20px;
+        height: 420px;
+        padding-right: 0px;
+        padding-left: 20px;
+        text-align: center;
     }
 
     .blogs{
@@ -575,11 +587,12 @@ nav{
     }
 
     .contacts{
+        margin: 0 auto;
         transform: scale(0.7);
         padding-bottom: 50px;
     }
 
     .contacts a{
-        margin: 0 4.1px;
+        margin: 0 5px;
     }
 }

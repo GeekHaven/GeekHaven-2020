@@ -231,10 +231,23 @@
     var $logo = $(".nav-logo");
     $logo.toggleClass('scroll-img', $(this).scrollTop() > $logo.height());
 
+    var $bars = $(".fa-bars")
+    
+
+    if(j==1)
+    {
+        $logo.toggleClass('mode-change-color', $(this).scrollTop() > $logo.height());
+        $bars.toggleClass('mode-change-color', $(this).scrollTop() > $logo.height());
+    }
+
+    
+
     var $nav = $(".navbar-fixed-top");
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+
   });
 });
+
     var i = 0;
     var j=0;
     $('.margin-div-bottom')
@@ -266,6 +279,7 @@
             $('.nav-logo').attr('src','images/gh.png')
             $(".more").css('color','#13F7D2')
             $('.arrow').attr('src','images/arrow.png')
+            $('.fa-bars').css('color','#FFFFFF')
             j=0;
         }else{
             $(document.body).attr('style', 'background-color: white !important');
@@ -275,6 +289,7 @@
             $('.nav-logo').attr('src','images/gh.svg')
             $(".more").css('color','#78e0cf')
             $('.arrow').attr('src','images/arrow-light.png')
+            $('.fa-bars').css('color','#000000')
             j=1;
         }
     }); 
@@ -293,6 +308,8 @@
             $(this).children('p').css('color','white');
         }
     });
+
+
 
     </script>
 </body>
