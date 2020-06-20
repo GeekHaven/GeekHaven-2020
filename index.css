@@ -62,9 +62,9 @@ nav{
 
 .navbar-nav li a{
     color: #13F7D2;
-    padding-left: 50px !important;
-    padding-right: 50px !important;
+    margin-left: 50px !important;
     font-weight: bolder;
+    text-align: center;
 
 }
 
@@ -72,11 +72,10 @@ nav{
     content: '';
     position: absolute;
     bottom: -20%;
-    align-self: center;
-    left: 22.5px;
-    width: 80%;
+    left: 0px;
+    width: 100%;
     height: 3px;
-    background: #6098FF;
+    background: #13F7D2;
     display: block;
     -webkit-transform-origin: right top;
     -ms-transform-origin: right top;
@@ -377,6 +376,8 @@ nav{
 
 @media only screen and (max-width: 800px) {
 
+
+
     .navbar img{
         width: 60px;
         height: 50px;
@@ -469,6 +470,9 @@ nav{
 
 @media screen and (max-width:420px)
 {
+    .navbar-nav a::before{
+        display: none;
+    }
 
     .navbar img{
         top:7px;
