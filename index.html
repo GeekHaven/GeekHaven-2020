@@ -32,7 +32,6 @@
                       <li><a href="#">Wings</a></li>
                       <li><a href="#">Coordinators</a></li>
                       <li><a href="#">Contacts</a></li>
-                      <i class="fa fa-sun-o theme" style="color: #13F7D2;padding: 10px;" aria-hidden="true"></i>  
                     </ul>
                   </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -41,6 +40,15 @@
         <div class="container-fluid">
             <div class="intro-header">
                 <h1 class="sub-heading">IIIT ALLAHABAD</h1>
+
+                <div class="theme-button">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round theme"></span>
+                    </label>
+                </div>
+
+                <!-- <i class="fa fa-sun-o theme" style="color: #13F7D2;padding: 10px;" aria-hidden="true"></i>   -->
                 <h1 class="main-heading">GeekHaven</h1>
                 <p class="intro-heading"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             </div>
@@ -225,25 +233,40 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
 <script>
+
+    x=false;
+
     $(function () {
   $(document).scroll(function () {
 
     var $logo = $(".nav-logo");
-    $logo.toggleClass('scroll-img', $(this).scrollTop() > $logo.height());
+    $logo.toggleClass('scroll-img', $(this).scrollTop() > 10);
 
-    var $bars = $(".fa-bars")
-    
+    var $nav_links = $(".navbar-nav li a")
+    var $bars = $(".fa-bars");
+    var $navabar = $(".navbar-fixed-top");
 
-    if(j==1)
+    x = true;
+
+    if(j==1) //light mode
     {
         $logo.toggleClass('mode-change-color', $(this).scrollTop() > $logo.height());
-        $bars.toggleClass('mode-change-color', $(this).scrollTop() > $logo.height());
+        $bars.toggleClass('mode-change-color', $(this).scrollTop() > $logo.height());   
+        $nav_links.toggleClass('link-change-color', $(this).scrollTop() > $logo.height()); 
+
+        if (window.matchMedia('(max-width: 768px)').matches)
+        {
+            $nav_links.toggleClass('link2-change-color', $(this).scrollTop() > $logo.height()); 
+        }
+
     }
+
+    // $navabar.attr('style', 'background-color: #FFFFFF !important', $(this).scrollTop() > $logo.height());
 
     
 
     var $nav = $(".navbar-fixed-top");
-    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
 
   });
 });
@@ -271,9 +294,16 @@
 
     $('.theme').click(function(){
         
-        if(j==1){
+        if(j==1){ //dark mode
             $(document.body).attr('style', 'background-color: #252628 !important');
             $(".margin-div-bottom").children('p').css('color','white');
+            $(".navbar-nav li a").css('color','#13F7D2')
+
+            // if (window.matchMedia('(max-width: 480px)').matches)
+            // {
+            //     $(".navbar-fixed-top").attr('style', 'background-color: #252628 !important');
+            // }
+
             $('.intro-heading').css('color','white')
             $('.main-heading').css('color','white')
             $('.nav-logo').attr('src','images/gh.png')
@@ -281,9 +311,17 @@
             $('.arrow').attr('src','images/arrow.png')
             $('.fa-bars').css('color','#FFFFFF')
             j=0;
-        }else{
+        }else{  //light mode
             $(document.body).attr('style', 'background-color: white !important');
             $(".margin-div-bottom").children('p').css('color','black'); 
+            $(".navbar-nav li a").css('color','#000000')
+            // $(".navbar-fixed-top")
+
+            // if (window.matchMedia('(max-width: 480px)').matches)
+            // {
+            //     $(".navbar-fixed-top").attr('style', 'background-color: white !important');
+            // }
+
             $('.intro-heading').css('color','black')
             $('.main-heading').css('color','black')
             $('.nav-logo').attr('src','images/gh.svg')
