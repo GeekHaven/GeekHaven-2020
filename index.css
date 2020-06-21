@@ -539,7 +539,7 @@ nav{
     }
     .intro-header p{
         font-size: 17px;
-        padding-left: 29px;
+        /* padding-left: 29px; */
         padding-top: 15px;
     }
 
@@ -669,28 +669,34 @@ nav{
     }
 
     .switch{
+        top:-24px;
         right: -60px;
     }
 
     .intro-header{
-        padding-top:200px;
+        padding-top:180px;
         padding-bottom:50px;
     }
 
     .intro-header .sub-heading{
+        position: relative;
+        top:20px;
         font-size: 25px;
-        left:9%;
+        /* left:9%; */
     }
 
     .intro-header .main-heading{
+        position: relative;
+        top: -10px;
         font-size: 50px;
-        left:9%;
+        /* left:9%; */
     }
 
     .intro-header p{
+        top:-10px;
         font-size: 13px;
         max-width: 100ch;
-        left:-8%;
+        /* left:-8%; */
         padding-bottom: 20px;
     }
 
