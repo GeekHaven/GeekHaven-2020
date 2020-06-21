@@ -16,7 +16,7 @@
     <div class="wrapper">
             <nav class="navbar navbar-fixed-top">
                 <div class="container-fullwidth">
-                  <img class="nav-logo" src="./images/gh.png" >
+                  <img class="nav-logo" src="./images/gh.png">
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -66,7 +66,7 @@
     </div>
     <section class="container-fluid">
         <div class="col-12 col-sm-6 col-md-4 margin-div-bottom">
-            <img src="images/webd.png" class="wing-image">
+            <img src="images/webd.png" class="wing-image" style="width: 100px;">
             <p class="wing-title">
                 Web Development
             </p>
@@ -126,7 +126,7 @@
             <a href="#" class="more">More</a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 margin-div-bottom">
-            <img src="images/cc.png" class="wing-image">
+            <img src="images/cc.png" class="wing-image" style="width: 100px;">
             <p class="wing-title">
                 Competitive Programming
             </p>
@@ -263,8 +263,6 @@
 
     // $navabar.attr('style', 'background-color: #FFFFFF !important', $(this).scrollTop() > $logo.height());
 
-    
-
     var $nav = $(".navbar-fixed-top");
     $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
 
@@ -275,14 +273,8 @@
     var j=0;
     $('.margin-div-bottom')
       .mouseover(function() {
-        if($(document).width()<400){
-            $(this).children('img').css("margin-left","40%" );
-        }else if($(document).width()<800 && $(document).width()>=400){
-            $(this).children('img').css("margin-left","40%" );
-        }
-        else{
-            $(this).children('img').css("margin-left","44%" );
-        }
+        
+        $(this).children('img').css("margin","auto" );
         $(this).children('p').css("text-align","center" );
         $(this).children('a').css("margin-left","45%" );
       })

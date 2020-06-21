@@ -421,6 +421,7 @@ nav{
 }
 .margin-div-bottom>img{
     transition: 1s ease;
+    display: block;
 }
 
 .margin-div-bottom>p{
