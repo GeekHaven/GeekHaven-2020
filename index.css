@@ -157,7 +157,7 @@ nav{
 
 .intro-header .sub-heading{
     text-align: left;
-    color: var(--text_color);
+    color: #13F7D2;
     font-weight: lighter;
     font-size: 36px;
 }
@@ -190,7 +190,7 @@ nav{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #319e49;
+    background-color: #0D9C85;
     -webkit-transition: .4s;
     transition: .4s;
   }

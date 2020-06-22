@@ -286,56 +286,66 @@
             $(document.body).attr('style', 'background-color: #252628 !important');
             $(".margin-div-bottom").children('p').css('color','white');
             $(".navbar-nav li a").css('color','#13F7D2')
-
-            // if (window.matchMedia('(max-width: 480px)').matches)
-            // {
-            //     $(".navbar-fixed-top").attr('style', 'background-color: #252628 !important');
-            // }
-
+            $('.sub-heading').attr('style','color: #13F7D2')
             $('.intro-heading').css('color','white')
             $('.main-heading').css('color','white')
             $('.nav-logo').attr('src','images/gh.png')
+            $('.view-all').attr('style', 'color: #13F7D2')
+            $('.arrow-down').attr('style','color: #13F7D2')
             $(".more").css('color','#13F7D2')
             $('.arrow').attr('src','images/arrow.png')
             $('.fa-bars').css('color','#FFFFFF')
             $('.slider').css('background-color','white');
             $('.overall-section').css('background-color','#27282B');
-            $('.footer').css('background-color','#191A1B');
+            $('.blogs h2').attr('style','color: #FFFFFF')
+            $('.blogs button').attr('style','background-color: #13F7D2; border-color: #13F7D2')
+            $('.blogs span').attr('style','color: #000000')
+            $('.contacts h2').attr('style','color: #FFFFFF')
+            $('.contacts a').attr('style','color: #13F7D2; border-color:#13F7D2')
+            $('.footer').attr('style','background-color: #1D1D1F')
+
             j=0;
         }else{  //light mode
             $(document.body).attr('style', 'background-color: white !important');
             $(".margin-div-bottom").children('p').css('color','black'); 
             $(".navbar-nav li a").css('color','#000000')
-            // $(".navbar-fixed-top")
-
-            // if (window.matchMedia('(max-width: 480px)').matches)
-            // {
-            //     $(".navbar-fixed-top").attr('style', 'background-color: white !important');
-            // }
             $('.slider').css('background-color','black');           
+            $('.sub-heading').attr('style','color: #0D9C85')
             $('.intro-heading').css('color','black')
             $('.main-heading').css('color','black')
             $('.nav-logo').attr('src','images/gh.svg')
-            $(".more").css('color','#78e0cf')
+            $('.view-all').attr('style', 'color: #0D9C85')
+            $('.arrow-down').attr('style','color: #0D9C85')
+            $(".more").css('color','#0D9C75')
             $('.arrow').attr('src','images/arrow-light.png')
             $('.fa-bars').css('color','#000000')
             $('.overall-section').css('background-color','#343538');
-            $('.footer').css('background-color','#E5E5E5');
+            $('.blogs h2').attr('style','color: #000000')
+            $('.blogs button').attr('style','background-color: #15C4A8; border-color: #15C4A8')
+            $('.blogs span').attr('style','color: #FFFFFF')
+            $('.contacts h2').attr('style','color: #000000')
+            $('.contacts a').attr('style','color: #15C4A8; border-color:#15C4A8')
+            $('.footer').attr('style','background-color: #FFFFFF')
+
             j=1;
         }
     }); 
     
     $(".margin-div-bottom").hover(function(){
         if(j==1){
+            $(this).children(".more").css('color','#13F7D2');
             $(this).children('p').css('color','white');
         }else{
+            $(this).children(".more").css('color','#13F7D2');
             $(this).children('p').css('color','white');
         }
     }, function(){
         if(j==1){
+            $(this).children(".more").css('color','#0D9C85');
             $(this).children('p').css('color','black');
 
         }else{
+            $(this).children(".more").css('color','#13F7D2');
             $(this).children('p').css('color','white');
         }
     });
