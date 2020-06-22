@@ -620,6 +620,14 @@ nav{
 
 }
 
+#particles-js{
+    z-index: -9;
+    height: 110%;
+    width: 100%;
+    position: absolute;
+    margin-top: 0px;
+    background: transparent;
+}
 
 @media screen and (max-width:480px)
 {
@@ -724,5 +732,9 @@ nav{
 
     .contacts a{
         margin: 0 5px;
+    }
+
+    #particles-js{
+        height: 80%;
     }
 }
