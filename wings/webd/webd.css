@@ -127,6 +127,13 @@ nav{
     padding: 20px;
     border: 10px solid #919191;    
 }
+.images-blog{
+    width: 100%;
+    height: 200px;
+    background: #C4C4C4;
+    margin: auto;
+    padding: 20px;  
+}
 @media screen and (min-width:900px){
     .zigzag-team{
         margin-top: 360px;
@@ -146,6 +153,14 @@ nav{
     flex-direction: column;
     align-items: center;   
     margin-top:100px ; 
+}
+.blog-div{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    margin-top:100px ; 
+    background-color: #272829;
 }
 .coordi-name{
     font-family: 'Montserrat', sans-serif;
@@ -367,3 +382,69 @@ nav{
         font-size: 20px;
     }
 }
+.footer{
+    display: inline-block;
+    background-color: #191A1B;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-left: 40px;
+    padding-top:60px;
+    height: 330px;
+}
+
+.blogs h2{
+    color: #FFFFFF;
+    font-weight: 700 !important;
+    font-size: 35px;
+}
+
+.blogs button{
+    position: relative;
+    background-color: #13F7D2;
+    border-color: #13F7D2;
+    top:20px;
+    height: 55px;
+    width: 400px;
+}
+
+.blogs .btn{
+    text-align: left !important;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.blogs button:hover{
+    border-color: #13F7D2;
+    background-color: aqua;
+    text-decoration: none;
+}
+
+
+.blogs span{
+    position: relative;
+    color: #000000;
+    top: 0px;
+}
+
+.contacts .icons{
+    position: relative;
+    top:29px;
+}
+
+.contacts a{
+    padding: 10px 15px;
+    font-size: 20px;
+    color:#13F7D2;
+    border-radius: 100%;
+    border: 2px solid #13F7D2;
+    margin:0 10px;
+}
+
+
+.contacts h2{
+    color: #FFFFFF;
+    font-weight: 700 !important;
+    font-size: 35px;
+}  
