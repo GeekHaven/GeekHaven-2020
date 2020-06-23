@@ -462,7 +462,9 @@ nav{
     font-size: 17px;
 }
 
-
+.card-3{
+    background: linear-gradient(90deg, #A823BD 50%, #27282B 50%);
+}
 
 .wing-heading{
     font-family: Montserrat;
@@ -613,6 +615,18 @@ nav{
     .intro-header .heading{
         font-size: 40px !important;
         line-height:70px;
+    }
+
+    .card-title{
+        height: 500px;
+    }
+
+    .card-title h1{
+        font-size: 40px;
+    }
+
+    .card-title .card-text{
+        font-size: 17px;
     }
 
 }
