@@ -1,7 +1,7 @@
 body{
     margin: 0 auto;
     padding: 0px;
-    text-align: center;
+    /* text-align: center; */
     width: 100vw;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
@@ -106,9 +106,7 @@ nav{
 .navbar-nav li a:hover{
     background: transparent !important;
 }
-.images-cover{
 
-}
 .images-coordi{
     width: 250px;
     height: 250px;
@@ -127,9 +125,14 @@ nav{
     padding: 20px;
     border: 10px solid #919191;    
 }
+.circle-blog{
+    position: absolute;
+    height: 490px;
+    margin-left: -138px;
+}
 .images-blog{
     width: 100%;
-    height: 200px;
+    height: 300px;
     background: #C4C4C4;
     margin: auto;
     padding: 20px;  
@@ -139,7 +142,14 @@ nav{
         margin-top: 360px;
     }
 }
-
+@media screen and (max-width:900px){
+.circle-blog{
+    height: 200px;
+}
+.div-blog{
+    display: block !important;
+}
+}
 .coordi-div{
     padding: 20px;
     display: flex;
@@ -154,6 +164,7 @@ nav{
     align-items: center;   
     margin-top:100px ; 
 }
+
 .blog-div{
     padding: 20px;
     display: flex;
@@ -162,6 +173,25 @@ nav{
     margin-top:100px ; 
     background-color: #272829;
 }
+
+.blog-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    color: #FFFFFF;
+}
+
+.blog-subtitle{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
 .coordi-name{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -170,6 +200,7 @@ nav{
     line-height: 49px;
     color: #FFFFFF;
     margin-top: 20px;
+    text-align: center;
 }
 .overall-icon{
     border-radius: 100%;
@@ -189,6 +220,7 @@ nav{
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
+    text-align: center;
     line-height: 37px;
     color: #13F7D2;
 }
@@ -253,8 +285,18 @@ nav{
     font-style: normal;
     font-weight: bold;
     font-size: 55px;
+    text-align: center;
     line-height: 67px;
     color: white;
+}
+
+.more-blog{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #13F7D2    
 }
 
 .webd-logo img{
