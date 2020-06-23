@@ -290,6 +290,180 @@ nav{
     font-weight: 300;
 }
 
+.whats-new{
+    font-family: Montserrat;
+    padding-top:90px;
+    font-weight: 600;
+    color: #13F7D2;
+    font-size: 20px;
+    text-align: center;
+}
+
+.announcements{
+    padding-top: 60px;
+    text-align: center;
+}
+
+.announcements p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    text-align: center;
+    line-height: 67px;
+    color: white;
+}
+
+.announcements .line{
+    width: 550px ;
+}
+
+.ann-desc{
+    width:90%;
+    padding-top:50px;
+}
+
+.event-date{
+    font-family: Montserrat;
+    padding:20px;
+    border: 1px solid #13F7D2;
+    background-color: #13F7D2;
+}
+
+.event-date .number{
+    color: #191A1B;
+    font-weight: 900 !important;
+    font-size: 90px !important;
+}
+
+.event-date  p{
+    color:#191A1B;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.event-desc{
+    font-family: Montserrat;
+    text-align: left;
+}
+
+.event-desc h1{
+    font-size: 40px;
+    color:#FFFFFF;
+    font-weight: 600;
+}
+
+.event-desc p{
+    padding-top: 20px;
+    font-weight: lighter;
+    text-align: left;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.title{
+    padding-top: 100px;
+}
+
+.title p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    text-align: center;
+    line-height: 67px;
+    color: white;
+}
+
+.title .line{
+    width:280px;
+}
+
+.circle-card-1{
+    position: absolute;
+    left:-50px;
+}
+
+
+.card-title{
+    font-family: Montserrat;
+    text-align: right !important;
+    margin-top: 50px;
+    background: linear-gradient(90deg, #D52B2B 50%, #27282B 50%);
+}
+
+.card-title p{
+    text-align: right;
+    font-size: 18px;
+}
+
+.card-title .line{
+    width:70px;
+    float: right;
+    position: relative;
+    right:20px;
+    top:-20px !important;
+    background-color: #13F7D2;
+    border: 3px solid #13F7D2;
+    color: #13F7D2;
+}
+
+.card-title h1{
+    padding: 30px;
+    font-size: 70px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.card-title .col-md-6{
+    float: right;
+}
+
+.card-title .card-text{
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.card-2{
+    background: linear-gradient(90deg, #27282B 50%, #4C40D2 50%);
+    text-align: left !important;
+}
+
+.card-2 p{
+    text-align: left;
+    font-size: 18px;
+}
+
+.card-2 .line{
+    float: left;
+    right:-20px ;
+}
+
+.card-2 .col-md-6{
+    float: left;
+}
+
+.card-btn{
+    height: 40px;
+    margin-top:40px;
+    margin-bottom:50px !important;
+    background-color: #13F7D2 !important;
+    border-color: #13F7D2 !important;
+    border-top-left-radius: 25px !important;
+    border-top-right-radius: 25px !important;
+    border-bottom-left-radius: 25px !important;
+    border-bottom-right-radius: 25px !important;
+}
+
+.card-btn span{
+    font-weight: bold !important;
+    font-size: 17px;
+}
+
+
+
 .wing-heading{
     font-family: Montserrat;
     font-style: normal;
@@ -403,7 +577,7 @@ nav{
     .navbar img{
         width: 60px;
         height: 50px;
-        left:70px;
+        left:40px;
     }
 
     .navbar{
@@ -424,9 +598,23 @@ nav{
         color: #13F7D2 !important;
     }
 
-    .intro-header p{
+    /* .intro-header p{
         margin-right: 0px !important;
+    } */
+
+    .intro-header{
+        padding-top: 150px;
     }
+
+    .intro-header p{
+        font-size: 17px;
+    }
+
+    .intro-header .heading{
+        font-size: 40px !important;
+        line-height:70px;
+    }
+
 }
 
 @media screen and (max-width:480px)
@@ -458,14 +646,14 @@ nav{
     }
 
     .navbar img{
-
+        left:40px !important;
         top:40px !important;
         /* left:70px !important; */
         transform: scale(1.3);
     }
 
     .fa-bars{
-        padding-right: 30px;
+        padding-right: 0px;
         transform: scale(1.2);
     }
 
@@ -488,36 +676,90 @@ nav{
         background-color: #000000 !important;
     }
 
+    .intro-header{
+        padding-top: 150px;
+    }
+
     .intro-header p{
+        font-size: 17px;
+    }
+
+    .intro-header .heading{
+        font-size: 40px !important;
+        line-height:70px;
+    }
+
+    .announcements p{
+        font-size: 30px;
+    }
+
+    .announcements .line{
+        width: 300px;
+    }
+
+    .ann-desc{
+        padding-top: 0px;
+    }
+
+    .event-date{
+        padding:0px;
+        margin:10px;
+    }
+
+    .event-date .number{
+        color: #191A1B;
+        font-weight: 800 !important;
+        font-size: 70px !important;
+    }
+    
+    .event-date  p{
+        color:#191A1B;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .event-1{
+        padding-top: 40px;
+    }
+
+    .event-desc{
+        font-family: Montserrat;
+        text-align: left;
+    }
+    
+    .event-desc h1{
+        font-size: 30px;
+        color:#FFFFFF;
+        font-weight: 600;
+    }
+    
+    .event-desc p{
+        padding-top: 20px;
+        font-weight: lighter;
+        text-align: left;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+    .card-title{
+        height: 550px;
+    }
+
+    .card-title h1{
         font-size: 20px;
     }
-}
-.footer{
-    display: inline-block;
-    background-color: #191A1B;
-    width: 100%;
-    margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    padding-left: 40px;
-    padding-top:60px;
-    height: auto;
-}
 
-.blogs h2{
-    color: #FFFFFF;
-    font-weight: 700 !important;
-    font-size: 35px;
-}
+    .card-title .card-text{
+        font-size: 14px;
+    }
 
-.blogs button{
-    position: relative;
-    background-color: #13F7D2;
-    border-color: #13F7D2;
-    top:20px;
-    height: 55px;
-}
-
+    .footer{
+        padding-top: -20px;
+        height: 420px;
+        padding-right: 0px;
+        padding-left: 20px;
+        text-align: center;
+    }
 
     .blogs{
         transform: scale(0.7);
@@ -536,6 +778,5 @@ nav{
     .contacts a{
         margin: 0 5px;
     }
-
 
 }
