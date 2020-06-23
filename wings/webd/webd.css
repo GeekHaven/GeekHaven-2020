@@ -306,6 +306,73 @@ nav{
     width: 575px;
 }
 
+.footer{
+    display: inline-block;
+    background-color: #191A1B;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-left: 40px;
+    padding-top:60px;
+    height: 330px;
+}
+
+.blogs h2{
+    color: #FFFFFF;
+    font-weight: 700 !important;
+    font-size: 35px;
+}
+
+.blogs button{
+    position: relative;
+    background-color: #13F7D2;
+    border-color: #13F7D2;
+    top:20px;
+    height: 55px;
+    width: 400px;
+}
+
+.blogs .btn{
+    text-align: left !important;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.blogs button:hover{
+    border-color: #13F7D2;
+    background-color: aqua;
+    text-decoration: none;
+}
+
+
+.blogs span{
+    position: relative;
+    color: #000000;
+    top: 0px;
+}
+
+.contacts .icons{
+    position: relative;
+    top:29px;
+}
+
+.contacts a{
+    padding: 10px 15px;
+    font-size: 20px;
+    color:#13F7D2;
+    border-radius: 100%;
+    border: 2px solid #13F7D2;
+    margin:0 10px;
+}
+
+
+.contacts h2{
+    color: #FFFFFF;
+    font-weight: 700 !important;
+    font-size: 35px;
+}  
+
 @media screen and (min-width:1900px)
 {
     .navbar{
@@ -422,70 +489,33 @@ nav{
     .intro-header p{
         font-size: 20px;
     }
+    .footer{
+        width: 170% !important;
+        margin-right: 0px !important;
+        padding-top: -20px;
+        height: 420px;
+        padding-right: 0px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .blogs{
+        transform: scale(0.7);
+    }
+
+    .blogs button{
+        width: 300px;
+    }
+
+    .contacts{
+        margin: 0 auto;
+        transform: scale(0.7);
+        padding-bottom: 50px;
+    }
+
+    .contacts a{
+        margin: 0 5px;
+    }
+
+
 }
-.footer{
-    display: inline-block;
-    background-color: #191A1B;
-    width: 100%;
-    margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    padding-left: 40px;
-    padding-top:60px;
-    height: 330px;
-}
-
-.blogs h2{
-    color: #FFFFFF;
-    font-weight: 700 !important;
-    font-size: 35px;
-}
-
-.blogs button{
-    position: relative;
-    background-color: #13F7D2;
-    border-color: #13F7D2;
-    top:20px;
-    height: 55px;
-    width: 400px;
-}
-
-.blogs .btn{
-    text-align: left !important;
-    font-size: 28px;
-    font-weight: 800;
-}
-
-.blogs button:hover{
-    border-color: #13F7D2;
-    background-color: aqua;
-    text-decoration: none;
-}
-
-
-.blogs span{
-    position: relative;
-    color: #000000;
-    top: 0px;
-}
-
-.contacts .icons{
-    position: relative;
-    top:29px;
-}
-
-.contacts a{
-    padding: 10px 15px;
-    font-size: 20px;
-    color:#13F7D2;
-    border-radius: 100%;
-    border: 2px solid #13F7D2;
-    margin:0 10px;
-}
-
-
-.contacts h2{
-    color: #FFFFFF;
-    font-weight: 700 !important;
-    font-size: 35px;
-}  
