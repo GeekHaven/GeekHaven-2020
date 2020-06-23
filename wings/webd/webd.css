@@ -353,6 +353,107 @@ nav{
     line-height: 27px;
 }
 
+.title{
+    padding-top: 100px;
+}
+
+.title p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    text-align: center;
+    line-height: 67px;
+    color: white;
+}
+
+.title .line{
+    width:280px;
+}
+
+.circle-card-1{
+    position: absolute;
+    left:-50px;
+}
+
+
+.card-title{
+    font-family: Montserrat;
+    text-align: right !important;
+    margin-top: 50px;
+    background: linear-gradient(90deg, #D52B2B 50%, #27282B 50%);
+}
+
+.card-title p{
+    text-align: right;
+    font-size: 18px;
+}
+
+.card-title .line{
+    width:70px;
+    float: right;
+    position: relative;
+    right:20px;
+    top:-20px !important;
+    background-color: #13F7D2;
+    border: 3px solid #13F7D2;
+    color: #13F7D2;
+}
+
+.card-title h1{
+    padding: 30px;
+    font-size: 70px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.card-title .col-md-6{
+    float: right;
+}
+
+.card-title .card-text{
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.card-2{
+    background: linear-gradient(90deg, #27282B 50%, #4C40D2 50%);
+    text-align: left !important;
+}
+
+.card-2 p{
+    text-align: left;
+    font-size: 18px;
+}
+
+.card-2 .line{
+    float: left;
+    right:-20px ;
+}
+
+.card-2 .col-md-6{
+    float: left;
+}
+
+.card-btn{
+    height: 40px;
+    margin-top:40px;
+    margin-bottom:50px !important;
+    background-color: #13F7D2 !important;
+    border-color: #13F7D2 !important;
+    border-top-left-radius: 25px !important;
+    border-top-right-radius: 25px !important;
+    border-bottom-left-radius: 25px !important;
+    border-bottom-right-radius: 25px !important;
+}
+
+.card-btn span{
+    font-weight: bold !important;
+    font-size: 17px;
+}
+
 
 
 .wing-heading{
@@ -632,6 +733,17 @@ nav{
         line-height: 15px;
     }
     
+    .card-title{
+        height: 550px;
+    }
+
+    .card-title h1{
+        font-size: 20px;
+    }
+
+    .card-title .card-text{
+        font-size: 14px;
+    }
 
     .footer{
         padding-top: -20px;
