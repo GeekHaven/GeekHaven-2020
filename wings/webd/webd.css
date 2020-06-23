@@ -141,9 +141,13 @@ nav{
         margin-top: 360px;
     }
 }
+
 @media screen and (max-width:900px){
 .circle-blog{
     height: 200px;
+}
+.intro-header .heading {
+    font-size: 45px !important;
 }
 .div-blog{
     display: block !important;
@@ -262,7 +266,7 @@ nav{
 }
 
 .intro-header .heading{
-    font-size: 80px;
+    font-size: 65px;
     font-weight: bold;
     /* transform: scaleY(0.86); */
     color: #FFFFFF;
@@ -272,7 +276,6 @@ nav{
 
 .intro-header p{
     position: relative;
-    margin-right: -70px !important;
     color:#FFFFFF;
     padding-top:30px;
     font-size: 18px;
@@ -301,9 +304,8 @@ nav{
 .webd-logo img{
     position: relative;
     margin:0 auto;
-    padding-top:200px;
-    height: 575px;
-    width: 575px;
+    margin-top: 200px;
+    width: 100%;
 }
 
 @media screen and (min-width:1900px)
@@ -411,14 +413,6 @@ nav{
         background-color: #000000 !important;
     }
 
-    .intro-header{
-        margin-right:-53% !important ;
-    }
-
-    .intro-header .heading{
-        font-size: 60px;
-    }
-
     .intro-header p{
         font-size: 20px;
     }
@@ -447,7 +441,6 @@ nav{
     border-color: #13F7D2;
     top:20px;
     height: 55px;
-    width: 400px;
 }
 
 .blogs .btn{
