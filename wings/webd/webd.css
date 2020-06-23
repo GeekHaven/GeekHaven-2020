@@ -109,11 +109,11 @@ nav{
 .images-coordi{
     width: 250px;
     height: 250px;
-    background: #C4C4C4;
+    background: #919191;
     border-radius: 100%;
     margin: auto;
-    padding: 20px;
-    border: 10px solid #919191;
+    filter: grayscale(100%);
+    padding: 10px;
 }
 .images-member{
     width: 200px;
@@ -121,8 +121,16 @@ nav{
     background: #C4C4C4;
     border-radius: 100%;
     margin: auto;
-    padding: 20px;
-    border: 10px solid #919191;    
+    filter: grayscale(100%);
+    padding: 10px;
+}
+.images-member:hover{
+    filter: grayscale(0%);
+    background-color: #13F7D2;
+}
+.images-coordi:hover{
+    filter: grayscale(0%);
+    background-color: #13F7D2;
 }
 .circle-blog{
     position: absolute;
