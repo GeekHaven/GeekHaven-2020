@@ -636,6 +636,13 @@ nav{
         margin-top: 0px !important;
     }
 
+    .footer{
+        padding-top:10px ;
+    }
+    
+    .overall-section{
+        margin-bottom: 50px;
+    }
 
     .navbar-fixed-top{
         opacity: 2;
