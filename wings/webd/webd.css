@@ -385,11 +385,13 @@ nav{
 }
 
 
+
 .card-title{
     font-family: Montserrat;
     text-align: right !important;
     margin-top: 50px;
     background: linear-gradient(90deg, #D52B2B 50%, #27282B 50%);
+    border-radius: 10px !important;
 }
 
 .card-title p{
@@ -443,6 +445,10 @@ nav{
 
 .card-2 .col-md-6{
     float: left;
+}
+
+.c2{
+    left:85% !important;
 }
 
 .card-btn{
@@ -629,6 +635,23 @@ nav{
         font-size: 17px;
     }
 
+    .circle-card-1{
+        transform: scale(0.5);
+    }
+
+    .c1{
+        top:-40px;
+    }
+
+    .c2{
+        top:-40px;
+        left:77% !important; 
+    }
+
+    .c3{
+        top:-40px;
+    }
+
 }
 
 @media screen and (max-width:480px)
@@ -755,6 +778,25 @@ nav{
         line-height: 15px;
     }
     
+    .circle-card-1{
+        position: absolute;
+        margin-top: -62px;
+        transform: scale(0.5);
+    }
+
+    .c1{
+        top:-40px;
+    }
+
+    .c2{
+        top:-40px;
+        left:46% !important; 
+    }
+
+    .c3{
+        top:-40px;
+    }
+
     .card-title{
         height: 550px;
     }
