@@ -361,6 +361,10 @@ nav{
     line-height: 27px;
 }
 
+.center-block {
+    text-align: center;
+  }
+
 .title{
     padding-top: 100px;
 }
@@ -491,11 +495,12 @@ nav{
     color: #13F7D2    
 }
 
-.webd-logo img{
+.cybsec-logo img{
     position: relative;
     margin:0 auto;
-    margin-top: 200px;
+    margin-top: 80px;
     width: 100%;
+    transform: scale(0.8);
 }
 
 .footer{
@@ -724,10 +729,6 @@ nav{
     .intro-header .heading{
         font-size: 40px !important;
         line-height:55px;
-    }
-
-    .webd-logo img{
-        margin-top: 100px;
     }
 
     .announcements p{
