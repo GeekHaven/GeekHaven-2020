@@ -6,6 +6,9 @@ body{
     font-family: 'Montserrat', sans-serif;
     background-color: #1D1E20 !important;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body::-webkit-scrollbar-track
 {
@@ -116,8 +119,8 @@ nav{
     padding: 10px;
 }
 .images-member{
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
     background: #C4C4C4;
     border-radius: 100%;
     margin: auto;

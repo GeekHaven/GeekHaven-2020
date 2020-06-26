@@ -31,7 +31,7 @@
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                       <li><a href="#">Blogs</a></li>
-                      <li><a href="#">Wings</a></li>
+                      <li><a href="#wings-section">Wings</a></li>
                       <li><a href="#">Coordinators</a></li>
                       <li><a href="#">Contacts</a></li>
                     </ul>
@@ -59,14 +59,17 @@
     </div>
 
     <div style="margin-bottom: 50px;"> 
-        <p class="view-all">
-            VIEW ALL WINGS
-        </p>
-        <div class="arrow-down">
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </div>
+        <a href="#wings-section" style="text-decoration: none;">
+            <p class="view-all">
+                VIEW ALL WINGS
+            </p>
+            <div class="arrow-down">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+        </a>
+        
     </div>
-    <section class="container-fluid">
+    <section class="container-fluid" id="wings-section">
         <div class="col-12 col-sm-6 col-md-4 margin-div-bottom">
             <img src="images/webd.png" class="wing-image webd-card" style="width: 100px;">
             <p class="wing-title">
@@ -95,7 +98,7 @@
             <p class="wing-dis">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
             </p>
-            <a href="#" class="more">More</a>
+            <a href="wings/foss/index.html" class="more">More</a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 margin-div-bottom">
             <img src="images/ai.png" class="wing-image ai-card">
@@ -105,7 +108,7 @@
             <p class="wing-dis">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
             </p>
-            <a href="#" class="more">More</a>
+            <a href="wings/ai/index.html" class="more">More</a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 margin-div-bottom">
             <img src="images/cyb.png" class="wing-image cybersec-card">
@@ -125,7 +128,7 @@
             <p class="wing-dis">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
             </p>
-            <a href="#" class="more">More</a>
+            <a href="wings/design/index.html" class="more">More</a>
         </div>
         <div class="col-12 col-sm-6 col-md-4 margin-div-bottom">
             <img src="images/cc.png" class="wing-image cc-card" style="width: 100px;">
@@ -135,7 +138,7 @@
             <p class="wing-dis">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
             </p>
-            <a href="#" class="more">More</a>
+            <a href="wings/cc/index.html" class="more">More</a>
         </div>
         
         <div class="col-12 col-sm-6 col-md-4 margin-div-bottom1">
@@ -273,11 +276,13 @@
         $(this).children('img').css("margin","auto" );
         $(this).children('p').css("text-align","center" );
         $(this).children('a').css("margin-left","45%" );
+        $(this).css("box-shadow","0 0 0 2pt #13F7D2" );
       })
       .mouseout(function() {
         $(this).children('img').css("margin-left","0%" );
         $(this).children('p').css("text-align","left" );
         $(this).children('a').css("margin-left","0%" );
+        $(this).css("box-shadow","0 0 0 0pt #13F7D2" );
       });
 
     $('.theme').click(function(){
