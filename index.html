@@ -436,6 +436,10 @@
 
             );
     }else{  
+            $(document).ready(function(){
+                $('.theme').click()
+            });
+            
             $(document.body).attr('style', 'background-color: white !important');
             $(".margin-div-bottom").children('p').css('color','black'); 
             $(".navbar-nav li a").css('color','#000000')
@@ -588,7 +592,6 @@
 
 
     $('.theme').click(function(){
-        
         if(j==1){ //dark mode
             localStorage.setItem("theme", 1);
             $(document.body).attr('style', 'background-color: #252628 !important');
@@ -894,8 +897,6 @@
             j=1;
         }
     }); 
-    
-    
 
     $(".margin-div-bottom").hover(function(){
         if(j==1){
