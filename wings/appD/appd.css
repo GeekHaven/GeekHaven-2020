@@ -695,6 +695,7 @@ nav{
     .fa-bars{
         padding-right: 0px;
         transform: scale(1.2);
+        color: #13F7D2;
     }
 
     .navbar-nav a::before{
@@ -717,11 +718,12 @@ nav{
     }
 
     .intro-header{
-        padding-top: 150px;
+        text-align: center;
+        padding-top: 110px;
     }
 
     .intro-header p{
-        font-size: 17px;
+        font-size: 12px;
     }
 
     .intro-header .heading{
@@ -730,7 +732,9 @@ nav{
     }
 
     .webd-logo img{
-        margin-top: 100px;
+        margin-top: 10px;
+        transform: scale(0.8);
+        margin-left: 7px;
     }
 
     .announcements p{

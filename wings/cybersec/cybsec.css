@@ -700,6 +700,7 @@ nav{
     .fa-bars{
         padding-right: 0px;
         transform: scale(1.2);
+        color: #13F7D2;
     }
 
     .navbar-nav a::before{
@@ -722,16 +723,21 @@ nav{
     }
 
     .intro-header{
-        padding-top: 150px;
+        text-align: center;
+        padding-top: 110px;
     }
 
     .intro-header p{
-        font-size: 17px;
+        font-size: 12px;
     }
 
     .intro-header .heading{
         font-size: 40px !important;
         line-height:55px;
+    }
+
+    .cybsec-logo img{
+        margin-top: -10px;
     }
 
     .announcements p{
