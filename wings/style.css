@@ -191,9 +191,10 @@ nav{
 }
 
 .blog-div{
-    padding: 20px;
     display: flex;
     flex-direction: column;
+    padding: 0px !important;  
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
     align-items: center;   
     margin-top:100px ; 
     background-color: #272829;
@@ -204,8 +205,9 @@ nav{
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
-    width: 100%;
+    padding-left: 10px;
     line-height: 49px;
+    width: 100%;
     color: #FFFFFF;
 }
 
@@ -215,6 +217,7 @@ nav{
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;
+    padding-left: 10px;
     color: #FFFFFF;
 }
 
@@ -376,6 +379,10 @@ nav{
     line-height: 27px;
 }
 
+.center-block {
+    text-align: center;
+  }
+
 .title{
     padding-top: 100px;
 }
@@ -502,16 +509,19 @@ nav{
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
-    width: 100%;
     line-height: 22px;
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 20px;
     color: #13F7D2    
 }
 
-.webd-logo img{
+.cybsec-logo img{
     position: relative;
     margin:0 auto;
-    margin-top: 200px;
+    margin-top: 80px;
     width: 100%;
+    transform: scale(0.8);
 }
 
 .footer{
@@ -744,10 +754,8 @@ nav{
         line-height:55px;
     }
 
-    .webd-logo img{
-        margin-top: 10px;
-        transform: scale(0.8);
-        margin-left: 7px;
+    .cybsec-logo img{
+        margin-top: -10px;
     }
 
     .announcements p{

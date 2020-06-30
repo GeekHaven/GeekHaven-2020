@@ -203,6 +203,7 @@ nav{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: bold;
+    width: 100%;
     font-size: 40px;
     line-height: 49px;
     color: #FFFFFF;
@@ -505,6 +506,7 @@ nav{
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
+    width: 100%;
     line-height: 22px;
     color: #13F7D2    
 }

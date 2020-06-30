@@ -203,6 +203,7 @@ nav{
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
+    width: 100%;
     line-height: 49px;
     color: #FFFFFF;
 }
@@ -501,6 +502,7 @@ nav{
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
+    width: 100%;
     color: #13F7D2    
 }
 

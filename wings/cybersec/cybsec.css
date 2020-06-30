@@ -205,6 +205,7 @@ nav{
     font-weight: bold;
     font-size: 40px;
     line-height: 49px;
+    width: 100%;
     color: #FFFFFF;
 }
 
@@ -503,6 +504,7 @@ nav{
 .more-blog{
     font-family: Montserrat;
     font-style: normal;
+    width: 100%;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;

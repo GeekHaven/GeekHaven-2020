@@ -191,9 +191,11 @@ nav{
 }
 
 .blog-div{
-    padding: 20px;
     display: flex;
     flex-direction: column;
+    padding-left: 0px !important;
+    padding-right: 0px !important;  
+    box-shadow: 0 0 10px #ccc;
     align-items: center;   
     margin-top:100px ; 
     background-color: #272829;
@@ -204,7 +206,9 @@ nav{
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
+    padding-left: 10px;
     line-height: 49px;
+    width: 100%;
     color: #FFFFFF;
 }
 
@@ -214,6 +218,7 @@ nav{
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;
+    padding-left: 10px;
     color: #FFFFFF;
 }
 
@@ -506,6 +511,9 @@ nav{
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 10px;
     color: #13F7D2    
 }
 
