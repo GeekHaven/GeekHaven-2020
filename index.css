@@ -434,7 +434,7 @@ nav{
 
 .margin-div-bottom:hover>a{
     text-decoration: none;
-    transition:1s ease ;
+    /* transition:1s ease ; */
 }
 
 .footer{
