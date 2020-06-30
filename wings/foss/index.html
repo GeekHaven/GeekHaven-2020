@@ -407,6 +407,23 @@
 
                 var $logo = $(".nav-logo");
                 $logo.toggleClass('scroll-img', $(this).scrollTop() > 10);
+
+                var $nav_links = $(".navbar-nav li a")
+                var $bars = $(".fa-bars");
+
+                if(localStorage.getItem("theme")=="0") //light mode
+                {
+                    $logo.toggleClass('mode-change-color', $(this).scrollTop() > $logo.height());
+                    $bars.toggleClass('mode-change-color', $(this).scrollTop() > $logo.height());   
+                    $nav_links.toggleClass('link-change-color', $(this).scrollTop() > $logo.height()); 
+
+                    if (window.matchMedia('(max-width: 768px)').matches)
+                    {
+                        $nav_links.toggleClass('link2-change-color', $(this).scrollTop() > $logo.height()); 
+                    }
+
+                }
+
                 var $nav = $(".navbar-fixed-top");
                 $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
 
