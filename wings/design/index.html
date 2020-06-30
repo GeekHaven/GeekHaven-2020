@@ -39,22 +39,22 @@
 
       <div class="wrapper">
             <div class="intro-header col-sm-6">
-                <div class="heading">Design</div>
-                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <div class="heading main-heading">Design</div>
+                <p class="intro-heading"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
             <div class="cybsec-logo col-sm-6">
                 <img src="../../images/cybs_1.svg">
             </div>
       </div>
 
-      <div class="whats-new">
+      <div class="whats-new texta">
         <p>What's New</p>
         <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
       </div>
 
       <div class="container-fluid announcements">
-        <p>
-          ANNOU</span><span style="color: #13F7D2;">N</span>CEMENTS
+        <p class="whiteToBlack">
+          ANNOU</span><span class="texta" style="color: #13F7D2;">N</span>CEMENTS
         </p>
         <hr class="line">
 
@@ -67,8 +67,8 @@
                   <p class="number">21</p>
                 </div>
                 <div class="col-md-8 event-desc">
-                  <h1>Event Name</h1>
-                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
+                  <h1 class="whiteToBlack">Event Name</h1>
+                  <p class="whiteToBlack"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
                 </div>
               </div>
             </div>
@@ -79,8 +79,8 @@
                   <p class="number">21</p>
                 </div>
                 <div class="col-md-8 event-desc">
-                  <h1>Event Name</h1>
-                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
+                  <h1 class="whiteToBlack">Event Name</h1>
+                  <p class="whiteToBlack"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
                 </div>
               </div>
             </div>
@@ -89,8 +89,8 @@
       </div>
 
       <div class="container-fluid title" id="projects">
-        <p>
-          PR</span><span style="color: #13F7D2;">O</span>JECT
+        <p class="whiteToBlack">
+          PR</span><span class="texta"  style="color: #13F7D2;">O</span>JECT
         </p>
         <hr class="line">
 
@@ -145,8 +145,8 @@
     </div>
 
       <section style="margin-top: 100px;" id="team">
-        <p class="wing-heading">
-          <span>TE</span><span style="color: #13F7D2;">A</span><span>M</span>
+        <p class="wing-heading whiteToBlack">
+          <span>TE</span><span class="texta" style="color: #13F7D2;">A</span><span>M</span>
         </p>
         <hr class="line">
           <div class="container-fluid">
@@ -284,8 +284,8 @@
       </section>
       <section class="container-fluid" style="margin-top: 100px;margin-bottom: 100px;" id="blogs">
         <img src="../../images/circle.png" class="circle-blog">
-        <p class="wing-heading">
-          <span>BL</span><span style="color: #13F7D2;">O</span><span>GS</span>
+        <p class="wing-heading whiteToBlack">
+          <span>BL</span><span class="texta" style="color: #13F7D2;">O</span><span>GS</span>
         </p>
         <hr class="line">
           <div class="row div-blog" style="display: flex;justify-content: space-evenly;margin-left: 0px;margin-right: 0px;">
@@ -380,6 +380,60 @@
 
             });
             });
+
+            if(localStorage.getItem("theme")=="0"){
+    
+    $(document.body).attr('style', 'background-color: white !important');
+    $(".margin-div-bottom").children('p').css('color','black'); 
+    $(".navbar-nav li a").css('color','#000000')
+    $('.slider').css('background-color','black');           
+    $('.sub-heading').attr('style','color: #0D9C85')
+    $('.intro-heading').css('color','black')
+    $('.main-heading').css('color','black')
+    $('.nav-logo').attr('src','../../images/gh.svg')
+    $('.texta').attr('style', 'color: #0D9C85')
+    $('.arrow-down').attr('style','color: #0D9C85')
+    $(".more").css('color','#0D9C75')
+    $('.whiteToBlack').attr('style', 'color: black')
+    $('.arrow').attr('src','images/arrow-light.png')
+    $('.fa-bars').css('color','#000000')
+    $('.design-card').attr('src','images/l5.png')
+    $('.cc-card').attr('src','images/l6.png')
+    $('.blogs h2').attr('style','color: #000000')
+    $('.coordi-name').attr('style', 'color: black')
+    $('.coordi-post').attr('style', 'color: #0D9C85')
+    $('.blogs button').attr('style','background-color: #15C4A8; border-color: #15C4A8')
+    $('.blogs span').attr('style','color: #FFFFFF')
+    $('.contacts h2').attr('style','color: #000000')
+    $('.contacts a').attr('style','color: #15C4A8; border-color:#15C4A8')
+    $('.footer').attr('style','background-color: #E7E7E7')
+
+}else{  
+
+$(document.body).attr('style', 'background-color: #252628 !important');
+    $(".margin-div-bottom").children('p').css('color','white');
+    $(".navbar-nav li a").css('color','#13F7D2')
+    $('.sub-heading').attr('style','color: #13F7D2')
+    $('.intro-heading').css('color','white')
+    $('.main-heading').css('color','white')
+    $('.nav-logo').attr('src','../../images/gh.png')
+    $('.texta').attr('style', 'color: #13F7D2')
+    $('.arrow-down').attr('style','color: #13F7D2')
+    $(".more").css('color','#13F7D2')
+    $('.coordi-post').attr('style', 'color: #13F7D2')
+    $('.arrow').attr('src','../../images/arrow.png')
+    $('.fa-bars').css('color','#FFFFFF')
+    $('.slider').css('background-color','white');
+    $('.whiteToBlack').attr('style', 'color: white')
+    $('.blogs h2').attr('style','color: #FFFFFF')
+    $('.blogs button').attr('style','background-color: #13F7D2; border-color: #13F7D2')
+    $('.blogs span').attr('style','color: #000000')
+    $('.coordi-name').attr('style', 'color: white')
+    $('.contacts h2').attr('style','color: #FFFFFF')
+    $('.contacts a').attr('style','color: #13F7D2; border-color:#13F7D2')
+    $('.footer').attr('style','background-color: #1D1D1F')
+
+} 
 
       </script>
 
