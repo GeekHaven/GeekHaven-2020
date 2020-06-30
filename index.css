@@ -416,12 +416,13 @@ nav{
     margin-bottom: 50px;
     padding: 20px;
     border-radius: 17px;
+    transition: all 0.3s ease;
 }
 
 .margin-div-bottom:hover{
     background-color: #343538;
     transform: scale(1.02);
-    transition:ease 0.3s ;
+    /*transition:ease 0.3s ;*/
 }
 .margin-div-bottom>img{
     transition: 1s ease;
