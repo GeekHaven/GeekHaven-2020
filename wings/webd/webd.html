@@ -424,7 +424,15 @@
     $('.event-date').attr('style','background-color: #0D9C85; border-color: #0D9C85')
     $('.card-title').attr('style','background:linear-gradient(90deg, #F2A3A3 50%, #FFFFFF 50%);box-shadow: 0 0 10px #ccc')
     $('.card-2').attr('style','background:linear-gradient(90deg, #FFFFFF 50%, #BBB6F3 50%);box-shadow: 0 0 10px #ccc')   
-    $('.card-3').attr('style','background:linear-gradient(90deg, #EDBDF4 50%, #FFFFFF 50%);box-shadow: 0 0 10px #ccc')     
+    $('.card-3').attr('style','background:linear-gradient(90deg, #EDBDF4 50%, #FFFFFF 50%);box-shadow: 0 0 10px #ccc')
+
+    if (window.matchMedia('(max-width: 480px)').matches)
+    {
+      $('.card-title').attr('style','background:linear-gradient(to bottom, #F2A3A3 50%, #FFFFFF 50%) !important;box-shadow: 0 0 10px #ccc')
+      $('.card-2').attr('style','background:linear-gradient(to bottom, #BBB6F3 50%, #FFFFFF 50%) !important;box-shadow: 0 0 10px #ccc')   
+      $('.card-3').attr('style','background:linear-gradient(to bottom, #EDBDF4 50%, #FFFFFF 50%) !important;box-shadow: 0 0 10px #ccc') 
+    }
+
     $('.card-btn').attr('style','background-color: #0D9C85 !important; border-color: #0D9C85 !important')
     $('.blogs h2').attr('style','color: #000000')
     $('.blogs button').attr('style','background-color: #15C4A8; border-color: #15C4A8')
@@ -455,7 +463,15 @@ $(document.body).attr('style', 'background-color: #252628 !important');
     $('.event-date').attr('style','background-color: #13F7D2; border-color: #13F7D2')
     $('.card-title').attr('style','background:linear-gradient(90deg, #d52b2b 50%, #27282b 50%);box-shadow: 0 ')
     $('.card-2').attr('style','background:linear-gradient(90deg, #27282B 50%, #4C40D2 50%);box-shadow: 0 ')    
-    $('.card-3').attr('style','background:linear-gradient(90deg, #A823BD 50%, #27282B 50%);box-shadow: 0 ')    
+    $('.card-3').attr('style','background:linear-gradient(90deg, #A823BD 50%, #27282B 50%);box-shadow: 0 ')   
+
+    if (window.matchMedia('(max-width: 480px)').matches)
+    {
+      $('.card-title').attr('style','background:linear-gradient(to bottom, #d52b2b 50%, #27282b 50%) !important;box-shadow: 0 0 10px #ccc')
+      $('.card-2').attr('style','background:linear-gradient(to bottom, #4c40d2 50%, #27282b 50%) !important;box-shadow: 0 0 10px #ccc')   
+      $('.card-3').attr('style','background:linear-gradient(to bottom, #a823bd 50%, #27282b 50%) !important;box-shadow: 0 0 10px #ccc') 
+    }
+
     $('.card-btn').attr('style','background-color: #13F7D2 !important; border-color: #13F7D2 !important')
     $('.blogs h2').attr('style','color: #FFFFFF')
     $('.blogs button').attr('style','background-color: #13F7D2; border-color: #13F7D2')
