@@ -822,15 +822,50 @@ nav{
     }
 
     .card-title{
-        height: 550px;
+        background: linear-gradient(to bottom, #D52B2B 50%, #27282b 50%) !important;
+        height: 370px !important;
+        box-shadow: 0 0 1px #ccc;
+    }
+
+    .card-title .date{
+        display: none;
+    }
+
+    .card-title .line{
+        display: none;
     }
 
     .card-title h1{
-        font-size: 20px;
+        text-align: left !important;
+        padding: 16px !important;
+        font-size: 10px;
+        padding-top:200px !important;
+
+    }
+
+    .card-title .col-md-6{
+        float: left !important;
     }
 
     .card-title .card-text{
-        font-size: 14px;
+        text-align: left !important;
+        font-size: 8px !important;
+        font-weight: lighter;
+        line-height: 10px !important;
+    }
+
+    .card-btn{
+        margin-top: 10px !important;
+        left:-35px !important;
+        transform: scale(0.7);
+    }
+
+    .card-2{
+        background: linear-gradient(to bottom, #4c40d2 50%, #27292b 50%) !important;
+    }
+
+    .card-3{
+        background: linear-gradient(to bottom, #A823BD 50%, #27292b 50%) !important;
     }
 
     .footer{
