@@ -825,7 +825,7 @@ nav{
     }
 
     .card-title{
-        background: linear-gradient(to bottom, #D52B2B 50%, #27282b 50%) !important;
+        /* background: linear-gradient(to bottom, #D52B2B 50%, #27282b 50%) !important; */
         height: 370px !important;
         box-shadow: 0 0 1px #ccc;
     }
@@ -863,13 +863,13 @@ nav{
         transform: scale(0.7);
     }
 
-    .card-2{
+    /* .card-2{
         background: linear-gradient(to bottom, #4c40d2 50%, #27292b 50%) !important;
     }
 
     .card-3{
         background: linear-gradient(to bottom, #A823BD 50%, #27292b 50%) !important;
-    }
+    } */
 
     .footer{
         padding-top: -20px;
