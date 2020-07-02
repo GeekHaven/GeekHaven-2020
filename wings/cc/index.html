@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="../style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="../index.js" ></script>
+    
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 </head>
@@ -292,56 +291,56 @@
         </p>
         <hr class="line">
           <div class="row div-blog" style="display: flex;justify-content: space-evenly;margin-left: 0px;margin-right: 0px;">
-            <div class="col-12 col-sm-12 col-md-3 blog-div">
+            <div class="col-12 col-sm-12 col-md-3 blog-div whiteToblackBg">
             
-              <div class="images-blog" style="background-color: #D52B2B;">
+              <div class="images-blog blog-1" style="background-color: #D52B2B;">
 
               </div>
-              <p class="blog-heading">
+              <p class="blog-heading whiteToBlack">
                 Blog-1
               </p>
             
-            <p class="blog-subtitle">
+            <p class="blog-subtitle whiteToBlack">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                when an unknown printer took a galley of type and scrambled it.
             </p>
-            <a class="more-blog">Read More</a>
+            <a class="more-blog texta">Read More</a>
           </div>
-          <div class="col-12 col-sm-12 col-md-3 blog-div">
+          <div class="col-12 col-sm-12 col-md-3 blog-div whiteToblackBg">
             
-              <div class="images-blog" style="background-color: #A823BD;">
+              <div class="images-blog blog-2" style="background-color: #A823BD;">
 
               </div>
             
             
-            <p class="blog-heading">
+            <p class="blog-heading whiteToBlack">
               Blog-2
             </p>
-            <p class="blog-subtitle">
+            <p class="blog-subtitle whiteToBlack">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                when an unknown printer took a galley of type and scrambled it.
             </p>
-            <a class="more-blog">Read More</a>
+            <a class="more-blog texta">Read More</a>
 
           </div>
-          <div class="col-12 col-sm-12 col-md-3 blog-div">
+          <div class="col-12 col-sm-12 col-md-3 blog-div whiteToblackBg">
           
-              <div class="images-blog" style="background-color: #4C40D2;">
+              <div class="images-blog blog-3" style="background-color: #4C40D2;">
 
               </div>
             
             
-            <p class="blog-heading">
+            <p class="blog-heading whiteToBlack">
               Blog-3
             </p>
-            <p class="blog-subtitle">
+            <p class="blog-subtitle whiteToBlack">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                when an unknown printer took a galley of type and scrambled it.
             </p>
-            <a class="more-blog">Read More</a>
+            <a class="more-blog texta">Read More</a>
 
           </div>
            
@@ -440,8 +439,8 @@
     $('.contacts h2').attr('style','color: #000000')
     $('.contacts a').attr('style','color: #15C4A8; border-color:#15C4A8')
     $('.footer').attr('style','background-color: #E7E7E7')
-    $('.blog-div').attr('style', 'background-color: white')
-              
+    $('.whiteToblackBg').attr('style', 'background-color: white')
+
 }else{  
 
 $(document.body).attr('style', 'background-color: #252628 !important');
@@ -462,8 +461,8 @@ $(document.body).attr('style', 'background-color: #252628 !important');
     $('.blacktowhite').attr('style', 'color: black')
     $('.event-date').attr('style','background-color: #13F7D2; border-color: #13F7D2')
     $('.card-title').attr('style','background:linear-gradient(90deg, #d52b2b 50%, #27282b 50%);box-shadow: 0')
-    $('.card-2').attr('style','background:linear-gradient(90deg, #27282B 50%, #4C40D2 50%);box-shadow: 0 ')    
-    $('.card-3').attr('style','background:linear-gradient(90deg, #A823BD 50%, #27282B 50%);box-shadow: 0 ') 
+    $('.card-2').attr('style','background:linear-gradient(90deg, #27282B 50%, #4C40D2 50%);box-shadow: 0')    
+    $('.card-3').attr('style','background:linear-gradient(90deg, #A823BD 50%, #27282B 50%);box-shadow: 0')  
 
     if (window.matchMedia('(max-width: 480px)').matches)
     {
@@ -479,7 +478,7 @@ $(document.body).attr('style', 'background-color: #252628 !important');
     $('.contacts h2').attr('style','color: #FFFFFF')
     $('.contacts a').attr('style','color: #13F7D2; border-color:#13F7D2')
     $('.footer').attr('style','background-color: #1D1D1F')
-    $('.blog-div').attr('style', 'background-color: #252628 ')
+    $('.whiteToblackBg').attr('style', 'background-color: #252628 ')
 } 
 
       </script>

@@ -191,9 +191,11 @@ nav{
 }
 
 .blog-div{
-    padding: 20px;
     display: flex;
     flex-direction: column;
+    padding-left: 0px !important;
+    padding-right: 0px !important;  
+    box-shadow: 0 0 10px #ccc;
     align-items: center;   
     margin-top:100px ; 
     background-color: #272829;
@@ -203,9 +205,10 @@ nav{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: bold;
-    width: 100%;
     font-size: 40px;
+    padding-left: 10px;
     line-height: 49px;
+    width: 100%;
     color: #FFFFFF;
 }
 
@@ -215,6 +218,7 @@ nav{
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;
+    padding-left: 10px;
     color: #FFFFFF;
 }
 
@@ -506,8 +510,10 @@ nav{
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
-    width: 100%;
     line-height: 22px;
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 10px;
     color: #13F7D2    
 }
 
@@ -825,7 +831,7 @@ nav{
     }
 
     .card-title{
-        background: linear-gradient(to bottom, #D52B2B 50%, #27282b 50%) !important;
+        /* background: linear-gradient(to bottom, #D52B2B 50%, #27282b 50%) !important; */
         height: 370px !important;
         box-shadow: 0 0 1px #ccc;
     }
@@ -863,13 +869,13 @@ nav{
         transform: scale(0.7);
     }
 
-    .card-2{
+    /* .card-2{
         background: linear-gradient(to bottom, #4c40d2 50%, #27292b 50%) !important;
     }
 
     .card-3{
         background: linear-gradient(to bottom, #A823BD 50%, #27292b 50%) !important;
-    }
+    } */
 
     .footer{
         padding-top: -20px;
