@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Contact Us</title>
+    <title>Wing Name</title>
     <link rel="shortcut icon" href="../../images/gh.svg" type="image/png" />
     <link rel="stylesheet" href="form.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
         <div class="container-fullwidth">
-          <a href="../../index.html"><img class="nav-logo" src="../../images/gh.png"></a>
+          <a href="../index.html"><img class="nav-logo" src="../images/gh.png"></a>
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -34,4 +34,35 @@
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
-      </nav>
+	  </nav>
+	  <style>
+		  
+	  </style>
+      <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
+        <div class="container" style="background: #171717;border-radius: 16px;">
+          <form method="post" action='../data_game/savemem.php' style="text-align: center;">
+            <p class="contactUs" >Add Wing</p>
+			<div class="form-group col-lg-12">
+				<input type="text" name="wing" required></input>
+				<span class="floating-label">Wing Name</span>
+			</div>
+			<div class="form-group col-lg-12">
+				<textarea  name="wing" ></textarea>
+				<span class="floating-label">Information</span>
+				
+			</div> 
+			<div class="form-group col-lg-12">]
+				<input accept="image/*" style="outline: none;" type="file" name="logo"/>
+			</div>
+			<div class="form-group form-button">             
+				<button name="add_btn" type="submit" class="form-submit button" >Add Wing</button>
+			</div>   
+            
+                       
+                       
+          </form>
+        </div>   
+
+      </div>
+</body>
+</html>      
