@@ -267,7 +267,7 @@ input:focus {
     color: #fff; 
     outline: none;
     border-color: #13F7D2;
-    border-top: none;
+    /* border-top: none; */
 }  
 select:focus{
     outline: none;
@@ -287,6 +287,8 @@ input:not(:focus):valid ~ .floating-label{
     top: -9px;
     left: 40px;
     color: #13F7D2;
+    background-color: #171717;
+    z-index: 1000;
     font-size: 16px;
     opacity: 1;
 }
@@ -310,11 +312,11 @@ textarea:focus {
     color: #fff; 
     outline: none;
     border-color: #13F7D2;
-    border-top: none;
     top: -9px;
 }
 textarea:focus + span{  
     color: #13F7D2;
+    background-color: #171717;
     top: -9px;
     font-size: 16px;
 }
@@ -334,4 +336,5 @@ textarea:focus + span{
 }
 .button:hover{
     background: #13F7D2;
+    color: #171717;
 }
