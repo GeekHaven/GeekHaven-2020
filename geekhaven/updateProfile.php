@@ -58,7 +58,7 @@
 	  
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
 		<div class="container" style="background: #171717;border-radius: 16px;">
-			<form method='post' action='../data_game/announce.php' style="text-align: center;" enctype="multipart/form-data">
+			<form method='post'  style="text-align: center;" enctype="multipart/form-data">
                 <p class="contactUs" >Update Profile</p> 
 
 				<div class="form-group col-lg-12">

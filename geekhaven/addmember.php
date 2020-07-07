@@ -83,14 +83,7 @@
                     <small id="hint_id_username" class="form-text text-muted">*Password should be same</small>
                 </div>
 			</div>
-			<div class="form-group col-lg-6">
-				<!-- <label>Member Post</label>  -->
-				<input name="mem_post" type="text" required></input><br>
-				<span class="floating-label">Post</span>
-				<div>
-					<small id="hint_id_username" class="form-text text-muted"></small>
-				</div>
-			</div>
+			
 			<div class="form-group col-lg-6">
 				<!-- <label>Session</label>  -->
 				<input name="session" type="text" required></input><br>
@@ -114,7 +107,7 @@
                 ?>
 					</select>
 				</div>
-			<div class="form-group form-button">             
+			<div class="form-group form-button col-lg-12">             
 				<button name="add_btn" type="submit" class="form-submit button" >Add Member</button>
 			</div>           
           </form>
