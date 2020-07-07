@@ -11,7 +11,7 @@
                 $mem_post = $_POST['mem_post'];
                 $sess = $_POST['session'];
                 $wing = $_POST['wing'];
-                
+                $image = $_POST['image'];
                 // $_SESSION['member_id'] = time()*1000;
                 // $member_id = $_SESSION['id'];
                 $member_id = time()*1000;

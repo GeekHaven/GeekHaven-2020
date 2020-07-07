@@ -1,13 +1,15 @@
+  
 <?php
-    require "../database/wingsdb.php";    
+    // include './addmember.php'
+    require "../database/member_info.php";    
     session_start();
     $cookie_name = $_SESSION['member_id'];
     $t = $_SESSION['time'];
     if(isset($_COOKIE[$cookie_name])){
         if($_COOKIE[$cookie_name]==$t + ($t%2408) + $cookie_name){
-            echo "welcome Admin";
+
         }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
-            echo "welcome member";
+            
         }else{
             header('location:login.php');
         }
@@ -85,7 +87,18 @@
 					<button name="submit" type="submit" class="form-submit button" >Save</button>
 				</div>   	
 			</form>
-          
+            <?php
+            if(isset($_POST['submit'])){
+                $name = $_POST['name'];
+                $roll = $_POST['roll_no'];
+                $img = $_POST['image'];
+                $description = $_POST['description'];
+                $query = "UPDATE member SET `name`='$name',`roll_no`='$roll',`image`='$img',`description`='$description' WHERE `member_id`='$mem_id'";
+                $query_run = mysqli_query($connection,$query);
+                echo "UPDATED SUCCESSFULLY";
+            }
+            // echo $id;
+        ?>
         </div>   
 
         <!-- <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
