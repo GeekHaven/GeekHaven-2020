@@ -1,9 +1,26 @@
+<?php
+    require "../database/member_info.php";
+    session_start();
+    $cookie_name = $_SESSION['member_id'];
+    $t = $_SESSION['time'];
+    if(isset($_COOKIE[$cookie_name])){
+        if($_COOKIE[$cookie_name]==$t + ($t%2408) + $cookie_name){
+            echo "welcome Admin";
+        }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
+            header('location:home.php');
+        }else{
+            header('location:login.php');
+        }
+    }else{
+        header('location:login.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Contact Us</title>
+    <title>Add Member</title>
     <link rel="shortcut icon" href="../../images/gh.svg" type="image/png" />
     <link rel="stylesheet" href="form.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
@@ -38,65 +55,68 @@
 	  <style>
 		  
 	  </style>
-      <section class="form" style="margin-top: 200px;margin-bottom: 50px;">
+      <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
         <div class="container" style="background: #171717;border-radius: 16px;">
-          <form method="post" style="text-align: center;">
-            <p class="contactUs" >Contact Us</p>
-			<div class="form-group col-lg-6">
+          <form method="post" action='../data_game/savemem.php' style="text-align: center;">
+            <p class="contactUs" >Add Member</p>
+			<div class="form-group col-lg-12">
 				<!-- <label>Username</label> -->
-				<!-- placeholder="First Name" -->
-				<input name="first" type="text"  required></input>
-				<span class="floating-label">First Name</span>
+				<input name="username" type="text" required></input><br>
+				<span class="floating-label">Username</span>
 				<div>
 					
 				</div>
 			</div>
 			<div class="form-group col-lg-6" >
 				<!-- <label>Password</label>             -->
-				<input name="second" type="text" required></input>
-				<span class="floating-label">Last Name</span>
+				<input name="password" type="password"  required></input><br>
+				<span class="floating-label">Password</span>
 				<div>
 					<small id="hint_id_username" class="form-text text-muted"></small>
 				</div>
 			</div> 
-			<div class="form-group col-lg-12">
+			<div class="form-group col-lg-6">
                 <!-- <label>Confirm Password</label>   -->
-				<textarea name="description" type="text" ></textarea>
-				<span class="floating-label">Description</span>
+				<input name="cpassword" type="password" required></input><br>
+				<span class="floating-label">Confirm Password</span>
                 <div>
-                    <small id="hint_id_username" class="form-text text-muted">*Describe yourself</small>
+                    <small id="hint_id_username" class="form-text text-muted">*Password should be same</small>
                 </div>
 			</div>
-			<div class="form-group col-lg-12">
+			<div class="form-group col-lg-6">
 				<!-- <label>Member Post</label>  -->
-				<input name="email" type="email"  required></input>
-				<span class="floating-label">Email address</span>
+				<input name="mem_post" type="text" required></input><br>
+				<span class="floating-label">Post</span>
 				<div>
 					<small id="hint_id_username" class="form-text text-muted"></small>
 				</div>
 			</div>
 			<div class="form-group col-lg-6">
 				<!-- <label>Session</label>  -->
-				<input name="phone_number" type="tel" required></input>
-				<span class="floating-label">Mobile Number</span>
+				<input name="session" type="text" required></input><br>
+				<span class="floating-label">Session</span>
 				<div>
 					<small id="hint_id_username" class="form-text text-muted"></small>
 				</div>
 			</div>
 			<div class="form-group col-lg-6">
-				<div>
-					<select id="gender" name="gender" style="color: #707070;">
-						<option value="MALE">MALE</option>
-						<option value="FEMALE">FEMALE</option>
+					<select name="wing" style="color: #707070;">
+          <option selected="selected">Choose one</option>
+                <?php
+                    $query = 'SELECT * FROM wings';
+                    $result = mysqli_query($connection,$query);
+                    while($row = mysqli_fetch_assoc($result)){
+                        $wing =$row['wing'];
+                        ?>
+                        <option value="<?php echo $wing; ?>"><?php echo $wing; ?></option>
+                        <?php
+                    }
+                ?>
 					</select>
 				</div>
-			</div>
-			<div class="form-group form-button" style="display: inline-block;width: 100%;">             
-				<button name="add_btn" type="submit" class="form-submit button" >Contact Us</button>
-			</div>   
-            
-                       
-                       
+			<div class="form-group form-button">             
+				<button name="add_btn" type="submit" class="form-submit button" >Add Member</button>
+			</div>           
           </form>
         </div>   
 

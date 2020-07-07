@@ -1,9 +1,26 @@
+<?php
+    require "../database/wingsdb.php";    
+    session_start();
+    $cookie_name = $_SESSION['member_id'];
+    $t = $_SESSION['time'];
+    if(isset($_COOKIE[$cookie_name])){
+        if($_COOKIE[$cookie_name]==$t + ($t%2408) + $cookie_name){
+            echo "welcome Admin";
+        }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
+            echo "welcome member";
+        }else{
+            header('location:login.php');
+        }
+    }else{
+        header('location:login.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Contact Us</title>
+    <title>Add Blog</title>
     <link rel="shortcut icon" href="../../images/gh.svg" type="image/png" />
     <link rel="stylesheet" href="form.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
@@ -38,66 +55,61 @@
 	  <style>
 		  
 	  </style>
-      <section class="form" style="margin-top: 200px;margin-bottom: 50px;">
-        <div class="container" style="background: #171717;border-radius: 16px;">
-          <form method="post" style="text-align: center;">
-            <p class="contactUs" >Contact Us</p>
-			<div class="form-group col-lg-6">
-				<!-- <label>Username</label> -->
-				<!-- placeholder="First Name" -->
-				<input name="first" type="text"  required></input>
-				<span class="floating-label">First Name</span>
-				<div>
-					
+	  
+      <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
+		<div class="container" style="background: #171717;border-radius: 16px;">
+			<form method='post' action='../data_game/announce.php' style="text-align: center;" enctype="multipart/form-data">
+                <p class="contactUs" >Add Blog</p>
+                
+                <div class="form-group col-lg-11">
+                    <!-- <label>Wing</label> -->
+                    <!-- <input name="wing" type="text" placeholder="Wing" required></input> -->
+                        <div>
+                            <select id="wings" name="wings" style="color: #707070;">
+                                <option>WebD</option>
+                                <option>AppD</option>
+                                <option>AI</option>
+                                <option>FOSS</option>
+                                <option>CyberSec</option>
+                                <option>Design</option>
+                                <option>CC</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-button col-lg-1">             
+                        <button name="select_btn" type="submit" class="form-submit button" >Go</button>
+                    </div>   
+
+				<div class="form-group col-lg-12">
+					<input name="blog_title" type="text" required></input>
+					<span class="floating-label">Blog Title</span>
+					<div>
+						
+					</div>
 				</div>
-			</div>
-			<div class="form-group col-lg-6" >
-				<!-- <label>Password</label>             -->
-				<input name="second" type="text" required></input>
-				<span class="floating-label">Last Name</span>
-				<div>
-					<small id="hint_id_username" class="form-text text-muted"></small>
+				<div class="form-group col-lg-12">
+					<textarea  name="details" type="text" ></textarea>
+					<span class="floating-label">Description</span>
+					<!-- <div>
+						<small id="hint_id_username" class="form-text text-muted">*Describe The Event</small>
+					</div> -->
+				</div> 
+				<div class="form-group col-lg-12">
+					<input name="blog_link" type="text" required ></input>
+					<span class="floating-label">Blog Link</span>
 				</div>
-			</div> 
-			<div class="form-group col-lg-12">
-                <!-- <label>Confirm Password</label>   -->
-				<textarea name="description" type="text" ></textarea>
-				<span class="floating-label">Description</span>
-                <div>
-                    <small id="hint_id_username" class="form-text text-muted">*Describe yourself</small>
+				<div class="form-group col-lg-12">
+					<!-- <label>Image</label> -->
+					<input accept="image/*" style="outline: none;" type="file" name="image"/>
                 </div>
-			</div>
-			<div class="form-group col-lg-12">
-				<!-- <label>Member Post</label>  -->
-				<input name="email" type="email"  required></input>
-				<span class="floating-label">Email address</span>
-				<div>
-					<small id="hint_id_username" class="form-text text-muted"></small>
-				</div>
-			</div>
-			<div class="form-group col-lg-6">
-				<!-- <label>Session</label>  -->
-				<input name="phone_number" type="tel" required></input>
-				<span class="floating-label">Mobile Number</span>
-				<div>
-					<small id="hint_id_username" class="form-text text-muted"></small>
-				</div>
-			</div>
-			<div class="form-group col-lg-6">
-				<div>
-					<select id="gender" name="gender" style="color: #707070;">
-						<option value="MALE">MALE</option>
-						<option value="FEMALE">FEMALE</option>
-					</select>
-				</div>
-			</div>
-			<div class="form-group form-button" style="display: inline-block;width: 100%;">             
-				<button name="add_btn" type="submit" class="form-submit button" >Contact Us</button>
-			</div>   
-            
-                       
-                       
-          </form>
+				
+				<div class="form-group form-button">             
+					<button name="add_blog" type="submit" class="form-submit button" >Add Blog</button>
+				</div>   	
+			</form>
+          
         </div>   
 
 		<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
