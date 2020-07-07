@@ -1,18 +1,11 @@
 <?php
-    require "../database/wingsdb.php";    
+    require "../database/member_info.php";
     session_start();
-    $cookie_name = $_SESSION['member_id'];
-    $t = $_SESSION['time'];
+    $mem_id = $_SESSION['member_id'];
+    $cookie_name = $mem_id;
+    
     if(isset($_COOKIE[$cookie_name])){
-        if($_COOKIE[$cookie_name]==$t + ($t%2408) + $cookie_name){
-            echo "welcome Admin";
-        }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
-            echo "welcome member";
-        }else{
-            header('location:login.php');
-        }
-    }else{
-        header('location:login.php');
+        header('location:home.php');
     }
 ?>
 <!DOCTYPE html>
@@ -72,14 +65,37 @@
 					<input name="password" type="text" required ></input>
 					<span class="floating-label">Password</span>
 				</div>
-				<div class="form-group col-lg-12">
-					<!-- <label>Image</label> -->
-					<input accept="image/*" style="outline: none;" type="file" name="image"/>
-                </div>
 				
 				<div class="form-group form-button">             
 					<button name="add_btn" type="submit" class="form-submit button" >Login</button>
 				</div>   	
+        <?php
+            if(isset($_POST['add_btn'])){
+                $username = $_POST['username'];
+                $pass = $_POST['password'];
+                $time = time()*1000;
+                $query = "select * from credentials WHERE username='$username' AND password='$pass'"; 
+                $query_run = mysqli_query($connection,$query);
+                if(mysqli_num_rows($query_run)>0){
+                    $result = mysqli_query($connection,$query);
+                    while($row = mysqli_fetch_assoc($result)){
+                        $mem_id =$row['member_id'];
+                        $admin = $row['admin_value'];
+                    }
+                    $_SESSION['member_id'] = $mem_id;
+                    $_SESSION['time'] = $time;
+                    
+                    $cookie_name = $mem_id;
+                    $cookie_value = $time+($time%2408)*($admin)+$mem_id;
+                    setcookie($cookie_name,$cookie_value,time()+(86400*5));
+                    echo $cookie_name;
+                    echo $cookie_value;
+                    header('location:home.php');
+                }else{
+                    echo 'INCORRECT loginID or password';
+                }
+            }
+            ?>
 			</form>
           
         </div>   
