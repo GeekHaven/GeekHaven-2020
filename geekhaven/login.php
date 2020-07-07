@@ -19,7 +19,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
 </head>
 <body>
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
@@ -51,7 +50,7 @@
 	  
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
 		<div class="container" style="background: #171717;border-radius: 16px;">
-			<form method='post' action='../data_game/announce.php' style="text-align: center;" enctype="multipart/form-data">
+			<form method='post' style="text-align: center;">
                 <p class="contactUs" >Login</p>
                 
 				<div class="form-group col-lg-12">
@@ -62,7 +61,7 @@
 					</div>
 				</div>
 				<div class="form-group col-lg-12">
-					<input name="password" type="text" required ></input>
+					<input name="password" type="password" required ></input>
 					<span class="floating-label">Password</span>
 				</div>
 				
