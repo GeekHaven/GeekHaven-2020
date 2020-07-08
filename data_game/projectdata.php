@@ -6,7 +6,7 @@
 
 <?php
             if(isset($_POST['add_project'])){
-                $wingID = $_SESSION['wingID'];
+                $wingID = $_POST['wings'];
                 $member_id = $_SESSION['member_id'];
                 if($wingID!=''&$member_id!=''){
                     $project_name = $_POST['project_name'];

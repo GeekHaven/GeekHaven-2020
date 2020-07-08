@@ -5,9 +5,9 @@
     $t = $_SESSION['time'];
     if(isset($_COOKIE[$cookie_name])){
         if($_COOKIE[$cookie_name]==$t + ($t%2408) + $cookie_name){
-            echo "welcome Admin";
+            // echo "welcome Admin";
         }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
-            echo "welcome member";
+            // echo "welcome member";
         }else{
             header('location:login.php');
         }
@@ -58,29 +58,31 @@
 	  
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
 		<div class="container" style="background: #171717;border-radius: 16px;">
-			<form method='post' action='../data_game/announce.php' style="text-align: center;" enctype="multipart/form-data">
+			<form method='post' action='../data_game/projectdata.php' style="text-align: center;" enctype="multipart/form-data">
                 <p class="contactUs" >Add Project</p>
                 
-                <div class="form-group col-lg-11">
+                <div class="form-group col-lg-12">
                     <!-- <label>Wing</label> -->
                     <!-- <input name="wing" type="text" placeholder="Wing" required></input> -->
                         <div>
+                            
                             <select id="wings" name="wings" style="color: #707070;">
-                                <option>WebD</option>
-                                <option>AppD</option>
-                                <option>AI</option>
-                                <option>FOSS</option>
-                                <option>CyberSec</option>
-                                <option>Design</option>
-                                <option>CC</option>
+                            <?php
+                                $query = 'SELECT * FROM wings';
+                                $result = mysqli_query($connection,$query);
+                                while($row = mysqli_fetch_assoc($result)){
+                                    $wing_id =$row['wing_id'];
+                                    $wing =$row['wing'];
+                                ?>
+                                    <option value="<?php echo $wing_id; ?>"><?php echo $wing; ?></option>
+                                    <?php
+                                }
+                            ?>
 
                             </select>
                         </div>
                     </div>
 
-                    <div class="form-group form-button col-lg-1">             
-                        <button name="select_btn" type="submit" class="form-submit button" >Go</button>
-                    </div>   
 
 				<div class="form-group col-lg-12">
 					<input name="project_name" type="text" required></input>
@@ -97,15 +99,15 @@
 					</div> -->
 				</div> 
 				<div class="form-group col-lg-12">
-					<input name="pro_link" type="text" required ></input>
+					<input name="pro_link" type="text"  ></input>
 					<span class="floating-label">Project Link</span>
                 </div>
                 <div class="form-group col-lg-6">
-					<input name="blog_link" type="text" required ></input>
+					<input name="blog_link" type="text"  ></input>
 					<span class="floating-label">Blog Link</span>
                 </div>
                 <div class="form-group col-lg-6">
-					<input name="source_code" type="text" required ></input>
+					<input name="source_code" type="text"  ></input>
 					<span class="floating-label">Source Code Link</span>
 				</div>
 				<div class="form-group col-lg-12">

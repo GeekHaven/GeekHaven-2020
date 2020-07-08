@@ -31,6 +31,8 @@
 
 </head>
 <body>
+
+
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
         <div class="container-fullwidth">
           <a href="../index.html"><img class="nav-logo" src="../images/gh.png"></a>
@@ -57,25 +59,37 @@
 	  <style>
 		  
 	  </style>
+
+        <?php
+            $mem_id = $_SESSION['member_id'];
+            $query = "SELECT * FROM member WHERE member_id='$mem_id'";
+            $query_run = mysqli_query($connection,$query);
+            while($row = mysqli_fetch_assoc($query_run)){
+                $name =$row['name'];                
+                $roll =$row['roll_no'];
+                $image =$row['image'];
+                $des =$row['description']; 
+            }
+        ?>
 	  
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
 		<div class="container" style="background: #171717;border-radius: 16px;">
-			<form method='post'  style="text-align: center;" enctype="multipart/form-data">
+			<form method='post'  style="text-align: center;" enctype="multipart/form-data" action='../data_game/profileupdate.php'>
                 <p class="contactUs" >Update Profile</p> 
 
 				<div class="form-group col-lg-12">
-					<input name="name" type="text" required></input>
+					<input name="name" type="text" value="<?php echo $name;?>" required></input>
 					<span class="floating-label">Name</span>
 				</div>
 				<div class="form-group col-lg-12">
-					<textarea  name="description" type="text" ></textarea>
+					<textarea  name="description" type="text" ><?php echo $des;?></textarea>
 					<span class="floating-label">Description</span>
 					<!-- <div>
 						<small id="hint_id_username" class="form-text text-muted">*Describe The Event</small>
 					</div> -->
 				</div> 
 				<div class="form-group col-lg-12">
-					<input name="roll_no" type="text" required ></input>
+					<input name="roll_no" type="text" required value="<?php echo $roll;?>"></input>
 					<span class="floating-label">Roll Number</span>
 				</div>
 				<div class="form-group col-lg-12">

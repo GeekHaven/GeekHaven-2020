@@ -6,7 +6,7 @@
 
 <?php
             if(isset($_POST['add_blog'])){
-                $wingID = $_SESSION['wingID'];
+                $wingID = $_POST['wings'];
                 $member_id = $_SESSION['member_id'];
                 if($wingID!=''&$member_id!=''){
                     $blog_title = $_POST['blog_title'];
