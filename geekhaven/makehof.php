@@ -71,7 +71,7 @@
                         $res = mysqli_fetch_assoc($query_run);
                         $name =$res['name'];
                         ?>
-                        <option value="<?php echo $member_id; ?>"><?php echo $name; ?></option>
+                        <option value="<?php echo $member_id; ?>"><?php if($name){echo $name;}else{echo "Name Not Available";} ?></option>
                         <?php
                     }
                 ?>
@@ -100,7 +100,8 @@
                         $name =$row['name'];
                         $hof_value =$row['hof'];
                         ?>
-                        <label style="color:white;"><?php echo $name; echo ' : '; ;?></label>
+                        <label style="color:white;"><?php if($name){echo $name;}else{echo "Name Not Available";} echo ' : '; ;?></label>
+
                         <?php if($hof_value){
                             echo "HOF";
                         }else{

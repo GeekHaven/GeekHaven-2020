@@ -106,7 +106,7 @@
                         
                         ?>
                         <br>
-                        <label><?php echo $name; echo ' : '; ;?></label>
+                        <label><?php if($name){echo $name;}else{echo 'Name Not Available';} echo ' : '; ;?></label>
                         <?php if($admin_value){
                             echo "Admin";
                         }else{
@@ -115,9 +115,7 @@
                         <?php
                     }
                 ?>
-    <form method= 'post' action='home.php'>
-        <input type='submit' value='home'>
-    </form>
+
         </div>   
 
         

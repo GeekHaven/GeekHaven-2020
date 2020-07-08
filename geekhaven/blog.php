@@ -90,7 +90,7 @@
 					</div>
 				</div>
 				<div class="form-group col-lg-12">
-					<textarea  name="details" type="text" ></textarea>
+					<textarea  name="description" type="text" ></textarea>
 					<span class="floating-label">Description</span>
 					<!-- <div>
 						<small id="hint_id_username" class="form-text text-muted">*Describe The Event</small>

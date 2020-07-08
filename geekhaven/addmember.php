@@ -126,8 +126,9 @@
                                 $query_run = mysqli_query($connection,$query);
                                 $res = mysqli_fetch_assoc($query_run);
                                 $name =$res['name'];
+                                $memID = $res['member_id'];
                                 ?>
-                                <option value="<?php echo $name; ?>"><?php if($name){echo $name;}else{echo 'NOT AVAILABLE';} ?></option>
+                                <option value="<?php echo $memID; ?>"><?php if($name){echo $name;}else{echo 'NOT AVAILABLE';} ?></option>
                                 <?php
                             }
                         ?>
@@ -148,8 +149,9 @@
                             $result = mysqli_query($connection,$query);
                             while($row = mysqli_fetch_assoc($result)){
                                 $name =$row['name'];
+                                $past_mem_id = $row['member_id'];
                                 ?>
-                                <option value="<?php echo $name; ?>"><?php if($name){echo $name;}else{echo 'NOT AVAILABLE';} ?></option>
+                                <option value="<?php echo $past_mem_id; ?>"><?php if($name){echo $name;}else{echo 'NOT AVAILABLE';} ?></option>
                                 <?php
                             }
                         ?>

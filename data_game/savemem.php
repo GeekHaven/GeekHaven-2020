@@ -8,10 +8,8 @@
                 $username = $_POST['username'];
                 $pass = $_POST['password'];
                 $cpass = $_POST['cpassword'];
-                $mem_post = $_POST['mem_post'];
                 $sess = $_POST['session'];
                 $wing = $_POST['wing'];
-                $image = $_POST['image'];
                 // $_SESSION['member_id'] = time()*1000;
                 // $member_id = $_SESSION['id'];
                 $member_id = time()*1000;
@@ -31,7 +29,7 @@
                     }else{
                         $query = "INSERT INTO social_handles VALUES('$social_handle_id','','','','','','','','','','')";
                         $query_run = mysqli_query($connection,$query);                             
-                        $query = "INSERT INTO member VALUES ('', '', '', '', '$member_id', '', '$social_handle_id', '$cred_id', '$mem_post', '$wing', '$sess')";
+                        $query = "INSERT INTO member VALUES ('', '', '', '', '$member_id', '0', '$social_handle_id', '$cred_id', '$mem_post', '$wing', '$sess')";
                         $query_run = mysqli_query($connection,$query);     
                         $query = "INSERT INTO credentials VALUES('$cred_id','$username','$pass','0','$member_id')";
                         $query_run = mysqli_query($connection,$query);
@@ -41,8 +39,8 @@
             }
 
             if(isset($_POST['select_mem_btn'])){
-                $name = $_POST['members'];
-                $query = "SELECT * FROM member WHERE `name`='$name'";
+                $memID = $_POST['members'];
+                $query = "SELECT * FROM member WHERE `member_id`='$memID'";
                 $query_run = mysqli_query($connection,$query);
                 if(mysqli_num_rows($query_run)>0){
                     while($row = mysqli_fetch_assoc($query_run)){
@@ -62,7 +60,7 @@
                     $query = "DELETE FROM credentials WHERE `credentialsID`='$cred_id'";
                     $query_run = mysqli_query($connection,$query);
                     
-                    $query = "DELETE FROM member WHERE `name`='$name'";
+                    $query = "DELETE FROM member WHERE `member_id`='$memID'";
                     $query_run = mysqli_query($connection,$query);
 
                     $query = "INSERT INTO past_members VALUES ('$name', '$roll_no', '$image', '$des', '$member_id', '$hof', '$social_handles', '$post', '$wing', '$session')";
@@ -76,8 +74,18 @@
             }
 
             if(isset($_POST['remove_past_mem_btn'])){
-                $name = $_POST['past_members'];
-                $query = "DELETE FROM past_members WHERE `name`='$name'";
+                $past_mem_id = $_POST['past_members'];
+                $query = "SELECT * FROM past_members WHERE `member_id`='$past_mem_id'";
+                $query_run = mysqli_query($connection,$query);
+                if(mysqli_num_rows($query_run)>0){
+                    while($row = mysqli_fetch_assoc($query_run)){
+                        $handle_id = $row['social_handles'];
+                    }
+                }
+                $query = "DELETE FROM past_members WHERE `member_id`='$past_mem_id'";
+                $query_run = mysqli_query($connection,$query);
+
+                $query = "DELETE FROM social_handles WHERE `social_handles_id`='$handle_id'";
                 $query_run = mysqli_query($connection,$query);
                 header('location:../geekhaven/addmember.php');
             }
