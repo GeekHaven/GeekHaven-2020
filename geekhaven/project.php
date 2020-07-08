@@ -119,15 +119,29 @@
 					<button name="add_project" type="submit" class="form-submit button" >Add Project</button>
 				</div>   	
 			</form>
+
             <form method='post' action='../data_game/projectdata.php' style="text-align: center;">
-				<p class="contactUs" >Remove Project</p>
-				<select name="projects"></select>
-				<option selected="selected">Choose one</option>
-				<div class="form-group form-button">             
-					<button name="select_pro_btn" type="submit" class="form-submit button" >Remove</button>
-				</div>   
-				</select>
-            </form>                        
+                    <p class="contactUs" >Remove Project</p>
+                    <select name="projects">
+                    <option selected="selected">Choose one</option>
+                    <?php
+                        $query = 'SELECT * FROM Projects';
+                        $result = mysqli_query($connection,$query);
+                        while($row = mysqli_fetch_assoc($result)){
+                            $name =$row['project_name'];
+                            
+                            ?>
+                            <option value="<?php echo $name; ?>"><?php echo $name; ?></option>
+                            <?php
+                        }
+                    ?>
+                    </select>
+                    <div class="form-group form-button">             
+                        <button name="select_pro_btn" type="submit" class="form-submit button" >Remove</button>
+                    </div>   
+                    
+            </form>
+        </div>                      
         </div>   
 
         
