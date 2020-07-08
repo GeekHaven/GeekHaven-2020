@@ -62,39 +62,39 @@
                 <p class="contactUs" >Update Social Handles</p>
 
 				<div class="form-group col-lg-4">
-					<input name="git" type="text" required></input>
+					<input name="git" type="text" ></input>
 					<span class="floating-label">Github ID</span>
                 </div>
 				<div class="form-group col-lg-4">
-					<input name="mail" type="text" required></input>
+					<input name="mail" type="text" ></input>
 					<span class="floating-label">Mail ID</span>
                 </div> 
                 <div class="form-group col-lg-4">
-					<input name="face" type="text" required></input>
+					<input name="face" type="text" ></input>
 					<span class="floating-label">Facebook</span>
                 </div>
                 <div class="form-group col-lg-4">
-					<input name="insta" type="text" required></input>
+					<input name="insta" type="text" ></input>
 					<span class="floating-label">Codechef</span>
                 </div>
                 <div class="form-group col-lg-4">
-					<input name="force" type="text" required></input>
+					<input name="force" type="text" ></input>
 					<span class="floating-label">Codeforces</span>
                 </div>    
                 <div class="form-group col-lg-4">
-					<input name="in" type="text" required></input>
+					<input name="in" type="text" ></input>
 					<span class="floating-label">LinkedIn</span>
                 </div>
                 <div class="form-group col-lg-4">
-					<input name="rank" type="text" required></input>
+					<input name="rank" type="text" ></input>
 					<span class="floating-label">Hackerrank</span>
                 </div>     
                 <div class="form-group col-lg-4">
-					<input name="earth" type="text" required></input>
+					<input name="earth" type="text" ></input>
 					<span class="floating-label">Hackerearth</span>
 				</div>      
 				<div class="form-group col-lg-4">
-					<input name="twi" type="text" required ></input>
+					<input name="twi" type="text"  ></input>
 					<span class="floating-label">Twitter</span>
 				</div>
 				

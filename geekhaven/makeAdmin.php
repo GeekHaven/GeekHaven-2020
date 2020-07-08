@@ -56,7 +56,7 @@
 		  
 	  </style>
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
-        <div class="container" style="background: #171717;border-radius: 16px;color:white;">
+        <div class="container" style="background: #171717;border-radius: 16px;">
         <form method="post" >  
         <select name="admin">
             <option selected="selected" style="color:black;">Choose one</option>
