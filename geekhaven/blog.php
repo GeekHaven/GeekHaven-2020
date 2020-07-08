@@ -43,7 +43,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../../index.html">Home</a></li>
+              <li><a href="./home.php">Home</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#team">Team</a></li>
               <li><a href="#blogs">Blogs</a></li>
@@ -90,7 +90,7 @@
 					</div>
 				</div>
 				<div class="form-group col-lg-12">
-					<textarea  name="details" type="text" ></textarea>
+					<textarea  name="description" type="text" ></textarea>
 					<span class="floating-label">Description</span>
 					<!-- <div>
 						<small id="hint_id_username" class="form-text text-muted">*Describe The Event</small>

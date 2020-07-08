@@ -43,7 +43,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../../index.html">Home</a></li>
+              <li><a href="./home.php">Home</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#team">Team</a></li>
               <li><a href="#blogs">Blogs</a></li>
@@ -119,8 +119,6 @@
 					<button name="add_project" type="submit" class="form-submit button" >Add Project</button>
 				</div>   	
 			</form>
-          
-          
 
             <form method='post' action='../data_game/projectdata.php' style="text-align: center;">
                     <p class="contactUs" >Remove Project</p>
@@ -143,17 +141,10 @@
                     </div>   
                     
             </form>
-        </div>
+        </div>                      
+        </div>   
 
-        <form method='post' action='../data_game/projectdata.php' style="text-align: center;">
-				<p class="contactUs" >Remove Past Member</p>
-				<select name="projects"></select>
-				<option selected="selected">Choose one</option>
-				<div class="form-group form-button">             
-					<button name="select_pro_btn" type="submit" class="form-submit button" >Remove</button>
-				</div>   
-				</select>
-        </form>
+        
 
 		<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>

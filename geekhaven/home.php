@@ -43,7 +43,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../../index.html">Home</a></li>
+              <li><a href="./home.php">Home</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#team">Team</a></li>
               <li><a href="#blogs">Blogs</a></li>
@@ -56,7 +56,7 @@
       	  
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
         <div class="container" style="background: #171717;border-radius: 16px;">
-            <p class="contactUs" >Only officials :p</p>
+            <p class="contactUs" >Only officials</p>
         <form action='addmember.php' class="form-group col-lg-6">
             <input type="submit" value="Add/Remove Member" style="color: aliceblue;">
         </form>
@@ -64,21 +64,19 @@
         <form action='makeAdmin.php' class="form-group col-lg-6">
             <input type="submit" value="Add Admin" style="color: aliceblue;">
         </form>
-        <br>
-        <form action='makehof.php' class="form-group col-lg-12">
-            <input type="submit" value="Manage HOF" style="color: aliceblue;">
-        </form>
-        <br>
-
         <form action='updateProfile.php' class="form-group col-lg-12">
             <input type="submit" value="Update My Profile" style="color: aliceblue;">
         </form>
-        <br>
+        <form action='makehof.php' class="form-group col-lg-6">
+            <input type="submit" value="Manage HOF" style="color: aliceblue;">
+        </form>
+        <form action='social_handles.php' class="form-group col-lg-6">
+            <input type="submit" value="Social Handle" style="color: aliceblue;">
+        </form>
 
         <form action='wing.php' class="form-group col-lg-12">
             <input type="submit" value="wings" style="color: aliceblue;">
         </form>
-        <br>
         <form action='project.php' class="form-group col-lg-4">
             <input type="submit" value="Projects" style="color: aliceblue;">
         </form>
@@ -92,12 +90,13 @@
         <form action='announcement.php' class="form-group col-lg-4">
             <input type="submit" value="Announcements" style="color: aliceblue;">
         </form>
-
-        <br>
-
-        <form action='logout.php' class="form-group col-lg-12">
+        <div class="col-lg-4">
+        </div>
+        <form action='logout.php' class="form-group col-lg-4" style="">
             <input type="submit" value="Logout" style="color: aliceblue;">
         </form>
+        <div class="col-lg-4">
+        </div>
         </div>
         
 

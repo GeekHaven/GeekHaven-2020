@@ -43,7 +43,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../../index.html">Home</a></li>
+              <li><a href="./home.php">Home</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#team">Team</a></li>
               <li><a href="#blogs">Blogs</a></li>
@@ -55,46 +55,74 @@
 	  <style>
 		  
 	  </style>
+        <?php
+            $mem_id = $_SESSION['member_id'];
+            $query = "SELECT * FROM member WHERE member_id='$mem_id'";
+            $query_run = mysqli_query($connection,$query);
+            while($row = mysqli_fetch_assoc($query_run)){
+                $handle_id =$row['social_handles']; 
+            }
+            $query = "SELECT * FROM social_handles WHERE social_handles_id='$handle_id'";
+            $query_run = mysqli_query($connection,$query);
+            while($row = mysqli_fetch_assoc($query_run)){
+                $handle_id =$row['social_handles_id'];
+                $_SESSION['handleID'] = $handle_id;
+                $git = $row['github'];
+                $mail = $row['mail']; 
+                $face = $row['facebook']; 
+                $insta = $row['instagram']; 
+                $chef = $row['codechef']; 
+                $force = $row['codeforces']; 
+                $in = $row['linkedin']; 
+                $rank = $row['hackerrank'];
+                $earth = $row['hackerearth']; 
+                $twi = $row['twitter'];                  
+            }
+        ?>
 	  
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
 		<div class="container" style="background: #171717;border-radius: 16px;">
-			<form method='post' action='../data_game/announce.php' style="text-align: center;" enctype="multipart/form-data">
+			<form method='post' action='../data_game/handle.php' style="text-align: center;" enctype="multipart/form-data">
                 <p class="contactUs" >Update Social Handles</p>
 
 				<div class="form-group col-lg-4">
-					<input name="git" type="text" required></input>
+					<input name="git" type="text" value="<?php echo $git;?>"></input>
 					<span class="floating-label">Github ID</span>
                 </div>
 				<div class="form-group col-lg-4">
-					<input name="mail" type="text" required></input>
+					<input name="mail" type="text" value="<?php echo $mail;?>"></input>
 					<span class="floating-label">Mail ID</span>
                 </div> 
                 <div class="form-group col-lg-4">
-					<input name="face" type="text" required></input>
+					<input name="face" type="text" value="<?php echo $face;?>"></input>
 					<span class="floating-label">Facebook</span>
                 </div>
                 <div class="form-group col-lg-4">
-					<input name="insta" type="text" required></input>
+					<input name="insta" type="text" value="<?php echo $insta;?>"></input>
+					<span class="floating-label">Instagram</span>
+                </div>
+                <div class="form-group col-lg-4">
+					<input name="chef" type="text" value="<?php echo $chef;?>"></input>
 					<span class="floating-label">Codechef</span>
                 </div>
                 <div class="form-group col-lg-4">
-					<input name="force" type="text" required></input>
+					<input name="force" type="text" value="<?php echo $force;?>"></input>
 					<span class="floating-label">Codeforces</span>
                 </div>    
                 <div class="form-group col-lg-4">
-					<input name="in" type="text" required></input>
+					<input name="in" type="text" value="<?php echo $in;?>"></input>
 					<span class="floating-label">LinkedIn</span>
                 </div>
                 <div class="form-group col-lg-4">
-					<input name="rank" type="text" required></input>
+					<input name="rank" type="text" value="<?php echo $rank;?>"></input>
 					<span class="floating-label">Hackerrank</span>
                 </div>     
                 <div class="form-group col-lg-4">
-					<input name="earth" type="text" required></input>
+					<input name="earth" type="text" value="<?php echo $earth;?>"></input>
 					<span class="floating-label">Hackerearth</span>
 				</div>      
 				<div class="form-group col-lg-4">
-					<input name="twi" type="text" required ></input>
+					<input name="twi" type="text"  value="<?php echo $twi;?>"></input>
 					<span class="floating-label">Twitter</span>
 				</div>
 				
