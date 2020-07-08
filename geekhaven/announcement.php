@@ -125,6 +125,7 @@
 
 			<form method='post' action='../data_game/announce.php' style="text-align: center;">
 				<p class="contactUs" >Remove Announcement</p>
+
 				<select name="announcements">
 				<option selected="selected">Choose one</option>
 				<?php
@@ -144,6 +145,7 @@
 				</div>   
 				
 			</form>
+
           
         </div>   
 

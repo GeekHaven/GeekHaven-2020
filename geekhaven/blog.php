@@ -110,6 +110,7 @@
 				</div>   	
             </form>
             
+
             <form method='post' action='../data_game/saveblog.php' style="text-align: center;">
 				<p class="contactUs" >Remove Blog</p>
 				<select name="blogs">
@@ -129,6 +130,7 @@
 					<button name="select_blog_btn" type="submit" class="form-submit button" >Delete</button>
 				</div>   
 				
+
             </form>
           
         </div>   
