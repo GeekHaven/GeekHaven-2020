@@ -5,7 +5,7 @@
     $t = $_SESSION['time'];
     if(isset($_COOKIE[$cookie_name])){
         if($_COOKIE[$cookie_name]==$t + ($t%2408) + $cookie_name){
-            echo "welcome Admin";
+            // echo "welcome Admin";
         }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
             header('location:home.php');
         }else{

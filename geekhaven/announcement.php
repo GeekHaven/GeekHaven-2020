@@ -5,9 +5,9 @@
     $t = $_SESSION['time'];
     if(isset($_COOKIE[$cookie_name])){
         if($_COOKIE[$cookie_name]==$t + ($t%2408) + $cookie_name){
-            echo "welcome Admin";
+            // echo "welcome Admin";
         }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
-            echo "welcome member";
+            // echo "welcome member";
         }else{
             header('location:login.php');
         }
@@ -119,7 +119,7 @@
 				</div>
 				
 				<div class="form-group form-button">             
-					<button name="add_btn" type="submit" class="form-submit button" >Submit</button>
+					<button name="submit" type="submit" class="form-submit button" >Submit</button>
 				</div>   	
 			</form>
           

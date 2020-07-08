@@ -12,11 +12,12 @@
             $query = "SELECT * FROM wings WHERE wing='$wing'" ;
             $query_run = mysqli_query($connection,$query);       
             if(mysqli_num_rows($query_run)>0){
+                echo $wing;
                 echo 'WING ALREADY EXIST';
             }else{
                 $query = "INSERT INTO wings VALUES('$wing_id','$wing','$info','$logo')" ;
                 $query_run = mysqli_query($connection,$query); 
-                // header('location:../geekhaven/wing.php'); 
+                header('location:../geekhaven/wing.php'); 
             }   
         }
 

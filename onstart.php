@@ -1,7 +1,7 @@
 <?php
     $connection = mysqli_connect("localhost","root","");
     mysqli_query($connection,"CREATE DATABASE geekhav") ;
-    mysqli_select_db($connection,'geekhave');
+    mysqli_select_db($connection,'geekhav');
     $query = "CREATE TABLE social_handles (
         `social_handles_id` varchar(255),
         `github` varchar(255),
@@ -117,6 +117,18 @@
         `attachment`varchar(255),        
         `image` blob,        
         FOREIGN KEY (member_id) REFERENCES member(member_id)
+    );";
+
+    mysqli_query($connection,$query) ;
+
+    $query = "CREATE TABLE contact (
+        `made_on` varchar(255),
+        `first_name` varchar(255),
+        `last_name`varchar(255),
+        `description`varchar(255),        
+        `email`varchar(255),        
+        `mobile`varchar(255),        
+        `gender`varchar(255)               
     );";
 
     mysqli_query($connection,$query) ;

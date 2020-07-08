@@ -1,3 +1,21 @@
+<?php
+    require "../database/wingsdb.php";    
+    session_start();
+    $cookie_name = $_SESSION['member_id'];
+    $t = $_SESSION['time'];
+    if(isset($_COOKIE[$cookie_name])){
+        if($_COOKIE[$cookie_name]==$t + ($t%2408) + $cookie_name){
+            // echo "welcome Admin";
+        }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
+            // echo "welcome member";
+        }else{
+            header('location:login.php');
+        }
+    }else{
+        header('location:login.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,14 +58,14 @@
 	  </style>
       <section class="form" style="margin-top: 200px;margin-bottom: 50px;">
         <div class="container" style="background: #171717;border-radius: 16px;">
-          <form method="post" action='../data_game/savemem.php' style="text-align: center;">
+          <form method="post" action='../data_game/savewing.php' style="text-align: center;" enctype="multipart/form-data">
             <p class="contactUs" >Add Wing</p>
 			<div class="form-group col-lg-12">
 				<input type="text" name="wing" required></input>
 				<span class="floating-label">Wing Name</span>
 			</div>
 			<div class="form-group col-lg-12">
-				<textarea  name="wing" ></textarea>
+				<textarea  name="info" ></textarea>
 				<span class="floating-label">Information</span>
 				
 			</div> 
