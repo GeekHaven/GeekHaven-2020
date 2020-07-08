@@ -122,6 +122,28 @@
 					<button name="submit" type="submit" class="form-submit button" >Submit</button>
 				</div>   	
 			</form>
+
+			<form method='post' action='../data_game/announce.php' style="text-align: center;">
+				<p class="contactUs" >Remove Announcement</p>
+				<select name="announcements">
+				<option selected="selected">Choose one</option>
+				<?php
+					$query = 'SELECT * FROM announcements';
+					$result = mysqli_query($connection,$query);
+					while($row = mysqli_fetch_assoc($result)){
+						$name =$row['name'];
+						
+						?>
+						<option value="<?php echo $name; ?>"><?php echo $name; ?></option>
+						<?php
+					}
+            	?>
+				</select>
+				<div class="form-group form-button">             
+					<button name="select_btn" type="submit" class="form-submit button" >Delete</button>
+				</div>   
+				
+			</form>
           
         </div>   
 
