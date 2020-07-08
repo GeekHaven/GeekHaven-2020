@@ -101,6 +101,7 @@
                         $hof_value =$row['hof'];
                         ?>
                         <label style="color:white;"><?php if($name){echo $name;}else{echo "Name Not Available";} echo ' : '; ;?></label>
+
                         <?php if($hof_value){
                             echo "HOF";
                         }else{

@@ -123,6 +123,7 @@
 				</div>      
 				<div class="form-group col-lg-4">
 					<input name="twi" type="text"  value="<?php echo $twi;?>"></input>
+
 					<span class="floating-label">Twitter</span>
 				</div>
 				
