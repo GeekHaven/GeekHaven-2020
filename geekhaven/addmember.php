@@ -94,7 +94,7 @@
 			</div>
 			<div class="form-group col-lg-6">
 					<select name="wing" style="color: #707070;">
-          <option selected="selected">Choose one</option>
+          <option selected="selected">Choose one Wing</option>
                 <?php
                     $query = 'SELECT * FROM wings';
                     $result = mysqli_query($connection,$query);
@@ -106,6 +106,7 @@
                     }
                 ?>
 					</select>
+                    
 				</div>
 			<div class="form-group form-button col-lg-12">             
 				<button name="add_btn" type="submit" class="form-submit button" >Add Member</button>

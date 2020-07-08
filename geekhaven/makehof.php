@@ -57,7 +57,9 @@
 	  </style>
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
         <div class="container" style="background: #171717;border-radius: 16px;">
-        <form method="post" style="color:white;">  
+        <form method="post">  
+        <div class="row" style="padding-top:50px;">
+        <div class="form-group form-button col-lg-11">
         <select name="hof">
             <option selected="selected">Choose one</option>
                 <?php
@@ -75,9 +77,14 @@
                         <?php
                     }
                 ?>
-                <br>
-            <input name="select_mem_btn" type="submit" value="Go"> </input><br>   
+            
+            
         </select>
+        </div>
+        <div class="form-group form-button col-lg-1">             
+			<button name="select_mem_btn" type="submit" class="form-submit button" >Go</button>
+		</div>  
+        </div>
     </form>
     <?php
     if(isset($_POST['select_mem_btn'])){
@@ -85,9 +92,14 @@
         $_SESSION['hof_mem_id'] = $memID;
         ?>
         <form method='post' style="color:white;" action='../data_game/hof.php'>
-        <label>HOF Value</label>
-        <input name='hof_value' type='text' placeholder='0/1'></input>
-        <input name='hof_btn' type='submit' value='save'></input>
+        <div class="row" style="padding-top:50px;">
+            <div class="form-group form-button col-lg-11">
+                <input name='hof_value' type='text' placeholder='HOF Value(0/1)'></input>
+            </div>
+            <div class="form-group form-button col-lg-1">             
+                <button name="hof_btn" type="submit" class="form-submit button" >SAVE</button>
+            </div>  
+        </div>
         </form>
         <?php
     }
@@ -111,7 +123,11 @@
                     }
                 ?>
     <form method= 'post' style="color:white;" action='home.php'>
-        <input type='submit' value='home'>
+        <div class="row">
+        <div class="form-group form-button col-lg-12">             
+			<button name="add_btn" type="submit" class="form-submit button" >home</button>
+		</div>  
+        </div>
     </form>
             
         </div>

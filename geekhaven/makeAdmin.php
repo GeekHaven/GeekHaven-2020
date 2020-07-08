@@ -58,26 +58,34 @@
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
         <div class="container" style="background: #171717;border-radius: 16px;">
         <form method="post" >  
-        <select name="admin">
-            <option selected="selected" style="color:black;">Choose one</option>
-                <?php
-                    $query = 'SELECT * FROM credentials';
-                    $result = mysqli_query($connection,$query);
-                    while($row = mysqli_fetch_assoc($result)){
-                        $member_id =$row['member_id'];
-                        $cred_id = $row['credentialsID'];
-                        $query = "SELECT * FROM member WHERE `member_id`='$member_id'";
-                        $query_run = mysqli_query($connection,$query);
-                        $res = mysqli_fetch_assoc($query_run);
-                        $name =$res['name'];
-                        ?>
-                        <option value="<?php echo $cred_id; ?>"><?php echo $name; ?></option>
-                        <?php
-                    }
-                ?>
-                <br>
-            <input name="select_mem_btn" type="submit" value="Go"> </input><br>   
-        </select>
+        
+        <div class="row" style="padding-top:50px;">
+        <div class="form-group form-button col-lg-11"> 
+            <select name="admin">
+                <option selected="selected" style="color:black;">Choose one</option>
+                    <?php
+                        $query = 'SELECT * FROM credentials';
+                        $result = mysqli_query($connection,$query);
+                        while($row = mysqli_fetch_assoc($result)){
+                            $member_id =$row['member_id'];
+                            $cred_id = $row['credentialsID'];
+                            $query = "SELECT * FROM member WHERE `member_id`='$member_id'";
+                            $query_run = mysqli_query($connection,$query);
+                            $res = mysqli_fetch_assoc($query_run);
+                            $name =$res['name'];
+                            ?>
+                            <option value="<?php echo $cred_id; ?>"><?php echo $name; ?></option>
+                            <?php
+                        }
+                    ?>
+                    <br> 
+            </select>
+        </div>
+        <div class="form-group form-button col-lg-1">             
+			<button name="select_mem_btn" type="submit" class="form-submit button" >Go</button>
+		</div> 
+        </div>
+        
     </form>
     <?php
     if(isset($_POST['select_mem_btn'])){
@@ -85,9 +93,15 @@
         $_SESSION['admin_cred_id'] = $credID;
         ?>
         <form method='post' action='../data_game/admin.php'>
-        <label>Admin Value</label>
-        <input name='admin_value' type='text' placeholder='0/1'></input>
-        <input name='admin_btn' type='submit' value='save'></input>
+        <div class="row">
+        <div class="form-group form-button col-lg-11">             
+            <input name='admin_value' type='text' placeholder='Admin Value (0/1)'></input>
+		</div> 
+        <div class="form-group form-button col-lg-1">             
+			<button name="admin_btn" type="submit" class="form-submit button" >SAVE</button>
+		</div> 
+        </div>
+        
         </form>
         <?php
     }
