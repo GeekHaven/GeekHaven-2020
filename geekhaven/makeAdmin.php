@@ -59,7 +59,7 @@
         <div class="container" style="background: #171717;border-radius: 16px;color:white;">
         <form method="post" >  
         <select name="admin">
-            <option selected="selected">Choose one</option>
+            <option selected="selected" style="color:black;">Choose one</option>
                 <?php
                     $query = 'SELECT * FROM credentials';
                     $result = mysqli_query($connection,$query);
