@@ -108,7 +108,17 @@
 				<div class="form-group form-button">             
 					<button name="add_blog" type="submit" class="form-submit button" >Add Blog</button>
 				</div>   	
-			</form>
+            </form>
+            
+            <form method='post' action='../data_game/blog.php' style="text-align: center;">
+				<p class="contactUs" >Remove Announcement</p>
+				<select name="blogs"></select>
+				<option selected="selected">Choose one</option>
+				<div class="form-group form-button">             
+					<button name="select_blog_btn" type="submit" class="form-submit button" >Delete</button>
+				</div>   
+				</select>
+            </form>
           
         </div>   
 
