@@ -1,18 +1,11 @@
 <?php
     require "../database/member_info.php";
+
     session_start();
-    $cookie_name = $_SESSION['member_id'];
-    $t = $_SESSION['time'];
-    if(isset($_COOKIE[$cookie_name])){
-        if($_COOKIE[$cookie_name]==$t + ($t%2408) + $cookie_name){
-            // echo "welcome Admin";
-        }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
-            header('location:home.php');
-        }else{
-            header('location:login.php');
-        }
-    }else{
-        header('location:login.php');
+    include 'auth.php';
+    $res = callCheck();
+    if($res<1){
+        header('location:login.php');        
     }
 ?>
 <!DOCTYPE html>
@@ -95,7 +88,7 @@
         <form method='post' action='../data_game/admin.php'>
         <div class="row">
         <div class="form-group form-button col-lg-11">             
-            <input name='admin_value' type='text' placeholder='Admin Value (0/1)'></input>
+            <input name='admin_value' type='text' placeholder='Admin Value (0/1/2)'></input>
 		</div> 
         <div class="form-group form-button col-lg-1">             
 			<button name="admin_btn" type="submit" class="form-submit button" >SAVE</button>
@@ -121,8 +114,11 @@
                         ?>
                         <br>
                         <label><?php if($name){echo $name;}else{echo 'Name Not Available';} echo ' : '; ;?></label>
-                        <?php if($admin_value){
-                            echo "Admin";
+                        <?php 
+                        if($admin_value == '2'){
+                            echo "Overall Coordinator";
+                        }else if($admin_value == '1'){
+                            echo "Coordinator";
                         }else{
                             echo "Member";
                         } ?>
