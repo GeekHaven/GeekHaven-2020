@@ -1,6 +1,14 @@
 
+<br/>
+<p align="left">
+    <a href="#" target="_blank">
+        <img width="8%" src="https://raw.githubusercontent.com/GeekHaven/GeekHaven-2020/adddaa8154f228b0f5edba0b8e2082cff5d8249a/images/gh.svg" alt="GH-logo">
+    </a>
+</p>
+
 # GeekHaven-2020
 A complete revamp of the official website of GeekHaven(IIIT-A)
+Don't forget to star ⭐ the project it helps us!
 
 ## 💻 Live-Link
 [GeekHaven](https://geekhaven.github.io/GeekHaven-2020/)
@@ -14,6 +22,7 @@ A complete revamp of the official website of GeekHaven(IIIT-A)
 - Setup
 - Brief Repo Strucutre
 - Frontend Frameworks
+- Schema
 - What Makes It Unique
 - Footnotes
 
@@ -88,24 +97,15 @@ Following CSS and Js frameworks/libraries are included in the project:
 P   -> Primary Key, F   -> Foreign Key<br>
 opt -> Optional
 
-
-
-
-
-
-
-
-
-
-
-
 ## 🧩 What Makes It Unique 
 The special thing about the 2020 Revamp project is that we're making the website dynamic, so that the data can be updated without hampering the code, simply by the use of some PHP and MySQL.
-### Dynamic listings
-Projects, Blogs, Announcements and even the PNGs and SVGs can be added/deleted/updated anytime.
+### CRUD functionality
+Projects, Blogs, Announcements and even the PNGs and SVGs can be created/read/updated/deleted anytime.
 ### Transfer of Authority
-During each session of GeekHaven it's members and coordis will have the authority to update/delete data dynamically with the help of their login credentials, which will be changed in the next session for its's members.
-### Theme Change functionality
+During each session of GeekHaven it's members and coordis will have the authority to update/delete data dynamically with the help of their login credentials, which will be changed in the next session for its's members, which will help not hampering the code anytime for data manipulation.
+### Hall of Fame
+Selected people with their achievements will be showcased with their projects/contests results.
+### Theme Toggle functionality
 A simple yet creative idea, you can toggle between dark and light mode in the website anytime, and your preference will be stored for future.
 
 ## ✒ Footnotes
