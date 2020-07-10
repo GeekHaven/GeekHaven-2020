@@ -1,19 +1,8 @@
 <?php
-    require "../database/wingsdb.php";    
+    require "../database/member_info.php";
     session_start();
-    $cookie_name = $_SESSION['member_id'];
-    $t = $_SESSION['time'];
-    if(isset($_COOKIE[$cookie_name])){
-        if($_COOKIE[$cookie_name]==$t + ($t%2408) + $cookie_name){
-            // echo "welcome Admin";
-        }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
-            // echo "welcome member";
-        }else{
-            header('location:login.php');
-        }
-    }else{
-        header('location:login.php');
-    }
+    include 'auth.php';
+    $res = callCheck();
 ?>
 
 <!DOCTYPE html>

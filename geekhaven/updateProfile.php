@@ -1,21 +1,10 @@
   
 <?php
     // include './addmember.php'
-    require "../database/member_info.php";    
+    require "../database/member_info.php";
     session_start();
-    $cookie_name = $_SESSION['member_id'];
-    $t = $_SESSION['time'];
-    if(isset($_COOKIE[$cookie_name])){
-        if($_COOKIE[$cookie_name]==$t + ($t%2408) + $cookie_name){
-
-        }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
-            
-        }else{
-            header('location:login.php');
-        }
-    }else{
-        header('location:login.php');
-    }
+    include 'auth.php';
+    $res = callCheck();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +54,7 @@
             $query = "SELECT * FROM member WHERE member_id='$mem_id'";
             $query_run = mysqli_query($connection,$query);
             while($row = mysqli_fetch_assoc($query_run)){
-                $name =$row['name'];                
+                $name =$row['name'];   
                 $roll =$row['roll_no'];
                 $image =$row['image'];
                 $des =$row['description']; 
