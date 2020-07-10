@@ -2,20 +2,20 @@
 # GeekHaven-2020
 A complete revamp of the official website of GeekHaven(IIIT-A)
 
-## Live-Link
+## 💻 Live-Link
 [GeekHaven](https://geekhaven.github.io/GeekHaven-2020/)
 
-## A snap of the site
-![](link to go here)
+## 📷 Few snaps of the site
+![](https://raw.githubusercontent.com/GeekHaven/GeekHaven-2020/master/images/Screenshot%20(85).png)
+![](https://raw.githubusercontent.com/GeekHaven/GeekHaven-2020/master/images/Screenshot%20(86).png)
 
-## Table of contents
-- [Dependencies](#🛠-Dependencies)
-- [Setup](#setup)
-- [Setup](#setup)
-- [Brief Repo Strucutre](#brief-repo-structure)
-- [Frontend Frameworks](#frontend-frameworks)
-- [What Makes It Unique](#what-makes-it-unique)
-- [Footnotes](#footnotes)
+## 🧾 Table of contents
+- Dependencies
+- Setup
+- Brief Repo Strucutre
+- Frontend Frameworks
+- What Makes It Unique
+- Footnotes
 
 
 ## 🛠 Dependencies
