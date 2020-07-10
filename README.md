@@ -69,6 +69,36 @@ Following CSS and Js frameworks/libraries are included in the project:
 - [Font-Awesome](https://fontawesome.com/6?next=%2F)
 - [Particle-Js](https://vincentgarreau.com/particles.js/)
 
+## 🏷 Schema
+| Login Credential   |  Social Handles  |   Member/Coordis  |     Projects     |     Blogs    |  Announcement |    Wing    |    Hall of Fame    | 
+|:------------------:|:----------------:|:-----------------:|:-----------------|:------------:|:-------------:|:----------:|:------------------:|
+| username           |  Github          | wing              | wing_id(F)       |  wing_id(F)  | name          | name       |  achievement       |  
+| password           |  Mail-Id         | post              | description      |  description |details        | info       |  project link(opt) | 
+| Admin Value(0/1)   |  Facebook        | session           | image            |  image       | date          | wing_id(P) |  member/coordi(F)  | 
+| cred_id(P)         |  Instagram(opt)  | cred_id(F)        | project link     |  blog link   | venue         | logo       |                    | 
+| member_id(F)       |  Codechef(opt)   | member_id(P)      | source code link |  member_id(F)| organizer     |            |                    | 
+|                    |  Codeforces(opt) | roll.no           | member_id(F)     |  blog title  |venue          |            |                    | 
+|                    |  LinkedIn        | image             | project name     |              |topic          |            |                    | 
+|                    |  Hackerearth(opt)| name              |                  |              | link(opt)     |            |                    | 
+|                    |  Hackerrank(opt) | description       |                  |              | image         |            |                    | 
+|                    |  Twitter(opt)    | social handles(F) |                  |              | made by(F)    |            |                    | 
+|                    |  table_id(P)     | HOF               |                  |              | attachment    |            |                    |
+|                    |  table_id(P)     | HOF               |                  |              | time          |            |                    | 
+
+P   -> Primary Key, F   -> Foreign Key<br>
+opt -> Optional
+
+
+
+
+
+
+
+
+
+
+
+
 ## 🧩 What Makes It Unique 
 The special thing about the 2020 Revamp project is that we're making the website dynamic, so that the data can be updated without hampering the code, simply by the use of some PHP and MySQL.
 ### Dynamic listings
