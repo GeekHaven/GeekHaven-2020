@@ -128,9 +128,11 @@
                                 $res = mysqli_fetch_assoc($query_run);
                                 $name =$res['name'];
                                 $memID = $res['member_id'];
-                                ?>
-                                <option value="<?php echo $memID; ?>"><?php if($name){echo $name;}else{echo 'NOT AVAILABLE';} ?></option>
-                                <?php
+                                if($memID != $_SESSION['member_id']){
+                                    ?>
+                                    <option value="<?php echo $memID; ?>"><?php if($name){echo $name;}else{echo 'NOT AVAILABLE';} ?></option>
+                                    <?php
+                                }
                             }
                         ?>
     
