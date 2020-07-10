@@ -83,14 +83,21 @@
         while($row = mysqli_fetch_assoc($result)){
             $wingname =$row['wing'];
             $winginfo =$row['info'];
-            $winglogo =$row['logo'];
+            $logo = base64_encode($row['logo']);
             ?>
             <div class="col-12 col-sm-6 col-md-4 margin-div-bottom">
 <!-- image -->
+                <img src="data:image/jpeg;base64,<?php echo $logo ?>" class="wing-image webd-card" style="width: 100px;"/>
                 <p class="wing-title">
                     <?php echo $wingname; ?>
                 </p>
-                <p class="wing-dis">
+                <p class="wing-dis" style="
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4; 
+                    height: 4.7em;
+                    -webkit-box-orient: vertical;">
                     <?php echo $winginfo; ?>
                 </p>
                 <a href="wings/webd/webd.html" class="more">More</a>
