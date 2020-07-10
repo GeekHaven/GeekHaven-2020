@@ -107,6 +107,8 @@ During each session of GeekHaven it's members and coordis will have the authorit
 Selected people with their achievements will be showcased with their projects/contests results.
 ### Theme Toggle functionality
 A simple yet creative idea, you can toggle between dark and light mode in the website anytime, and your preference will be stored for future.
+### Overall Theme
+Keeping in mind the aesthetic look of the website, the theme of website is **minimalist, unique and uniform**.
 
 ## ✒ Footnotes
 Aim of this project is to reduce the work for the upcoming years, so that the same website can be used without changing any piece of code, just simply update the members details dynamically and you're good to go.
