@@ -32,6 +32,18 @@ git clone  https://github.com/GeekHaven/GeekHaven-2020/
 ```
 Once downloaded, open the ```index.html``` file in your browser and you're good to go 🎉
 
+### For Database Setup
+
+* Copy and Paste all the folders in htdocs of Xampp.
+
+* For creating database and tables for the first time hit url `http://localhost:8080/gh_serverSide/onstart.php`.
+
+* There you will get a msg "database created".
+
+* A username='exUser' and password='exPass' will be created for login. 
+ 
+* Now head to `http://localhost:8080/gh_serverSide/geekhaven/login.php` for login.
+
 
 ## 📚 Brief Repo Structure
 ```
@@ -58,11 +70,13 @@ Following CSS and Js frameworks/libraries are included in the project:
 - [Particle-Js](https://vincentgarreau.com/particles.js/)
 
 ## 🧩 What Makes It Unique 
-The special thing about the 2020 Revamp project is that we're making the website dynamic, so that the data can be updated without hampering the code, simply by the use of some PHP and MySQL
+The special thing about the 2020 Revamp project is that we're making the website dynamic, so that the data can be updated without hampering the code, simply by the use of some PHP and MySQL.
 ### Dynamic listings
 Projects, Blogs, Announcements and even the PNGs and SVGs can be added/deleted/updated anytime.
 ### Transfer of Authority
-During each session of GeekHaven it's members and coordis will have the authority to update/delete data dynamically with the help of their login credentials, which will be changed in the next session for its's members
+During each session of GeekHaven it's members and coordis will have the authority to update/delete data dynamically with the help of their login credentials, which will be changed in the next session for its's members.
+### Theme Change functionality
+A simple yet creative idea, you can toggle between dark and light mode in the website anytime, and your preference will be stored for future.
 
 ## ✒ Footnotes
 Aim of this project is to reduce the work for the upcoming years, so that the same website can be used without changing any piece of code, just simply update the members details dynamically and you're good to go.
