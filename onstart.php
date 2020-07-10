@@ -69,8 +69,10 @@
     $query = "CREATE TABLE wings (
         `wing_id` varchar(255),
         `wing` varchar(255),
-        `info` varchar(255),
+        `info` varchar(2550),
         `logo`blob,
+        `link` varchar(255),
+        `image`blob, 
         PRIMARY KEY (wing_id)
     );";
 
