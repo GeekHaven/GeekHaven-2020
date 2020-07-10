@@ -71,8 +71,8 @@
         `wing` varchar(255),
         `info` varchar(2550),
         `logo`blob,
-        `link` varchar(255),
-        `image`blob, 
+        `image`blob,   
+        `web_link`varchar(255),             
         PRIMARY KEY (wing_id)
     );";
 
