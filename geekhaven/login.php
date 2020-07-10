@@ -1,6 +1,7 @@
 <?php
     require "../database/member_info.php";
     session_start();
+    error_reporting(0);
     $mem_id = $_SESSION['member_id'];
     $cookie_name = $mem_id;
     
