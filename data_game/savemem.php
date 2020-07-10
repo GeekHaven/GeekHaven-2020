@@ -29,7 +29,7 @@
                     }else{
                         $query = "INSERT INTO social_handles VALUES('$social_handle_id','','','','','','','','','','')";
                         $query_run = mysqli_query($connection,$query);                             
-                        $query = "INSERT INTO member VALUES ('$username', '', '', '', '$member_id', '0', '$social_handle_id', '$cred_id', '$mem_post', '$wing', '$sess')";
+                        $query = "INSERT INTO member VALUES ('$username', '', '', '', '$member_id', '0', '$social_handle_id', '$cred_id', 'member', '$wing', '$sess')";
                         $query_run = mysqli_query($connection,$query);     
                         $query = "INSERT INTO credentials VALUES('$cred_id','$username','$pass','0','$member_id')";
                         $query_run = mysqli_query($connection,$query);
