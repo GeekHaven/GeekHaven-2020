@@ -7,8 +7,10 @@
 </p>
 
 # GeekHaven-2020
-A complete revamp of the official website of GeekHaven(IIIT-A)
-Don't forget to star ⭐ the project it helps us!
+:star: Star us on GitHub — it helps!
+<br/>
+
+A complete revamp of the official website of GeekHaven(IIIT-A), with an aim for a dynamic and unique website that can be used in upcoming sessions too.
 
 ## 💻 Live-Link
 [GeekHaven](https://geekhaven.github.io/GeekHaven-2020/)
