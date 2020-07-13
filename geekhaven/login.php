@@ -86,7 +86,7 @@
                     $_SESSION['time'] = $time;
                     
                     $cookie_name = $mem_id;
-                    $cookie_value = $time+($time%2408)*($admin)+$mem_id;
+                    $cookie_value = $time+($time%2408)*($admin)+($time%2409)*($admin)+$mem_id;
                     setcookie($cookie_name,$cookie_value,time()+(86400*5));
                     echo $cookie_name;
                     echo $cookie_value;
