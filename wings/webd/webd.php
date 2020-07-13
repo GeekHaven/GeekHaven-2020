@@ -1,9 +1,37 @@
+<?php
+    require "../../database/member_info.php";
+    $wing = 'Web Development';
+    $wing_id = '1594022341000';
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <?php
+        $query = "SELECT * FROM wings WHERE `wing`='$wing'";
+        $result = mysqli_query($connection,$query);
+        while($row = mysqli_fetch_assoc($result)){
+            $wing = $row['wing'];
+            $info = $row['info'];
+            $logo = $row['logo'];
+            $image = $row['image'];
+            $link = $row['web_link'];
+        }
+
+    ?>
+</body>
+</html>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Web Development</title>
+    <title><?php echo $wing;?></title>
     <link rel="shortcut icon" href="../../images/gh.svg" type="image/png" />
     <link rel="stylesheet" href="webd.css" type="text/css">
     <link rel="stylesheet" href="../style.css" type="text/css">
@@ -40,11 +68,11 @@
 
       <div class="wrapper">
             <div class="intro-header col-sm-6">
-                <div class="heading main-heading">Web <br>Development</div>
-                <p class="intro-heading"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <div class="heading main-heading"><?php echo $wing?></div>
+                <p class="intro-heading"><?php echo $info;?>.</p>
             </div>
             <div class="webd-logo col-sm-6">
-                <img src="../../images/webdv2.svg">
+                <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?>
             </div>
       </div>
 
@@ -58,11 +86,42 @@
           ANNOU</span><span class="texta" style="color: #13F7D2;">N</span>CEMENTS
         </p>
         <hr class="line">
-
         <div class="ann-desc container-fluid">
           <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 event-1">
-              <div class="row">
+
+            <?php
+              $query = "SELECT * FROM announcements WHERE `organizer`='$wing'";
+
+              $result = mysqli_query($connection,$query);
+              while($row = mysqli_fetch_assoc($result)){
+                $ann_name = $row['name'];
+                $ann_info = $row['details'];
+                $venue = $row['venue'];
+                $date = $row['date'];
+                $image = $row['image'];
+                $link = $row['link'];
+                $time = $row['time'];
+                $topic = $row['topic'];
+                $details = $row['details'];
+                $image = $row['image'];
+                ?>
+                <div class="col-12 col-sm-12 col-md-6 event-1">
+                  <div class="row">
+                    <div class="col-md-4 event-date">
+                      <p class="blacktowhite">JUNE</p>
+                      <p class="number blacktowhite">21</p>
+                    </div>
+                    <div class="col-md-8 event-desc">
+                      <h1 class="whiteToBlack"><?php echo $ann_name;?></h1>
+                      <p class="whiteToBlack"><?php echo $ann_info;?>  .</p>
+                    </div>
+                  </div>
+                </div>
+                <?php
+              }
+            ?>
+            <!-- <div class="col-12 col-sm-12 col-md-6 event-1"> -->
+              <!-- <div class="row">
                 <div class="col-md-4 event-date">
                   <p class="blacktowhite">JUNE</p>
                   <p class="number blacktowhite">21</p>
@@ -72,19 +131,7 @@
                   <p class="whiteToBlack"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 event-1">
-              <div class="row">
-                <div class="col-md-4 event-date">
-                  <p class="blacktowhite">JUNE</p>
-                  <p class="number blacktowhite">21</p>
-                </div>
-                <div class="col-md-8 event-desc">
-                  <h1 class="whiteToBlack">Event Name</h1>
-                  <p class="whiteToBlack"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .</p>
-                </div>
-              </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -96,24 +143,41 @@
         <hr class="line">
 
         <section class="container title-cards">
-          <div class="col-12 col-sm-12 col-md-12" style="margin-top: 100px;"> 
-            <img src="../../images/circle.png" class="circle-card-1 c1" style="left: -90px;">
-              <div class="col-md-12 card-title">
-                <p class="whiteToBlack date">2020</p>
-                <hr class="line">
-                <h1 class="whiteToBlack">Title of the Project</h1>
-                <div class="col-md-6">
-                  <p class="card-text whiteToBlack">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button class="btn btn-default col-md-6 card-btn">
-                    <span class="blacktowhite">Link to the Project</span>
-                  </button>
+        <?php
+          $query = "SELECT * FROM Projects WHERE `wing_id`='$wing_id'";
+
+          $result = mysqli_query($connection,$query);
+          while($row = mysqli_fetch_assoc($result)){
+            // echo "lekfnlknddflkandlknalkdnalksnlkn";
+            $pro_name = $row['project_name'];
+            $pro_link = $row['project_link'];
+            $code = $row['source_code_link'];
+            $pro_des = $row['description'];
+            $pro_image = $row['image'];
+            $pro_blog_link = $row['blog_link'];
+            ?>
+            <div class="col-12 col-sm-12 col-md-12" style="margin-top: 100px;"> 
+              <img src="../../images/circle.png" class="circle-card-1 c1" style="left: -90px;">
+                <div class="col-md-12 card-title">
+                  <p class="whiteToBlack date">2020</p>
+                  <hr class="line">
+                  <h1 class="whiteToBlack"><?php echo $pro_name;?></h1>
+                  <div class="col-md-6">
+                    <p class="card-text whiteToBlack"><?php echo $pro_des;?>.</p>
+                    <button class="btn btn-default col-md-6 card-btn">
+                      <span class="blacktowhite">Link to the Project</span>
+                    </button>
+                  </div>
+
                 </div>
+            </div>            
+            <?php
+          }          
+        ?>
 
-              </div>
-          </div>
 
-          <div class="col-12 col-sm-12 col-md-12" style="margin-top: 100px;"> 
-            <img src="../../images/circle.png" class="circle-card-1 c2" style="left: 40%;">
+           <!-- <div class="col-12 col-sm-12 col-md-12" style="margin-top: 100px;"> 
+            <img src="../../images/circle.png" class="circle-card-1 c1" style="left: 40%;">
               <div class="col-md-12 card-title card-2">
                 <p class="whiteToBlack date" >2020</p>
                 <hr class="line">
@@ -138,10 +202,10 @@
                   <button class="btn btn-default col-md-6 card-btn">
                     <span class="blacktowhite">Link to the Project</span>
                   </button>
-                </div>
+                </div> -->
 
               </div>
-          </div>
+          </div> 
         </section>
     </div>
 
@@ -152,132 +216,137 @@
         <hr class="line">
           <div class="container-fluid">
               <div class="row">
-                <div class="col-12 col-sm-12 col-md-1">
-                  <img src="../../images/zigzag.png" class="zigzag-team">
-                </div>
-            
-                  <div class="col-12 col-sm-12 col-md-6 col-md-offset-2 coordi-div" style="padding:0px;">
-                    <div class="images-coordi">
-
-                    </div>
-                    <p class="coordi-name whiteToBlack">
-                      Mrigyen Sawant
-                    </p>
-                    <p class="coordi-post">
-                      COORDINATOR
-                    </p>
-                    <div class="overall-icon-div">
-                      <a href="#">
-                          <div class="overall-icon fb-icon">
-                              <i class="fa fa-facebook" aria-hidden="true"></i>
+                <?php
+                    $wing_name = "foss";
+                    $query = "SELECT * FROM member WHERE `wing`='$wing' AND `post`='coordinator'";
+                    $result = mysqli_query($connection,$query);
+                    while($row = mysqli_fetch_assoc($result)){
+                        $name = $row['name'];
+                        $roll_no = $row['roll_no'];
+                        $image = $row['image'];
+                        $des = $row['description'];
+                        $hof = $row['hof'];
+                        $social_id = $row['social_handles'];
+                        $query = "SELECT * FROM social_handles WHERE `social_handles_id`='$social_id'";
+                        $res = mysqli_query($connection,$query);
+                        while($data = mysqli_fetch_assoc($res)){
+                            $git = $data['github'];
+                            $mail = $data['mail'];
+                            $face = $data['facebook'];
+                            $insta = $data['instagram'];
+                            $chef = $data['codechef'];
+                            $force = $data['codeforces'];
+                            $linkedin = $data['linkedin'];
+                            $rank = $data['hackerrank'];
+                            $earth = $data['hackerearth'];
+                            $twi = $data['twitter'];
+                        }
+                        $sess = $row['session'];
+                        $post = $row['post'];
+                        ?>
+                          <div class="col-12 col-sm-12 col-md-1">
+                            <img src="../../images/zigzag.png" class="zigzag-team">
                           </div>
-                      </a>
-                      <a href="#">
-                          <div class="overall-icon">
-                              <i class="fa fa-twitter" aria-hidden="true"></i>
-                          </div>
-                      </a>
-                      <a href="#">
-                          <div class="overall-icon">
-                              <i class="fa fa-instagram" aria-hidden="true"></i>
-                          </div>
-                      </a>
                       
-                    </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-md-offset-2 coordi-div" style="padding:0px;">
+                              <div class="images-coordi">
+                              <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?>
+                              </div>
+                              <p class="coordi-name whiteToBlack">
+                                <?php echo $name?>
+                              </p>
+                              <p class="coordi-post">
+                                COORDINATOR
+                              </p>
+                              <div class="overall-icon-div">
+                                <a href="<?php echo $face;?>">
+                                    <div class="overall-icon fb-icon">
+                                        <i class="fa fa-facebook" aria-hidden="true" ></i>
+                                    </div>
+                                </a>
+                                <a href="<?php echo $twi;?>">
+                                    <div class="overall-icon">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                                <a href="<?php echo $insta;?>">
+                                    <div class="overall-icon">
+                                        <i class="fa fa-instagram" aria-hidden="true" href=""></i>
+                                    </div>
+                                </a>
+                                
+                              </div>
+                        <?php
+                    }
+                ?>
+
                   </div>
               </div>
               <div class="row">
-                <div class="col-12 col-sm-12 col-md-4 member-div">
-                  <div class="images-cover">
-                    <div class="images-member">
-                    </div>
-                  </div>
-                  
-                  <p class="coordi-name whiteToBlack">
-                    Tamoghno Bhattacharya
-                  </p>
-                  <p class="coordi-post">
-                    MEMBER
-                  </p>
-                  <div class="overall-icon-div">
-                    <a href="#">
-                        <div class="overall-icon fb-icon">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
+              <?php
+                    $wing_name = "foss";
+                    $query = "SELECT * FROM member WHERE `wing`='$wing' AND `post`='member'";
+                    $result = mysqli_query($connection,$query);
+                    while($row = mysqli_fetch_assoc($result)){
+                        $name = $row['name'];
+                        $roll_no = $row['roll_no'];
+                        $image = $row['image'];
+                        $des = $row['description'];
+                        $hof = $row['hof'];
+                        $social_id = $row['social_handles'];
+                        $query = "SELECT * FROM social_handles WHERE `social_handles_id`='$social_id'";
+                        $res = mysqli_query($connection,$query);
+                        while($data = mysqli_fetch_assoc($res)){
+                            $git = $data['github'];
+                            $mail = $data['mail'];
+                            $face = $data['facebook'];
+                            $insta = $data['instagram'];
+                            $chef = $data['codechef'];
+                            $force = $data['codeforces'];
+                            $linkedin = $data['linkedin'];
+                            $rank = $data['hackerrank'];
+                            $earth = $data['hackerearth'];
+                            $twi = $data['twitter'];
+                        }
+                        $sess = $row['session'];
+                        $post = $row['post'];
+                        ?>
+                        <div class="col-12 col-sm-12 col-md-4 member-div">
+                          <div class="images-cover">
+                            <div class="images-member">
+                            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?>
+                            </div>
+                          </div>
+                          
+                          <p class="coordi-name whiteToBlack">
+                            <?php echo $name?>
+                          </p>
+                          <p class="coordi-post">
+                            MEMBER
+                          </p>
+                          <div class="overall-icon-div">
+                            <a href="<?php echo $face;?>">
+                                <div class="overall-icon fb-icon">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <a href="<?php echo $twi;?>">
+                                <div class="overall-icon">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <a href="<?php echo $insta;?>">
+                                <div class="overall-icon">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                          </div>
                         </div>
-                    </a>
-                    <a href="#">
-                        <div class="overall-icon">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="overall-icon">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-4 member-div">
-                  <div class="images-cover">
-                    <div class="images-member">
-
-                    </div>
-                  </div>
-                  
-                  <p class="coordi-name whiteToBlack">
-                    Divyansh Rai
-                  </p>
-                  <p class="coordi-post">
-                    MEMBER
-                  </p>
-                  <div class="overall-icon-div">
-                    <a href="#">
-                        <div class="overall-icon fb-icon">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="overall-icon">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="overall-icon">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-4 member-div">
-                  <div class="images-cover">
-                    <div class="images-member">
-
-                    </div>
-                  </div>
-                  
-                  <p class="coordi-name whiteToBlack">
-                    Hardik Bhati
-                  </p>
-                  <p class="coordi-post">
-                    MEMBER
-                  </p>
-                  <div class="overall-icon-div">
-                    <a href="#">
-                        <div class="overall-icon fb-icon">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="overall-icon">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="overall-icon">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                  </div>
+                        <?php
+                        
+                    }
+              ?>
+                    
                 </div>
               </div>
             </div>
@@ -290,62 +359,34 @@
           <span>BL</span><span class="texta" style="color: #13F7D2;">O</span><span>GS</span>
         </p>
         <hr class="line">
-          <div class="row div-blog" style="display: flex;justify-content: space-evenly;margin-left: 0px;margin-right: 0px;">
-            <div class="col-12 col-sm-12 col-md-3 blog-div whiteToblackBg">
-            
-              <div class="images-blog blog-1" style="background-color: #D52B2B;">
-
+        <div class="row div-blog" style="display: flex;justify-content: space-evenly;margin-left: 0px;margin-right: 0px;">        
+        <?php
+          $query = "SELECT * FROM blogs WHERE `wing_id`='$wing_id' ";
+          $result = mysqli_query($connection,$query);
+          while($row = mysqli_fetch_assoc($result)){
+              $title = $row['blog_title'];
+              $des = $row['description'];
+              $image = $row['image'];
+              $link = $row['blog_link'];
+              ?>
+              <div class="col-12 col-sm-12 col-md-3 blog-div whiteToblackBg">
+              
+                <div class="images-blog blog-1" style="background-color: #D52B2B;">
+                <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?>
+                </div>
+                <p class="blog-heading whiteToBlack">
+                  <?php echo $title;?>
+                </p>
+              
+                <p class="blog-subtitle whiteToBlack">
+                  <?php echo $des;?>
+                </p>
+                <a class="more-blog texta" href=<?php echo $link?>>Read More</a>
               </div>
-              <p class="blog-heading whiteToBlack">
-                Blog-1
-              </p>
-            
-            <p class="blog-subtitle whiteToBlack">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-               when an unknown printer took a galley of type and scrambled it.
-            </p>
-            <a class="more-blog texta">Read More</a>
-          </div>
-          <div class="col-12 col-sm-12 col-md-3 blog-div whiteToblackBg">
-            
-              <div class="images-blog blog-2" style="background-color: #A823BD;">
-
-              </div>
-            
-            
-            <p class="blog-heading whiteToBlack">
-              Blog-2
-            </p>
-            <p class="blog-subtitle whiteToBlack">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-               when an unknown printer took a galley of type and scrambled it.
-            </p>
-            <a class="more-blog texta">Read More</a>
-
-          </div>
-          <div class="col-12 col-sm-12 col-md-3 blog-div whiteToblackBg">
-          
-              <div class="images-blog blog-3" style="background-color: #4C40D2;">
-
-              </div>
-            
-            
-            <p class="blog-heading whiteToBlack">
-              Blog-3
-            </p>
-            <p class="blog-subtitle whiteToBlack">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-               when an unknown printer took a galley of type and scrambled it.
-            </p>
-            <a class="more-blog texta">Read More</a>
-
-          </div>
-           
+              <?php
+          }
+        ?>
         </div>
-        
       </section>  
       <section class="footer" id="footer">
         <div class="row" style="margin-right: 0px;">
