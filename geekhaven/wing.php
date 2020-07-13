@@ -53,13 +53,19 @@
 				<input type="text" name="wing" required></input>
 				<span class="floating-label">Wing Name</span>
 			</div>
+      <div class="form-group col-lg-12">
+				<input type="text" name="link" required></input>
+				<span class="floating-label">Web Link</span>
+			</div>
 			<div class="form-group col-lg-12">
 				<textarea  name="info" ></textarea>
 				<span class="floating-label">Information</span>
-				
 			</div> 
 			<div class="form-group col-lg-12">]
 				<input accept="image/*" style="outline: none;" type="file" name="logo"/>
+			</div>
+      <div class="form-group col-lg-12">]
+				<input accept="image/*" style="outline: none;" type="file" name="image"/>
 			</div>
 			<div class="form-group form-button">             
 				<button name="add_btn" type="submit" class="form-submit button" >Add Wing</button>
@@ -73,20 +79,22 @@
           <div class="row">
             <div class="col-lg-12">
               <p class="contactUs" >Update/Remove Wing</p>
-              <select name="wings">
-              <option selected="selected">Choose one</option>
-                      <?php
-                          $query = 'SELECT * FROM wings';
-                          $result = mysqli_query($connection,$query);
-                          while($row = mysqli_fetch_assoc($result)){
-                              $wing_id =$row['wing_id'];
-                              $wing =$row['wing'];
-                              ?>
-                              <option value="<?php echo $wing_id; ?>"><?php echo $wing; ?></option>
-                              <?php
-                          }
-                      ?>
-                      </select>
+              <div class="form-group form-button">             
+                <select name="wings" style="color:#707070">
+                <option selected="selected">Choose one</option>
+                        <?php
+                            $query = 'SELECT * FROM wings';
+                            $result = mysqli_query($connection,$query);
+                            while($row = mysqli_fetch_assoc($result)){
+                                $wing_id =$row['wing_id'];
+                                $wing =$row['wing'];
+                                ?>
+                                <option value="<?php echo $wing_id; ?>"><?php echo $wing; ?></option>
+                                <?php
+                            }
+                        ?>
+                </select>
+        			</div> 
               <div class="form-group form-button">     
               <br>        
               <button name="select_btn" type="submit" class="form-submit button" >Delete</button>
@@ -99,12 +107,10 @@
             </form>
 
             <form method='post' action='../data_game/savewing.php' style="text-align: center;">
-              
                 <div class="form-group col-lg-12">
                   <input name="new_wing" type="text" required></input>
                   <span class="floating-label">Wing Name</span>
                 </div>
-
                 <div class="form-group col-lg-12">
                   <input name="new_info" type="text" required></input>
                   <span class="floating-label">Information</span>
@@ -120,8 +126,6 @@
                 <div class="form-group form-button">             
                   <button name="remove_btn" type="submit" class="form-submit button" >Remove Wing</button>
                 </div>   	
-
-
             </form>
 
         </div>   

@@ -68,7 +68,7 @@
 
       <div class="wrapper">
             <div class="intro-header col-sm-6">
-                <div class="heading main-heading"><?php echo $wing?></div>
+                <div class="heading main-heading"><?php echo $wing;?></div>
                 <p class="intro-heading"><?php echo $info;?>.</p>
             </div>
             <div class="webd-logo col-sm-6">
@@ -135,7 +135,6 @@
           </div>
         </div>
       </div>
-
       <div class="container-fluid title" id="projects">
         <p class="whiteToBlack">
           PR</span><span class="texta"  style="color: #13F7D2;">O</span>JECT
@@ -148,7 +147,6 @@
 
           $result = mysqli_query($connection,$query);
           while($row = mysqli_fetch_assoc($result)){
-            // echo "lekfnlknddflkandlknalkdnalksnlkn";
             $pro_name = $row['project_name'];
             $pro_link = $row['project_link'];
             $code = $row['source_code_link'];
@@ -164,9 +162,11 @@
                   <h1 class="whiteToBlack"><?php echo $pro_name;?></h1>
                   <div class="col-md-6">
                     <p class="card-text whiteToBlack"><?php echo $pro_des;?>.</p>
-                    <button class="btn btn-default col-md-6 card-btn">
-                      <span class="blacktowhite">Link to the Project</span>
-                    </button>
+                    <a href=<?php echo $pro_link ; ?>>
+                      <button class="btn btn-default col-md-6 card-btn">
+                        <span class="blacktowhite">Link to the Project</span>
+                      </button>
+                    </a>
                   </div>
 
                 </div>
@@ -247,11 +247,11 @@
                           <div class="col-12 col-sm-12 col-md-1">
                             <img src="../../images/zigzag.png" class="zigzag-team">
                           </div>
-                      
+                        
                             <div class="col-12 col-sm-12 col-md-6 col-md-offset-2 coordi-div" style="padding:0px;">
-                              <div class="images-coordi">
-                              <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?>
-                              </div>
+                              <!-- <div class="images-coordi"> -->
+                              <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="images-coordi"/>'; ?>
+                              <!-- </div> -->
                               <p class="coordi-name whiteToBlack">
                                 <?php echo $name?>
                               </p>
@@ -313,9 +313,9 @@
                         ?>
                         <div class="col-12 col-sm-12 col-md-4 member-div">
                           <div class="images-cover">
-                            <div class="images-member">
-                            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?>
-                            </div>
+                            <!-- <div class="images-member"> -->
+                            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"class="images-coordi"/>'; ?>
+                            <!-- </div> -->
                           </div>
                           
                           <p class="coordi-name whiteToBlack">
