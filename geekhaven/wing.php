@@ -68,6 +68,56 @@
                        
                        
           </form>
+
+          <form method='post' style="text-align: center;">
+            <p class="contactUs" >Update/Remove Wing</p>
+            <select name="wings">
+            <option selected="selected">Choose one</option>
+                    <?php
+                        $query = 'SELECT * FROM wings';
+                        $result = mysqli_query($connection,$query);
+                        while($row = mysqli_fetch_assoc($result)){
+                            $wing_id =$row['wing_id'];
+                            $wing =$row['wing'];
+                            ?>
+                            <option value="<?php echo $wing_id; ?>"><?php echo $wing; ?></option>
+                            <?php
+                        }
+                    ?>
+                    </select>
+            <div class="form-group form-button">             
+					<button name="select_btn" type="submit" class="form-submit button" >Delete</button>
+				</div>   
+				
+
+            </form>
+
+            <form method='post' action='../data_game/savewing.php' style="text-align: center;">
+              
+                <div class="form-group col-lg-12">
+                  <input name="new_wing" type="text" required></input>
+                  <span class="floating-label">Wing Name</span>
+                </div>
+
+                <div class="form-group col-lg-12">
+                  <input name="new_info" type="text" required></input>
+                  <span class="floating-label">Information</span>
+                </div> 
+
+                <div class="form-group col-lg-12">
+                  <input accept="image/*" style="outline: none;" type="file" name="new_logo"/>
+                </div>
+                
+                <div class="form-group form-button col-lg-6">             
+                  <button name="update_btn" type="submit" class="form-submit button" >Update Wing</button>
+                </div>  
+                <div class="form-group form-button">             
+                  <button name="remove_btn" type="submit" class="form-submit button" >Remove Wing</button>
+                </div>   	
+
+
+            </form>
+
         </div>   
 
         <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
