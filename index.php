@@ -192,11 +192,13 @@
             </p>
             <div class="overall-box-cover row">
             <?php
-                $query = 'SELECT * FROM credentials WHERE admin_value == "1" ';
-                $result = mysqli_query($connection,$query) ;
+                $admin_value='1';        
+                $query = "SELECT * FROM credentials WHERE admin_value=$admin_value ";
+                $result = mysqli_query($connection,$query);
+                
                 while($row = mysqli_fetch_assoc($result)){
                     $id =$row['member_id'];
-                    $query = 'SELECT * FROM member WHERE member_id == $id';
+                    $query = 'SELECT * FROM member WHERE member_id = $id';
                     $result = mysqli_query($connection,$query);
                     if($member_array = mysqli_fetch_assoc($result)){
                         $member = reset($member_array);
@@ -233,9 +235,7 @@
                         </div>            
                         <?php
                         }
-                    ?>
-                    
-                    <?php
+                       
                 }
             ?>
                 <div class="col-12 col-sm-6 overall-box">
