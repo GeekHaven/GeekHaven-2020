@@ -69,24 +69,30 @@
                        
           </form>
 
-          <form method='post' style="text-align: center;">
-            <p class="contactUs" >Update/Remove Wing</p>
-            <select name="wings">
-            <option selected="selected">Choose one</option>
-                    <?php
-                        $query = 'SELECT * FROM wings';
-                        $result = mysqli_query($connection,$query);
-                        while($row = mysqli_fetch_assoc($result)){
-                            $wing_id =$row['wing_id'];
-                            $wing =$row['wing'];
-                            ?>
-                            <option value="<?php echo $wing_id; ?>"><?php echo $wing; ?></option>
-                            <?php
-                        }
-                    ?>
-                    </select>
-            <div class="form-group form-button">             
-					<button name="select_btn" type="submit" class="form-submit button" >Delete</button>
+          <form method='post' class="container" style="text-align: center;">
+          <div class="row">
+            <div class="col-lg-12">
+              <p class="contactUs" >Update/Remove Wing</p>
+              <select name="wings">
+              <option selected="selected">Choose one</option>
+                      <?php
+                          $query = 'SELECT * FROM wings';
+                          $result = mysqli_query($connection,$query);
+                          while($row = mysqli_fetch_assoc($result)){
+                              $wing_id =$row['wing_id'];
+                              $wing =$row['wing'];
+                              ?>
+                              <option value="<?php echo $wing_id; ?>"><?php echo $wing; ?></option>
+                              <?php
+                          }
+                      ?>
+                      </select>
+              <div class="form-group form-button">     
+              <br>        
+              <button name="select_btn" type="submit" class="form-submit button" >Delete</button>
+            </div>
+          </div>
+            
 				</div>   
 				
 
