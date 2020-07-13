@@ -192,18 +192,20 @@
             </p>
             <div class="overall-box-cover row">
             <?php
-                $admin_value='1';        
+                $admin_value='2';        
                 $query = "SELECT * FROM credentials WHERE admin_value=$admin_value ";
                 $result = mysqli_query($connection,$query);
                 
                 while($row = mysqli_fetch_assoc($result)){
                     $id =$row['member_id'];
-                    $query = 'SELECT * FROM member WHERE member_id = $id';
+                    $query = "SELECT * FROM member WHERE member_id = $id";
                     $result = mysqli_query($connection,$query);
                     if($member_array = mysqli_fetch_assoc($result)){
-                        $member = reset($member_array);
+                        $member = $member_array;
                         $name = $member['name']; 
-                                
+                        $social=$member['social_handles'];    
+                        $querySocial = "SELECT * FROM social_handles WHERE social_handles_id = $social";
+                        $resultSocial = mysqli_query($connection,$querySocial);
                         ?>
                     
                         <div class="col-12 col-sm-6 overall-box">
@@ -214,24 +216,36 @@
                             <p class="overall-post">
                                 OVERALL COORDINATOR
                             </p>
-                            <div class="overall-icon-div">
-                                <a href="#">
-                                    <div class="overall-icon fb-icon">
-                                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="overall-icon">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="overall-icon">
-                                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                                    </div>
-                                </a>
-                                
-                            </div>
+                            
+                            <?php 
+                                if($social_array = mysqli_fetch_assoc($resultSocial)){
+                                    $fb=$social_array['facebook'];
+                                    $insta=$social_array['instagram'];
+                                    $twitter=$social_array['twitter'];
+                                    ?>
+                                    <div class="overall-icon-div">
+                                        <a href="<?php echo $fb; ?>">
+                                            <div class="overall-icon fb-icon">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </div>
+                                        </a>
+                                        <a href="<?php echo $twitter; ?>">
+                                            <div class="overall-icon">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </div>
+                                        </a>
+                                        <a href="<?php echo $insta; ?>">
+                                            <div class="overall-icon">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </div>
+                                        </a>
+                                            
+                                        </div>
+
+                                    <?php
+                                }
+                            ?>
+                                        
                         </div>            
                         <?php
                         }
