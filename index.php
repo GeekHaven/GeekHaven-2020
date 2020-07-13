@@ -191,6 +191,53 @@
                 Overall <br>Coordinators 
             </p>
             <div class="overall-box-cover row">
+            <?php
+                $query = 'SELECT * FROM credentials WHERE admin_value == "1" ';
+                $result = mysqli_query($connection,$query) ;
+                while($row = mysqli_fetch_assoc($result)){
+                    $id =$row['member_id'];
+                    $query = 'SELECT * FROM member WHERE member_id == $id';
+                    $result = mysqli_query($connection,$query);
+                    if($member_array = mysqli_fetch_assoc($result)){
+                        $member = reset($member_array);
+                        $name = $member['name']; 
+                                
+                        ?>
+                    
+                        <div class="col-12 col-sm-6 overall-box">
+                            <div class="overall-image"></div>
+                            <p class="overall-title">
+                                <?php echo $name; ?>
+                            </p>
+                            <p class="overall-post">
+                                OVERALL COORDINATOR
+                            </p>
+                            <div class="overall-icon-div">
+                                <a href="#">
+                                    <div class="overall-icon fb-icon">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="overall-icon">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="overall-icon">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                                
+                            </div>
+                        </div>            
+                        <?php
+                        }
+                    ?>
+                    
+                    <?php
+                }
+            ?>
                 <div class="col-12 col-sm-6 overall-box">
                     <div class="overall-image"></div>
                     <p class="overall-title">
