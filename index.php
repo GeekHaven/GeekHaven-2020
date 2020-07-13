@@ -83,6 +83,7 @@
         while($row = mysqli_fetch_assoc($result)){
             $wingname =$row['wing'];
             $winginfo =$row['info'];
+            $link =$row['link'];
             $logo = base64_encode($row['logo']);
             ?>
             <div class="col-12 col-sm-6 col-md-4 margin-div-bottom">
@@ -100,7 +101,7 @@
                     -webkit-box-orient: vertical;">
                     <?php echo $winginfo; ?>
                 </p>
-                <a href="wings/webd/webd.html" class="more">More</a>
+                <a href=<?php echo $link; ?> class="more">More</a>
             </div>
 
             <?php
