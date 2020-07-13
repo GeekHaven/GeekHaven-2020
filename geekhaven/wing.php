@@ -97,7 +97,7 @@
         			</div> 
               <div class="form-group form-button">     
               <br>        
-              <button name="select_btn" type="submit" class="form-submit button" >Delete</button>
+              <button name="select_btn" type="submit" class="form-submit button" >Go</button>
             </div>
           </div>
             
@@ -105,28 +105,45 @@
 				
 
             </form>
+            <?php
+            if(isset($_POST['select_btn'])){
+                $wingID = $_POST['wings'];
+                $query = "SELECT * FROM wings WHERE wing_id='$wingID'";
+                $query_run = mysqli_query($connection,$query);
+                while($row = mysqli_fetch_assoc($query_run)){
+                    $wing_id =$row['wing_id'];    
+                    $_SESSION['wingID'] = $wing_id;            
+                    $wing =$row['wing'];
+                    $info =$row['info'];
+                }
+                ?>
+                <form method='post' action='../data_game/savewing.php' style="text-align: center;">
+              
+                  <div class="form-group col-lg-12">
+                    <input name="new_wing" type="text"  value = "<?php echo $wing;?>"></input>
+                    <span class="floating-label">Wing Name</span>
+                  </div>
 
-            <form method='post' action='../data_game/savewing.php' style="text-align: center;">
-                <div class="form-group col-lg-12">
-                  <input name="new_wing" type="text" required></input>
-                  <span class="floating-label">Wing Name</span>
-                </div>
-                <div class="form-group col-lg-12">
-                  <input name="new_info" type="text" required></input>
-                  <span class="floating-label">Information</span>
-                </div> 
+                  <div class="form-group col-lg-12">
+                    <input name="new_info" type="text"  value = "<?php echo $info;?>"></input>
+                    <span class="floating-label">Information</span>
+                  </div> 
+                  
 
-                <div class="form-group col-lg-12">
-                  <input accept="image/*" style="outline: none;" type="file" name="new_logo"/>
-                </div>
-                
-                <div class="form-group form-button col-lg-6">             
-                  <button name="update_btn" type="submit" class="form-submit button" >Update Wing</button>
-                </div>  
-                <div class="form-group form-button">             
-                  <button name="remove_btn" type="submit" class="form-submit button" >Remove Wing</button>
-                </div>   	
-            </form>
+                  <div class="form-group col-lg-12">
+                    <input accept="image/*" style="outline: none;" type="file" name="new_logo"/>
+                  </div>
+                  
+                  <div class="form-group form-button col-lg-6">             
+                    <button name="update_btn" type="submit" class="form-submit button" >Update Wing</button>
+                  </div>  
+                  <div class="form-group form-button">             
+                    <button name="remove_btn" type="submit" class="form-submit button" >Remove Wing</button>
+                  </div>   	
+                </form>
+                <?php
+            }    
+            ?>
 
         </div>   
 
