@@ -61,11 +61,14 @@
 				<textarea  name="info" ></textarea>
 				<span class="floating-label">Information</span>
 			</div> 
-			<div class="form-group col-lg-12">]
+			<div class="form-group col-lg-12">
 				<input accept="image/*" style="outline: none;" type="file" name="logo"/>
+				<span class="floating-label">Logo</span>
+        
 			</div>
-      <div class="form-group col-lg-12">]
+      <div class="form-group col-lg-12">
 				<input accept="image/*" style="outline: none;" type="file" name="image"/>
+				<span class="floating-label">Image</span>        
 			</div>
 			<div class="form-group form-button">             
 				<button name="add_btn" type="submit" class="form-submit button" >Add Wing</button>
@@ -115,13 +118,19 @@
                     $_SESSION['wingID'] = $wing_id;            
                     $wing =$row['wing'];
                     $info =$row['info'];
+                    $web_link =$row['web_link'];                    
                 }
                 ?>
-                <form method='post' action='../data_game/savewing.php' style="text-align: center;">
+                <form method='post' action='../data_game/savewing.php' style="text-align: center;" enctype="multipart/form-data">
               
                   <div class="form-group col-lg-12">
                     <input name="new_wing" type="text"  value = "<?php echo $wing;?>"></input>
                     <span class="floating-label">Wing Name</span>
+                  </div>
+
+                  <div class="form-group col-lg-12">
+                    <input name="web_link" type="text"  value = "<?php echo $web_link;?>"></input>
+                    <span class="floating-label">Web Link</span>
                   </div>
 
                   <div class="form-group col-lg-12">
@@ -132,8 +141,14 @@
 
                   <div class="form-group col-lg-12">
                     <input accept="image/*" style="outline: none;" type="file" name="new_logo"/>
+                    <span class="floating-label">Logo</span>
                   </div>
-                  
+
+                  <div class="form-group col-lg-12">
+                    <input accept="image/*" style="outline: none;" type="file" name="image"/>
+                    <span class="floating-label">Image</span>
+                  </div>
+
                   <div class="form-group form-button col-lg-6">             
                     <button name="update_btn" type="submit" class="form-submit button" >Update Wing</button>
                   </div>  

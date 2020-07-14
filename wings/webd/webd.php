@@ -155,7 +155,8 @@
             $pro_blog_link = $row['blog_link'];
             ?>
             <div class="col-12 col-sm-12 col-md-12" style="margin-top: 100px;"> 
-              <img src="../../images/circle.png" class="circle-card-1 c1" style="left: -90px;">
+            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $pro_image ).'" class="circle-card-1 c1" style="left: -90px;"/>'; ?>
+
                 <div class="col-md-12 card-title">
                   <p class="whiteToBlack date">2020</p>
                   <hr class="line">
