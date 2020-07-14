@@ -27,9 +27,13 @@
             $wing_id = $_SESSION['wingID'];
             $wing = $_POST['new_wing'];
             $info = $_POST['new_info'];
-            $n_logo = addslashes(file_get_contents($_FILES['new_logo']['tmp_name']));
+            $web_link = $_POST['web_link'];
             
-            $query = "UPDATE wings SET `wing`='$wing',`info`='$info',`logo`='$n_logo' WHERE `wing_id`='$wing_id'" ;  
+            $n_logo = addslashes(file_get_contents($_FILES['new_logo']['tmp_name']));
+            $n_image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+            
+            
+            $query = "UPDATE wings SET `wing`='$wing',`info`='$info',`logo`='$n_logo',`image`='$n_image',`web_link`='$web_link'  WHERE `wing_id`='$wing_id'" ;  
             $query_run = mysqli_query($connection,$query);
             echo 'Updated successfully';
             header('location:../geekhaven/wing.php');     

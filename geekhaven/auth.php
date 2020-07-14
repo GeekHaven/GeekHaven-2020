@@ -3,9 +3,9 @@
     $t = $_SESSION['time'];
     function checkCookie($cookie_name,$t){
         if(isset($_COOKIE[$cookie_name])){
-            if($_COOKIE[$cookie_name]==$t + ($t%2408)*2 + ($t%2409)*2 + $cookie_name){
+            if($_COOKIE[$cookie_name]==$t + ($t%2408)*2 + ($t)*2 + $cookie_name){
                 return 2;
-            }else if($_COOKIE[$cookie_name]==$t + ($t%2408) + ($t%2409) + $cookie_name){
+            }else if($_COOKIE[$cookie_name]==$t + ($t%2408) + ($t) + $cookie_name){
                 return 1;
             }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
                 return 0;
