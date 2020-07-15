@@ -101,7 +101,7 @@
                     -webkit-box-orient: vertical;">
                     <?php echo $winginfo; ?>
                 </p>
-                <a href=<?php echo $link ;?> class="more">More</a>
+                <a href='<?php echo $link;?>' class="more">More</a>
             </div>
 
             <?php
