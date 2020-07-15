@@ -22,7 +22,7 @@
     $query = "CREATE TABLE member (
         `name` varchar(255),
         `roll_no` varchar(255),
-        `image` blob,
+        `image` longblob,
         `description`varchar(12000),
         `member_id` varchar(255),
         `hof` varchar(255),
@@ -40,7 +40,7 @@
     $query = "CREATE TABLE past_members (
         `name` varchar(255),
         `roll_no` varchar(255),
-        `image` blob,
+        `image` longblob,
         `description`varchar(12000),
         `member_id` varchar(255),
         `hof` varchar(255),
@@ -70,8 +70,8 @@
         `wing_id` varchar(255),
         `wing` varchar(255),
         `info` varchar(12000),
-        `logo`blob,
-        `image`blob,   
+        `logo` longblob,
+        `image` longblob,   
         `web_link`varchar(255),             
         PRIMARY KEY (wing_id)
     );";
@@ -86,7 +86,7 @@
         `blog_link`varchar(255),
         `source_code_link`varchar(255),
         `description`varchar(12000),
-        `image` blob,        
+        `image` longblob,        
         FOREIGN KEY (wing_id) REFERENCES wings(wing_id),
         FOREIGN KEY (member_id) REFERENCES member(member_id)
     );";
@@ -99,7 +99,7 @@
         `blog_title` varchar(255),
         `description`varchar(12000),
         `blog_link`varchar(255),        
-        `image` blob,        
+        `image` longblob,        
         FOREIGN KEY (member_id) REFERENCES member(member_id),
         FOREIGN KEY (wing_id) REFERENCES wings(wing_id)        
     );";
@@ -117,7 +117,7 @@
         `details`varchar(12000),        
         `link`varchar(255),        
         `attachment`varchar(255),        
-        `image` blob,        
+        `image` longblob,        
         FOREIGN KEY (member_id) REFERENCES member(member_id)
     );";
 

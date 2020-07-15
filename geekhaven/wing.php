@@ -62,58 +62,17 @@
 				<textarea  name="info" ></textarea>
 				<span class="floating-label">Information</span>
 			</div> 
-			<div class="form-group col-lg-9">
+			<div class="form-group col-lg-12">
 				<input accept="image/*" id="file" style="outline: none;" type="file" name="logo"/>
 				<span class="floating-label">Logo</span>
 			</div>
-      <div class="form-group col-lg-3">
-          <button name="add_btn" type="submit" class="button" >Upload Logo</button>
-      </div>
       <div class="form-group col-lg-12">
 				<input accept="image/*" style="outline: none;" type="file" name="image"/>
 				<span class="floating-label">Image</span>        
 			</div>
 			<div class="form-group form-button">             
 				<button name="add_btn" type="submit" class="form-submit button" >Add Wing</button>
-			</div>   
-      <div class="list" style="background-color:#000;color:#FFF;padding:5px;display:none;border-radius:5px;">
-
-      <script>
-      $("#uploader").submit(function(){
-          $('#uploader .list').fadeIn(100).css("width","0px");
-          var data = new FormData();
-          // if you want to append any other data: data.append("ID","");
-          $.each($('#file')[0].files, function(i, file) {
-              data.append('file-'+i, file);
-          });
-          $.ajax({
-              url: 'uploadimage.php',
-              data: data,
-              cache: false,
-              contentType: false,
-              processData: false,
-              type: 'POST',
-              xhr: function() {  // custom xhr
-                  myXhr = $.ajaxSettings.xhr();
-                  if(myXhr.upload){ // check if upload property exists
-                      myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // for handling the progress of the upload
-                  }
-                  return myXhr;
-              },
-              success: function(data2){
-                  $('#uploader .list').css({
-                      "width":"200px",
-                      "text-align":"center",
-                      "margin":"10px 0 10px 0"
-                  }).html("DONE!").delay(2000).fadeOut(500);
-                  if (data2 == "ERROR_FILESIZE"){
-                      return alert("Choose another file");
-                  }
-                }
-              });
-          return false;
-      });
-      </script>                             
+			</div>                             
 </form>
 
           <form method='post' class="container" style="text-align: center;">
