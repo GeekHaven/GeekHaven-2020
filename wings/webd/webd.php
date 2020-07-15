@@ -1,37 +1,28 @@
 <?php
+  if(isset($_GET['id'])){
     require "../../database/member_info.php";
-    $wing = 'Web Development';
-    $wing_id = '1594022341000';
+    $id=mysqli_real_escape_string($connection,$_GET['id']);
+    $wing_id = $id;
+    $query = "SELECT * FROM wings WHERE `wing_id`='$wing_id'";
+    $result = mysqli_query($connection,$query);
+    while($row = mysqli_fetch_assoc($result)){
+        $wing = $row['wing'];
+        $info = $row['info'];
+        $logo = $row['logo'];
+        $image = $row['image'];
+        $wingName =$row['wing'];
+        $link = $row['web_link'];
+    }
+  }
+    
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-
-</head>
-<body>
-    <?php
-        $query = "SELECT * FROM wings WHERE `wing`='$wing'";
-        $result = mysqli_query($connection,$query);
-        while($row = mysqli_fetch_assoc($result)){
-            $wing = $row['wing'];
-            $info = $row['info'];
-            $logo = $row['logo'];
-            $image = $row['image'];
-            $link = $row['web_link'];
-        }
-
-    ?>
-</body>
-</html>
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title><?php echo $wing;?></title>
+    <title><?php echo $wingName;?></title>
     <link rel="shortcut icon" href="../../images/gh.svg" type="image/png" />
     <link rel="stylesheet" href="webd.css" type="text/css">
     <link rel="stylesheet" href="../style.css" type="text/css">
@@ -156,7 +147,6 @@
             ?>
             <div class="col-12 col-sm-12 col-md-12" style="margin-top: 100px;"> 
                 <img src="../../images/circle.png" class="circle-card-1 c1" style="left: -90px;"/> 
-
                 <div class="col-md-12 card-title">
                   <p class="whiteToBlack date">2020</p>
                   <hr class="line">
@@ -460,8 +450,6 @@
     $('.blacktowhite').attr('style', 'color: white')
     $('.arrow').attr('src','images/arrow-light.png')
     $('.fa-bars').css('color','#000000')
-    $('.design-card').attr('src','images/l5.png')
-    $('.cc-card').attr('src','images/l6.png')
     $('.event-date').attr('style','background-color: #0D9C85; border-color: #0D9C85')
     $('.card-title').attr('style','background:linear-gradient(90deg, #F2A3A3 50%, #FFFFFF 50%);box-shadow: 0 0 10px #ccc')
     $('.card-2').attr('style','background:linear-gradient(90deg, #FFFFFF 50%, #BBB6F3 50%);box-shadow: 0 0 10px #ccc')   
