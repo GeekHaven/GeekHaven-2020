@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -47,7 +48,7 @@
 	  </style>
       <section class="form" style="margin-top: 200px;margin-bottom: 50px;">
         <div class="container" style="background: #171717;border-radius: 16px;">
-          <form method="post" action='../data_game/savewing.php' style="text-align: center;" enctype="multipart/form-data">
+          <form method="post" id="uploader" action='../data_game/savewing.php' style="text-align: center;" enctype="multipart/form-data">
             <p class="contactUs" >Add Wing</p>
 			<div class="form-group col-lg-12">
 				<input type="text" name="wing" required></input>
@@ -61,11 +62,13 @@
 				<textarea  name="info" ></textarea>
 				<span class="floating-label">Information</span>
 			</div> 
-			<div class="form-group col-lg-12">
-				<input accept="image/*" style="outline: none;" type="file" name="logo"/>
+			<div class="form-group col-lg-9">
+				<input accept="image/*" id="file" style="outline: none;" type="file" name="logo"/>
 				<span class="floating-label">Logo</span>
-        
 			</div>
+      <div class="form-group col-lg-3">
+          <button name="add_btn" type="submit" class="button" >Upload Logo</button>
+      </div>
       <div class="form-group col-lg-12">
 				<input accept="image/*" style="outline: none;" type="file" name="image"/>
 				<span class="floating-label">Image</span>        
@@ -73,10 +76,45 @@
 			<div class="form-group form-button">             
 				<button name="add_btn" type="submit" class="form-submit button" >Add Wing</button>
 			</div>   
-            
-                       
-                       
-          </form>
+      <div class="list" style="background-color:#000;color:#FFF;padding:5px;display:none;border-radius:5px;">
+
+      <script>
+      $("#uploader").submit(function(){
+          $('#uploader .list').fadeIn(100).css("width","0px");
+          var data = new FormData();
+          // if you want to append any other data: data.append("ID","");
+          $.each($('#file')[0].files, function(i, file) {
+              data.append('file-'+i, file);
+          });
+          $.ajax({
+              url: 'uploadimage.php',
+              data: data,
+              cache: false,
+              contentType: false,
+              processData: false,
+              type: 'POST',
+              xhr: function() {  // custom xhr
+                  myXhr = $.ajaxSettings.xhr();
+                  if(myXhr.upload){ // check if upload property exists
+                      myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // for handling the progress of the upload
+                  }
+                  return myXhr;
+              },
+              success: function(data2){
+                  $('#uploader .list').css({
+                      "width":"200px",
+                      "text-align":"center",
+                      "margin":"10px 0 10px 0"
+                  }).html("DONE!").delay(2000).fadeOut(500);
+                  if (data2 == "ERROR_FILESIZE"){
+                      return alert("Choose another file");
+                  }
+                }
+              });
+          return false;
+      });
+      </script>                             
+</form>
 
           <form method='post' class="container" style="text-align: center;">
           <div class="row">
