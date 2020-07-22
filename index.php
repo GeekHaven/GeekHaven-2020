@@ -101,13 +101,9 @@
                     -webkit-box-orient: vertical;">
                     <?php echo $winginfo; ?>
                 </p>
-<<<<<<< HEAD
                 <?php
                 echo "<a href='wings/webd/webd.php?id={$row['wing_id']}' class='more'>More</a>" ;
                 ?>
-=======
-                <a href='<?php echo $link;?>' class="more">More</a>
->>>>>>> 499a3bd4c7a65a954b6968a1f7456a0dec3f57ec
             </div>
 
             <?php
