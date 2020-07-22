@@ -159,7 +159,8 @@
                   <h1 class="whiteToBlack"><?php echo $pro_name;?></h1>
                   <div class="col-md-6">
                     <p class="card-text whiteToBlack"><?php echo $pro_des;?>.</p>
-                    <a href=<?php echo $pro_link ; ?>>
+                    <?php echo"
+                    <a href='{$pro_link}'>";?>
                       <button class="btn btn-default col-md-6 card-btn">
                         <span class="blacktowhite">Link to the Project</span>
                       </button>

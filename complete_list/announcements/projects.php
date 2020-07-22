@@ -63,7 +63,7 @@
         <hr class="line">
         
 
-        <section class="container title-cards">
+        <section class="container title-cards" style="margin-bottom:50px;">
         <?php
           $query = "SELECT * FROM Projects WHERE `wing_id`='$wing_id'";
 
@@ -84,9 +84,12 @@
                 <h1 class="whiteToBlack"><?php echo $pro_name;?></h1>
                 <div class="col-md-6">
                   <p class="card-text whiteToBlack"><?php echo $pro_des;?></p>
+                  <?php echo"
+                  <a href='{$pro_link}'>";?>
                   <button class="btn btn-default col-md-6 card-btn">
                     <span class="blacktowhite">Link to the Project</span>
                   </button>
+                  </a>
                 </div>
 
               </div>
