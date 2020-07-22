@@ -126,6 +126,12 @@
           </div>
         </div>
       </div>
+      <div div class="whats-new texta">
+      <?php
+      echo "<a href='../../complete_list/announcements/announcements.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
+      ?>
+      
+      </div>
       <div class="container-fluid title" id="projects">
         <p class="whiteToBlack">
           PR</span><span class="texta"  style="color: #13F7D2;">O</span>JECT
@@ -199,7 +205,12 @@
           </div> 
         </section>
     </div>
-
+    <div div class="whats-new texta">
+      <?php
+      echo "<a href='../../complete_list/announcements/projects.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
+      ?>
+      
+      </div>
       <section style="margin-top: 100px;" id="team">
         <p class="wing-heading whiteToBlack">
           <span>TE</span><span class="texta" style="color: #13F7D2;">A</span><span>M</span>

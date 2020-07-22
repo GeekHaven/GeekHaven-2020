@@ -1,6 +1,8 @@
 <?php
+if(isset($_GET['id'])){
     require "../../database/member_info.php";
-    $wing_id =1594022341000;
+    $id=mysqli_real_escape_string($connection,$_GET['id']);
+    $wing_id = $id;
     $query = "SELECT * FROM wings WHERE `wing_id`='$wing_id'";
     $result = mysqli_query($connection,$query);
     while($row = mysqli_fetch_assoc($result)){
@@ -11,6 +13,8 @@
         $wingName =$row['wing'];
         $link = $row['web_link'];
     }
+}
+    
 ?>
 
 <!DOCTYPE html>
