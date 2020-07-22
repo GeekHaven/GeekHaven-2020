@@ -105,7 +105,6 @@
                 echo "<a href='wings/webd/webd.php?id={$row['wing_id']}' class='more'>More</a>" ;
                 ?>
             </div>
-
             <?php
         }
     ?>
