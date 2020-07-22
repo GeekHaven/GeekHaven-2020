@@ -219,8 +219,10 @@
         <hr class="line">
           <div class="container-fluid">
               <div class="row">
+              <div class="col-12 col-sm-12 col-md-1">
+                <img src="../../images/zigzag.png" class="zigzag-team">
+              </div>
                 <?php
-                    $wing_name = "foss";
                     $query = "SELECT * FROM member WHERE `wing`='$wing' AND `post`='coordinator'";
                     $result = mysqli_query($connection,$query);
                     while($row = mysqli_fetch_assoc($result)){
@@ -247,11 +249,9 @@
                         $sess = $row['session'];
                         $post = $row['post'];
                         ?>
-                          <div class="col-12 col-sm-12 col-md-1">
-                            <img src="../../images/zigzag.png" class="zigzag-team">
-                          </div>
+                         
                         
-                            <div class="col-12 col-sm-12 col-md-6 col-md-offset-2 coordi-div" style="padding:0px;">
+                            <div class="col-12 col-sm-12 col-md-5 coordi-div" style="padding:0px;">
                               <!-- <div class="images-coordi"> -->
                               <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="images-coordi"/>'; ?>
                               <!-- </div> -->
@@ -277,17 +277,14 @@
                                         <i class="fa fa-instagram" aria-hidden="true" href=""></i>
                                     </div>
                                 </a>
-                                
+                                </div>
                               </div>
                         <?php
                     }
-                ?>
-
-                  </div>
+                ?> 
               </div>
               <div class="row">
               <?php
-                    $wing_name = "foss";
                     $query = "SELECT * FROM member WHERE `wing`='$wing' AND `post`='member'";
                     $result = mysqli_query($connection,$query);
                     while($row = mysqli_fetch_assoc($result)){
