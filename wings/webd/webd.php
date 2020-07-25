@@ -13,6 +13,7 @@
         $wingName =$row['wing'];
         $link = $row['web_link'];
     }
+    $months = array(1 => 'JAN', 2 => 'FEB', 3 => 'MAR', 4 => 'APR', 5 => 'MAY', 6 => 'JUNE', 7 => 'JULY', 8 => 'AUG', 9 => 'SEP', 10 => 'OCT', 11 => 'NOV', 12 => 'DEC');    
   }
     
 ?>
@@ -89,6 +90,8 @@
                 $ann_info = $row['details'];
                 $venue = $row['venue'];
                 $date = $row['date'];
+                $date = explode("-",$date);
+                $mon = $date[1]+10 -10;
                 $image = $row['image'];
                 $link = $row['link'];
                 $time = $row['time'];
@@ -99,8 +102,8 @@
                 <div class="col-12 col-sm-12 col-md-6 event-1">
                   <div class="row">
                     <div class="col-md-4 event-date">
-                      <p class="blacktowhite">JUNE</p>
-                      <p class="number blacktowhite">21</p>
+                      <p class="blacktowhite"><?php echo $months[$mon];?></p>
+                      <p class="number blacktowhite"><?php echo $date[2];?></p>
                     </div>
                     <div class="col-md-8 event-desc">
                       <h1 class="whiteToBlack"><?php echo $ann_name;?></h1>

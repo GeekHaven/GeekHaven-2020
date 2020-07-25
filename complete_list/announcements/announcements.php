@@ -13,6 +13,7 @@ if(isset($_GET['id'])){
         $wingName =$row['wing'];
         $link = $row['web_link'];
     }
+    $months = array(1 => 'JAN', 2 => 'FEB', 3 => 'MAR', 4 => 'APR', 5 => 'MAY', 6 => 'JUNE', 7 => 'JULY', 8 => 'AUG', 9 => 'SEP', 10 => 'OCT', 11 => 'NOV', 12 => 'DEC');    
 }
     
 ?>
@@ -72,6 +73,8 @@ if(isset($_GET['id'])){
                 $ann_info = $row['details'];
                 $venue = $row['venue'];
                 $date = $row['date'];
+                $date = explode("-",$date);
+                $mon = $date[1]+10 -10;
                 $image = $row['image'];
                 $link = $row['link'];
                 $time = $row['time'];
@@ -80,7 +83,7 @@ if(isset($_GET['id'])){
                 ?>
                 <div class="lower-block">
                     <p class="col-lg-3 col-sm-4 title"><i class="fa fa-circle" aria-hidden="true"></i> &nbsp;&nbsp; <?php echo $ann_name;?></p>
-                    <p class="col-lg-3 col-sm-4 date" style="padding-left: 90px;"><?php echo $date;?></p>
+                    <p class="col-lg-3 col-sm-4 date" style="padding-left: 90px;"><?php echo $date[2]; echo "   "; echo $months[$mon]; echo ", "; echo $date[0]; ?></p>
                     <p class="col-lg-3 col-sm-4 date" style="padding-left: 90px;"><?php echo $time;?></p>
                     <p class="col-lg-3 col-sm-4 date" style="padding-left: 90px;"><?php echo $venue;?></p>
                 </div>

@@ -79,7 +79,7 @@
 					</div>
 				</div> 
 				<div class="form-group col-lg-6">
-					<input name="date" type="text" required ></input>
+					<input name="date" type="date" required ></input>
 					<span class="floating-label">Date</span>
 				</div>
 				<div class="form-group col-lg-6">
