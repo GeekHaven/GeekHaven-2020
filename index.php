@@ -102,7 +102,7 @@
                     <?php echo $winginfo; ?>
                 </p>
                 <?php
-                echo "<a href='wings/webd/webd.php?id={$row['wing_id']}' class='more'>More</a>" ;
+                echo "<a href='wing.php?id={$row['wing_id']}' class='more'>More</a>" ;
                 ?>
             </div>
             <?php

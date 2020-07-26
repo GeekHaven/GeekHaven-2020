@@ -1,0 +1,905 @@
+body{
+    margin: 0 auto;
+    padding: 0px;
+    width: 99vw;f
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1D1E20 !important;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+} 
+
+body::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+.navbar img{
+    position: absolute;
+    width:80px;
+    height: 70px;
+    left:5%;
+}
+
+nav{
+    overflow: hidden;
+    margin: 49px 96px;
+    margin-top: 0px;
+    margin-right: 0px;
+    padding-top: 60px;
+}
+
+.navbar-fixed-top.scrolled {
+    background-color:#343538 !important;
+    margin-top:0px;
+    transition: all 0.3s ease;
+    font-size:25px !important ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mode-change-color{
+    filter: invert(100%) sepia(55%) saturate(2%) hue-rotate(241deg) brightness(110%) contrast(100%);
+}
+
+.link-change-color{
+    filter: invert(100%) sepia(55%) saturate(2%) hue-rotate(241deg) brightness(110%) contrast(100%);
+}
+
+.link2-change-color{
+    filter: invert(0%) sepia(55%) saturate(2%) hue-rotate(241deg) brightness(110%) contrast(100%);
+}
+
+.nav-change-color{
+    background-color: #1D1E20 !important;
+    /* filter: invert(30%) !important; */
+}
+
+.nav-logo.scroll-img{
+    width: 70px;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+.navbar-right{
+    position: relative;
+}
+
+.navbar-nav li a{
+    color: #13F7D2;
+    margin-left: 50px !important;
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+    transform: scaleY(0.9);
+}
+
+.navbar-nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background: #13F7D2;
+    display: block;
+    -webkit-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+  }
+  
+.navbar-nav a:hover::before {
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1)
+  }
+
+
+.navbar-nav li a:hover{
+    background: transparent !important;
+}
+
+.images-coordi{
+    width: 250px;
+    height: 250px;
+    background: #919191;
+    border-radius: 100%;
+    margin: auto;
+    filter: grayscale(100%);
+    padding: 10px;
+}
+.images-member{
+    width: 230px;
+    height: 230px;
+    background: #C4C4C4;
+    border-radius: 100%;
+    margin: auto;
+    filter: grayscale(100%);
+    padding: 10px;
+}
+.images-member:hover{
+    filter: grayscale(0%);
+    background-color: #13F7D2;
+}
+.images-coordi:hover{
+    filter: grayscale(0%);
+    background-color: #13F7D2;
+}
+.circle-blog{
+    position: absolute;
+    height: 490px;
+    margin-left: -138px;
+}
+.images-blog{
+    width: 100%;
+    height: 300px;
+    background: #C4C4C4;
+    margin: auto;
+    padding: 20px;  
+}
+@media screen and (min-width:900px){
+    .zigzag-team{
+        margin-top: 360px;
+    }
+}
+
+@media screen and (max-width:900px){
+.circle-blog{
+    height: 200px;
+}
+.intro-header .heading {
+    font-size: 45px !important;
+}
+.div-blog{
+    display: block !important;
+}
+}
+.coordi-div{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    margin-top:100px ; 
+}
+.member-div{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.blog-div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px !important;
+    padding-right: 0px !important;  
+    box-shadow: 0 0 10px #ccc;
+    align-items: center;   
+    margin-top:100px ; 
+    background-color: #272829;
+}
+
+.blog-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 10px;
+    line-height: 49px;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+.blog-subtitle{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    padding-left: 10px;
+    color: #FFFFFF;
+}
+
+.coordi-name{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    text-align: center;
+}
+.overall-icon{
+    border-radius: 100%;
+    border: 3px solid #9AA6A5;
+    font-size: 25px;
+    color: #9AA6A5;
+    padding: 6px 12px 6px 12px;
+    display: inline;
+    margin-left: 1em;
+    float: left;
+}
+.fb-icon{
+    padding: 6px 15px 6px 15px;
+}
+.coordi-post{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    line-height: 37px;
+    color: #13F7D2;
+}
+.line{
+    width: 199px;
+    background-color: #363939;
+    text-align: center;
+    border: 2px solid #363939;
+    border-radius: 1px;
+    margin-top: 0px;    
+}
+@media screen and (max-width:2600px)
+{
+    .navbar{
+        margin-top:30px;
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 100%;
+        padding: 30px 20px;
+    }
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color:white;
+}
+
+.wrapper{
+    max-width: 100vw;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.intro-header{
+    padding-top:200px;
+    padding-left:30px !important;
+    text-align: left;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.intro-header .heading{
+    font-size: 65px;
+    font-weight: bold;
+    /* transform: scaleY(0.86); */
+    color: #FFFFFF;
+    text-shadow: 2px 2px #13F7D2;
+    line-height: 100px;
+}
+
+.intro-header p{
+    position: relative;
+    color:#FFFFFF;
+    padding-top:30px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.whats-new{
+    font-family: Montserrat;
+    padding-top:90px;
+    font-weight: 600;
+    color: #13F7D2;
+    font-size: 20px;
+    text-align: center;
+}
+
+.announcements{
+    padding-top: 60px;
+    text-align: center;
+}
+
+.announcements p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    text-align: center;
+    line-height: 67px;
+    color: white;
+}
+
+.announcements .line{
+    width: 550px ;
+}
+
+.ann-desc{
+    width:90%;
+    padding-top:50px;
+}
+
+.event-date{
+    font-family: Montserrat;
+    padding:20px;
+    border: 1px solid #13F7D2;
+    background-color: #13F7D2;
+}
+
+.event-date .number{
+    color: #191A1B;
+    font-weight: 900 !important;
+    font-size: 90px !important;
+}
+
+.event-date  p{
+    color:#191A1B;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.event-desc{
+    font-family: Montserrat;
+    text-align: left;
+}
+
+.event-desc h1{
+    font-size: 40px;
+    color:#FFFFFF;
+    font-weight: 600;
+}
+
+.event-desc p{
+    padding-top: 20px;
+    font-weight: lighter;
+    text-align: left;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.center-block {
+    text-align: center;
+  }
+
+.title{
+    padding-top: 100px;
+}
+
+.title p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    text-align: center;
+    line-height: 67px;
+    color: white;
+}
+
+.title .line{
+    width:280px;
+}
+
+.circle-card-1{
+    position: absolute;
+    margin-top: -62px;
+}
+
+
+
+.card-title{
+    font-family: Montserrat;
+    text-align: right !important;
+    margin-top: 50px;
+    background: linear-gradient(90deg, #D52B2B 50%, #27282B 50%);
+    border-radius: 10px !important;
+}
+
+.card-title p{
+    text-align: right;
+    font-size: 18px;
+}
+
+.card-title .line{
+    width:70px;
+    float: right;
+    position: relative;
+    right:20px;
+    top:-20px !important;
+    background-color: #13F7D2;
+    border: 3px solid #13F7D2;
+    color: #13F7D2;
+}
+
+.card-title h1{
+    padding: 30px;
+    font-size: 70px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.card-title .col-md-6{
+    float: right;
+}
+
+.card-title .card-text{
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.card-2{
+    background: linear-gradient(90deg, #27282B 50%, #4C40D2 50%);
+    text-align: left !important;
+}
+
+.card-2 p{
+    text-align: left;
+    font-size: 18px;
+}
+
+.card-2 .line{
+    float: left;
+    right:-20px ;
+}
+
+.card-2 .col-md-6{
+    float: left;
+}
+
+.c2{
+    left:85% !important;
+}
+
+.card-btn{
+    height: 40px;
+    margin-top:40px;
+    margin-bottom:50px !important;
+    background-color: #13F7D2 !important;
+    border-color: #13F7D2 !important;
+    border-top-left-radius: 25px !important;
+    border-top-right-radius: 25px !important;
+    border-bottom-left-radius: 25px !important;
+    border-bottom-right-radius: 25px !important;
+}
+
+.card-btn span{
+    font-weight: bold !important;
+    font-size: 17px;
+}
+
+.card-3{
+    background: linear-gradient(90deg, #A823BD 50%, #27282B 50%);
+}
+
+.wing-heading{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    text-align: center;
+    line-height: 67px;
+    color: white;
+}
+
+.more-blog{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: #13F7D2    
+}
+
+.webd-logo img{
+    position: relative;
+    margin:0 auto;
+    margin-top: 200px;
+    width: 100%;
+}
+
+.footer{
+    display: inline-block;
+    background-color: #191A1B;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-left: 40px;
+    padding-top:60px;
+    height: 330px;
+}
+
+.blogs h2{
+    color: #FFFFFF;
+    font-weight: 700 !important;
+    font-size: 35px;
+}
+
+.blogs button{
+    position: relative;
+    background-color: #13F7D2;
+    border-color: #13F7D2;
+    top:20px;
+    height: 55px;
+    width: 400px;
+}
+
+.blogs .btn{
+    text-align: left !important;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.blogs button:hover{
+    border-color: #13F7D2;
+    background-color: aqua;
+    text-decoration: none;
+}
+
+
+.blogs span{
+    position: relative;
+    color: #000000;
+    top: 0px;
+}
+
+.contacts .icons{
+    position: relative;
+    top:29px;
+}
+
+.contacts a{
+    padding: 10px 15px;
+    font-size: 20px;
+    color:#13F7D2;
+    border-radius: 100%;
+    border: 2px solid #13F7D2;
+    margin:0 10px;
+}
+
+
+.contacts h2{
+    color: #FFFFFF;
+    font-weight: 700 !important;
+    font-size: 35px;
+}  
+
+@media screen and (min-width:1900px)
+{
+    .navbar{
+        padding-right: 70px;
+    }
+
+    .intro-header{
+        padding-left:100px !important;
+    }
+}
+
+@media only screen and (max-width: 764px) {
+
+    nav{
+        margin-right: 0px;
+    }
+
+    .navbar img{
+        width: 60px;
+        height: 50px;
+        left:40px;
+    }
+
+    .navbar{
+        /* margin-left: -10px; */
+        width: 100%;
+        padding-bottom: 0px ;
+    }
+
+    .fa-bars{
+        font-size: 25px !important;
+    }
+
+    .navbar-right{
+        background-color: #000000 !important;
+    } 
+
+    .navbar-nav li a{
+        color: #13F7D2 !important;
+    }
+
+    /* .intro-header p{
+        margin-right: 0px !important;
+    } */
+
+    .intro-header{
+        padding-top: 150px;
+    }
+
+    .intro-header p{
+        font-size: 17px;
+    }
+
+    .intro-header .heading{
+        font-size: 40px !important;
+        line-height:70px;
+    }
+
+    .card-title{
+        height: 500px;
+    }
+
+    .card-title h1{
+        font-size: 40px;
+    }
+
+    .card-title .card-text{
+        font-size: 17px;
+    }
+
+    .circle-card-1{
+        transform: scale(0.5);
+    }
+
+    .c1{
+        top:-40px;
+    }
+
+    .c2{
+        top:-40px;
+        left:77% !important; 
+    }
+
+    .c3{
+        top:-40px;
+    }
+
+}
+
+@media screen and (max-width:480px)
+{
+
+    nav{
+        margin-top: 0px !important;
+    }
+
+    .navbar{
+        margin-left: -10px;
+    }
+
+    .navbar-fixed-top{
+        opacity: 2;
+        width: 100%;
+        padding-bottom: 9px !important;
+    }
+
+    .nav-logo.scroll-img{
+        top: 20px !important;
+        transform: scale(0.8);
+        /* left:40px !important; */
+    }
+
+    .navbar{
+        width: 106% !important;
+        /* margin-right: -40px !important; */
+    }
+
+    .navbar img{
+        left:40px !important;
+        top:40px !important;
+        /* left:70px !important; */
+        transform: scale(1.3);
+    }
+
+    .fa-bars{
+        padding-right: 0px;
+        transform: scale(1.2);
+        color: #13F7D2;
+    }
+
+    .navbar-nav a::before{
+        display: none;
+    }
+
+    /* .nav-logo{
+        top:35px !important; 
+        left:50px !important;
+    } */
+
+    .navbar-nav li a{
+        margin-left: 20px !important;
+        font-size: 15px;
+        color: #13F7D2 !important;
+    }
+
+    .navbar-right{
+        background-color: #000000 !important;
+    }
+
+    .intro-header{
+        text-align: center;
+        padding-top: 110px;
+    }
+
+    .intro-header p{
+        font-size: 12px;
+    }
+
+    .intro-header .heading{
+        font-size: 40px !important;
+        line-height:55px;
+    }
+
+    .webd-logo img{
+        margin-top: 10px;
+    }
+
+    .announcements p{
+        font-size: 30px;
+    }
+
+    .announcements .line{
+        width: 300px;
+    }
+
+    .ann-desc{
+        padding-top: 0px;
+    }
+
+    .event-date{
+        padding:0px;
+        margin:10px;
+    }
+
+    .event-date .number{
+        color: #191A1B;
+        font-weight: 800 !important;
+        font-size: 70px !important;
+    }
+    
+    .event-date  p{
+        color:#191A1B;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .event-1{
+        padding-top: 40px;
+    }
+
+    .event-desc{
+        font-family: Montserrat;
+        text-align: left;
+    }
+    
+    .event-desc h1{
+        font-size: 30px;
+        color:#FFFFFF;
+        font-weight: 600;
+    }
+    
+    .event-desc p{
+        padding-top: 20px;
+        font-weight: lighter;
+        text-align: left;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+    .circle-card-1{
+        position: absolute;
+        margin-top: -62px;
+        transform: scale(0.5);
+    }
+
+    .c1{
+        top:-40px;
+    }
+
+    .c2{
+        top:-40px;
+        left:46% !important; 
+    }
+
+    .c3{
+        top:-40px;
+    }
+
+    .card-title{
+        /* background: linear-gradient(to bottom, #D52B2B 50%, #27282b 50%) !important; */
+        height: 370px !important;
+        box-shadow: 0 0 1px #ccc;
+    }
+
+    .card-title .date{
+        display: none;
+    }
+
+    .card-title .line{
+        display: none;
+    }
+
+    .card-title h1{
+        text-align: left !important;
+        padding: 16px !important;
+        font-size: 10px;
+        padding-top:200px !important;
+
+    }
+
+    .card-title .col-md-6{
+        float: left !important;
+    }
+
+    .card-title .card-text{
+        text-align: left !important;
+        font-size: 8px !important;
+        font-weight: lighter;
+        line-height: 10px !important;
+    }
+
+    .card-btn{
+        margin-top: 10px !important;
+        left:-35px !important;
+        transform: scale(0.7);
+    }
+
+    /* .card-2{
+        background: linear-gradient(to bottom, #4c40d2 50%, #27292b 50%) !important;
+    }
+
+    .card-3{
+        background: linear-gradient(to bottom, #A823BD 50%, #27292b 50%) !important;
+    } */
+
+    .footer{
+        padding-top: -20px;
+        height: 420px;
+        padding-right: 0px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .blogs{
+        transform: scale(0.7);
+    }
+
+    .blogs button{
+        width: 300px;
+    }
+
+    .contacts{
+        margin: 0 auto;
+        transform: scale(0.7);
+        padding-bottom: 50px;
+    }
+
+    .contacts a{
+        margin: 0 5px;
+    }
+
+}
