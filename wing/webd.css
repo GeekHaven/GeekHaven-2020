@@ -521,7 +521,8 @@ nav{
     position: relative;
     margin:0 auto;
     margin-top: 200px;
-    width: 100%;
+    width: 70%;
+    float: right;
 }
 
 .footer{
@@ -756,6 +757,7 @@ nav{
 
     .webd-logo img{
         margin-top: 10px;
+        width: 100%;
     }
 
     .announcements p{

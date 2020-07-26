@@ -61,7 +61,7 @@
       <div class="wrapper">
             <div class="intro-header col-sm-6">
                 <div class="heading main-heading"><?php echo $wing;?></div>
-                <p class="intro-heading"><?php echo $info;?>.</p>
+                <p class="intro-heading"><?php echo $info;?></p>
             </div>
             <div class="webd-logo col-sm-6">
                 <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?>
