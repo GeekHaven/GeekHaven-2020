@@ -140,7 +140,7 @@
     $query_run = mysqli_query($connection,$query);     
     $query = "INSERT INTO credentials VALUES('11111','exUser','exPass','1','22222')";
     $query_run = mysqli_query($connection,$query);
-    $query = "INSERT INTO wings VALUES('33333','X','Only for Overall coordinators','')";
+    $query = "INSERT INTO wings VALUES('33333','X','Only for Overall coordinators','','')";
     $query_run = mysqli_query($connection,$query);
 
     echo "Database created";
