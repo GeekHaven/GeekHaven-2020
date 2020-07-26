@@ -1,7 +1,11 @@
 <?php
-    $connection = mysqli_connect("localhost","root","");
-    mysqli_query($connection,"CREATE DATABASE geekhav") ;
-    mysqli_select_db($connection,'geekhav');
+    $server = "sql208.epizy.com";
+    $username = "epiz_26360820";
+    $password = "jJABjoAiW6OqP";
+    $dbname = "epiz_26360820_geekhav";
+    $connection = mysqli_connect($server,$username,$password,$dbname);
+    mysqli_select_db($connection,$dbname);
+    echo $connection;
     $query = "CREATE TABLE social_handles (
         `social_handles_id` varchar(255),
         `github` varchar(255),
