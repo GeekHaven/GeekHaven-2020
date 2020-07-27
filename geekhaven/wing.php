@@ -54,10 +54,6 @@
 				<input type="text" name="wing" required></input>
 				<span class="floating-label">Wing Name</span>
 			</div>
-      <div class="form-group col-lg-12">
-				<input type="text" name="link" required></input>
-				<span class="floating-label">Web Link</span>
-			</div>
 			<div class="form-group col-lg-12">
 				<textarea  name="info" ></textarea>
 				<span class="floating-label">Information</span>
@@ -115,7 +111,6 @@
                     $_SESSION['wingID'] = $wing_id;            
                     $wing =$row['wing'];
                     $info =$row['info'];
-                    $web_link =$row['web_link'];                    
                 }
                 ?>
                 <form method='post' action='../data_game/savewing.php' style="text-align: center;" enctype="multipart/form-data">
@@ -125,10 +120,6 @@
                     <span class="floating-label">Wing Name</span>
                   </div>
 
-                  <div class="form-group col-lg-12">
-                    <input name="web_link" type="text"  value = "<?php echo $web_link;?>"></input>
-                    <span class="floating-label">Web Link</span>
-                  </div>
 
                   <div class="form-group col-lg-12">
                     <input name="new_info" type="text"  value = "<?php echo $info;?>"></input>
