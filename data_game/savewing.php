@@ -19,8 +19,7 @@
                 $query = "INSERT INTO wings VALUES('$wing_id','$wing','$info','$logo','$image')" ;
                 $query_run = mysqli_query($connection,$query); 
                 header('location:../geekhaven/wing.php'); 
-                echo "Wing Added";
-                echo $query;
+
             }   
         }
 
@@ -35,8 +34,7 @@
             
             $query = "UPDATE wings SET `wing`='$wing',`info`='$info',`logo`='$n_logo',`image`='$n_image'  WHERE `wing_id`='$wing_id'" ;  
             $query_run = mysqli_query($connection,$query);
-            echo 'Updated successfully';
-            echo $query;
+
             header('location:../geekhaven/wing.php');     
                   
         }

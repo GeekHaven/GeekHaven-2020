@@ -48,7 +48,7 @@
 	  
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
 		<div class="container" style="background: #171717;border-radius: 16px;">
-			<form method='post' action='../data_game/announce.php' style="text-align: center;" enctype="multipart/form-data">
+			<form method='post' action='../data_game/ann.php' style="text-align: center;" enctype="multipart/form-data">
 				<p class="contactUs" >Add Announcement</p>
 				<div class="form-group col-lg-12">
 					<input name="name" type="text" required></input>
@@ -113,7 +113,7 @@
 				</div>   	
 			</form>
 
-			<form method='post' action='../data_game/announce.php' style="text-align: center;">
+			<form method='post' action='../data_game/ann.php' style="text-align: center;">
 				<p class="contactUs" >Remove Announcement</p>
 
 				<select name="announcements">
