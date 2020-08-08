@@ -83,9 +83,11 @@
 
             <?php
               $query = "SELECT * FROM announcements WHERE `organizer`='$wing'";
+              $j = 0;
 
               $result = mysqli_query($connection,$query);
-              while($row = mysqli_fetch_assoc($result)){
+              while(($row = mysqli_fetch_assoc($result))&&($j<2)){
+                $j = $j+1;
                 $ann_name = $row['name'];
                 $ann_info = $row['details'];
                 $venue = $row['venue'];
@@ -144,9 +146,11 @@
         <section class="container title-cards">
         <?php
           $query = "SELECT * FROM Projects WHERE `wing_id`='$wing_id'";
+          $i=0;
 
           $result = mysqli_query($connection,$query);
-          while($row = mysqli_fetch_assoc($result)){
+          while(($row = mysqli_fetch_assoc($result))&&($i<3)){
+            $i = $i+1;
             $pro_name = $row['project_name'];
             $pro_link = $row['project_link'];
             $code = $row['source_code_link'];
