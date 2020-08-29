@@ -89,10 +89,35 @@ if(isset($_GET['id'])){
         </div>
 
         <div div class="whats-new texta">
-            <p>Swipe to See More</p>
+            <p>Swipe to See More <i class="fa fa-angle-right" aria-hidden="true"></i></p>
         </div>
         
       </section>  
+
+      <section class="rm container">
+        <p class="read-more">Read More...</p>
+
+        <?php
+          $query = "SELECT * FROM blogs WHERE `wing_id`='$wing_id' ";
+          $result = mysqli_query($connection,$query);
+          while($row = mysqli_fetch_assoc($result)){
+              $title = $row['blog_title'];
+              $des = $row['description'];
+              $link = $row['blog_link'];
+              ?>
+
+              <div class="blog-card col-12 col-sm-12 col-md-12">
+                <p class="rm-head"><?php echo $title;?></p>
+                <p class="rm-sub"><?php echo $des;?></p>
+                  <a class="blog-link" href=<?php echo $link?>>Continue</a>
+              </div>
+              <?php
+          }
+        ?>
+
+      </section>
+
+      <p class="banner">Thanks For Watching!!!</p>
 
 
       <section class="footer" id="footer">
