@@ -210,9 +210,9 @@
         </section>
     </div>
 
-    <div class="whats-new texta">
+    <!-- <div class="whats-new texta">
       <p>hello</p>
-    </div>
+    </div> -->
 
       <section style="margin-top: 100px;" id="team">
         <p class="wing-heading whiteToBlack">
@@ -390,6 +390,11 @@
         ?>
         </div>
       </section>  
+      <div div class="whats-new texta">
+      <?php
+      echo "<a href='../../complete_list/blogs/blog.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
+      ?>
+      </div>
       <section class="footer" id="footer">
         <div class="row" style="margin-right: 0px;">
             <div class="blogs col-lg-6 col-xl-6">
