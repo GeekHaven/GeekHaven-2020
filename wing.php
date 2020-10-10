@@ -225,7 +225,7 @@
         </p>
         <hr class="line">
           <div class="container-fluid">
-              <div class="row">
+              <div class="row" style="text-align:center">
               <div class="col-12 col-sm-12 col-md-1">
                 <img src="./images/zigzag.png" class="zigzag-team">
               </div>
@@ -258,7 +258,7 @@
                         ?>
                          
                         
-                            <div class="col-12 col-sm-12 col-md-5 coordi-div" style="padding:0px;">
+                            <div class="col-12 col-sm-12 col-md-5 coordi-div" style="padding:0px; display:inline-block; float:none;">
                               <!-- <div class="images-coordi"> -->
                               <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="images-coordi"/>'; ?>
                               <!-- </div> -->
@@ -268,7 +268,7 @@
                               <p class="coordi-post">
                                 COORDINATOR
                               </p>
-                              <div class="overall-icon-div">
+                              <div class="overall-icon-div" style="height:50px; display:inline-block;">
                                 <a href="<?php echo $face;?>">
                                     <div class="overall-icon fb-icon">
                                         <i class="fa fa-facebook" aria-hidden="true" ></i>
@@ -290,7 +290,7 @@
                     }
                 ?> 
               </div>
-              <div class="row">
+              <div class="row" style="text-align:center">
               <?php
                     $query = "SELECT * FROM member WHERE `wing`='$wing' AND `post`='member'";
                     $result = mysqli_query($connection,$query);
@@ -318,7 +318,7 @@
                         $sess = $row['session'];
                         $post = $row['post'];
                         ?>
-                        <div class="col-12 col-sm-12 col-md-4 member-div">
+                        <div class="col-12 col-sm-12 col-md-4 member-div" style="display:inline-block; float:none;">
                           <div class="images-cover">
                             <!-- <div class="images-member"> -->
                             <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"class="images-coordi"/>'; ?>
@@ -331,7 +331,7 @@
                           <p class="coordi-post">
                             MEMBER
                           </p>
-                          <div class="overall-icon-div">
+                          <div class="overall-icon-div" style="height:50px; display:inline-block;">
                             <a href="<?php echo $face;?>">
                                 <div class="overall-icon fb-icon">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
