@@ -53,6 +53,7 @@
               <li><a href="#team">Team</a></li>
               <li><a href="#blogs">Blogs</a></li>
               <li><a href="#footer">Contacts</a></li>
+              <li><a href="./geekhaven/login.php">Login</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

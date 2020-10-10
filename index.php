@@ -39,6 +39,7 @@
                       <li><a href="#wings-section">Wings</a></li>
                       <li><a href="#overall">Coordinators</a></li>
                       <li><a href="./geekhaven/contact.html">Contacts</a></li>
+                      <li><a href="./geekhaven/login.php">Login</a></li>
                     </ul>
                   </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
