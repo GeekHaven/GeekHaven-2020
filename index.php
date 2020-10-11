@@ -133,13 +133,14 @@
                     if($member_array = mysqli_fetch_assoc($result)){
                         $member = $member_array;
                         $name = $member['name']; 
+                        $image = $member['image'];
                         $social=$member['social_handles'];    
                         $querySocial = "SELECT * FROM social_handles WHERE social_handles_id = $social";
                         $resultSocial = mysqli_query($connection,$querySocial);
                         ?>
                     
                         <div class="col-12 col-sm-6 overall-box">
-                            <div class="overall-image"></div>
+                            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="overall-image"/>'; ?>
                             <p class="overall-title">
                                 <?php echo $name; ?>
                             </p>
