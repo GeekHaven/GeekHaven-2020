@@ -124,9 +124,9 @@
             <?php
                 $admin_value='2';        
                 $query = "SELECT * FROM credentials WHERE admin_value=$admin_value ";
-                $result = mysqli_query($connection,$query);
+                $coordiResult = mysqli_query($connection,$query);
                 
-                while($row = mysqli_fetch_assoc($result)){
+                while($row = mysqli_fetch_assoc($coordiResult)){
                     $id =$row['member_id'];
                     $query = "SELECT * FROM member WHERE member_id = $id";
                     $result = mysqli_query($connection,$query);
