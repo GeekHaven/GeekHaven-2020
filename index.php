@@ -17,7 +17,12 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
-
+    <!-- <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div> -->
     <div id="particles-js"></div>
 
     <div class="wrapper">
@@ -38,7 +43,7 @@
                       <li><a href="#footer">Blogs</a></li>
                       <li><a href="#wings-section">Wings</a></li>
                       <li><a href="#overall">Coordinators</a></li>
-                      <li><a href="./geekhaven/contact.html">Contacts</a></li>
+                      <li><a href="./geekhaven/contact.php">Contacts</a></li>
                       <li><a href="./geekhaven/login.php">Login</a></li>
                     </ul>
                   </div><!-- /.navbar-collapse -->
