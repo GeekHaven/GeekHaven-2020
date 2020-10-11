@@ -170,9 +170,7 @@
                                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                                             </div>
                                         </a>
-                                            
                                         </div>
-
                                     <?php
                                 }
                             ?>
@@ -196,11 +194,11 @@
             <div class="contacts col-12 col-lg-6 col-xl-6">
                 <h2 style="padding-top:15px ;padding-right:0px;" >Contact us</h2>
                 <div class="icons">
-                    <a href="#"><i class="fa fa-facebook" style="padding: 5px 3px;" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/geekhaveniiita"><i class="fa fa-facebook" style="padding: 5px 3px;" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/geekhaveniiita"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://github.com/GeekHaven"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/geekhaven_iiita/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="mailto:geekhaven@iiita.ac.in"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
