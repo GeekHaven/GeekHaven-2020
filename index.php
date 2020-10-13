@@ -27,7 +27,7 @@
 
     <div class="wrapper">
             <nav class="navbar navbar-fixed-top" style="opacity: 0.9;">
-                <div class="container-fullwidth">
+                <div class="container-fullwidth" style="padding: 0 5%;">
                   <img class="nav-logo" src="./images/gh.png">
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header">
@@ -50,7 +50,7 @@
                 </div><!-- /.container-fluid -->
               </nav>
         
-        <div class="container-fluid">
+        <div class="container-fluid" style="height: 100%;">
             <div class="intro-header">
                 <h1 class="sub-heading">IIIT ALLAHABAD</h1>
 
@@ -81,7 +81,7 @@
         
     </div>
     
-    <section class="container-fluid" id="wings-section">
+    <section class="container-fluid" id="wings-section" style="padding: 0 40px;">
     <?php
         $query = 'SELECT * FROM wings';
         $result = mysqli_query($connection,$query);

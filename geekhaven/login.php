@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
-<body>
+<body style="height: 100%;">
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
-        <div class="container-fullwidth">
-          <a href="../index.html"><img class="nav-logo" src="../images/gh.png"></a>
+        <div class="container-fullwidth" style="padding: 0 5%;">
+          <a href="../index.php"><img class="nav-logo" src="../images/gh.png"></a>
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -36,7 +36,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../index.php">Home</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#team">Team</a></li>
               <li><a href="#blogs">Blogs</a></li>
@@ -52,50 +52,54 @@
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
 		<div class="container" style="background: #171717;border-radius: 16px;">
 			<form method='post' style="text-align: center;">
-                <p class="contactUs" >Login</p>
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8">
+      <p class="contactUs" >Login</p>
                 
-				<div class="form-group col-lg-12">
-					<input name="username" type="text" required></input>
-					<span class="floating-label">Username</span>
-					<div>
-						
-					</div>
-				</div>
-				<div class="form-group col-lg-12">
-					<input name="password" type="password" required ></input>
-					<span class="floating-label">Password</span>
-				</div>
-				
-				<div class="form-group form-button">             
-					<button name="add_btn" type="submit" class="form-submit button" >Login</button>
-				</div>   	
-        <?php
-            if(isset($_POST['add_btn'])){
-                $username = $_POST['username'];
-                $pass = $_POST['password'];
-                $time = time()*1000;
-                $query = "select * from credentials WHERE username='$username' AND password='$pass'"; 
-                $query_run = mysqli_query($connection,$query);
-                if(mysqli_num_rows($query_run)>0){
-                    $result = mysqli_query($connection,$query);
-                    while($row = mysqli_fetch_assoc($result)){
-                        $mem_id =$row['member_id'];
-                        $admin = $row['admin_value'];
-                    }
-                    $_SESSION['member_id'] = $mem_id;
-                    $_SESSION['time'] = $time;
+                <div class="form-group col-lg-12">
+                  <input name="username" type="text" required></input>
+                  <span class="floating-label">Username</span>
+                  <div>
                     
-                    $cookie_name = $mem_id;
-                    $cookie_value = $time+($time%2408)*($admin)+($time)*($admin)+$mem_id;
-                    setcookie($cookie_name,$cookie_value,time()+(86400*5));
-                    echo $cookie_name;
-                    echo $cookie_value;
-                    header('location:home.php');
-                }else{
-                    echo 'INCORRECT loginID or password';
-                }
-            }
-            ?>
+                  </div>
+                </div>
+                <div class="form-group col-lg-12">
+                  <input name="password" type="password" required ></input>
+                  <span class="floating-label">Password</span>
+                </div>
+                
+                <div class="form-group form-button">             
+                  <button name="add_btn" type="submit" class="form-submit button" >Login</button>
+                </div>   	
+                <?php
+                    if(isset($_POST['add_btn'])){
+                        $username = $_POST['username'];
+                        $pass = $_POST['password'];
+                        $time = time()*1000;
+                        $query = "select * from credentials WHERE username='$username' AND password='$pass'"; 
+                        $query_run = mysqli_query($connection,$query);
+                        if(mysqli_num_rows($query_run)>0){
+                            $result = mysqli_query($connection,$query);
+                            while($row = mysqli_fetch_assoc($result)){
+                                $mem_id =$row['member_id'];
+                                $admin = $row['admin_value'];
+                            }
+                            $_SESSION['member_id'] = $mem_id;
+                            $_SESSION['time'] = $time;
+                            
+                            $cookie_name = $mem_id;
+                            $cookie_value = $time+($time%2408)*($admin)+($time)*($admin)+$mem_id;
+                            setcookie($cookie_name,$cookie_value,time()+(86400*5));
+                            echo $cookie_name;
+                            echo $cookie_value;
+                            header('location:home.php');
+                        }else{
+                            echo 'INCORRECT loginID or password';
+                        }
+                    }
+                    ?>
+      </div>
+      <div class="col-lg-2"></div>
 			</form>
           
         </div>   

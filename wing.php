@@ -35,7 +35,7 @@
 </head>
 <body>
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
-        <div class="container-fullwidth">
+        <div class="container-fullwidth" style="padding: 0 5%;">
           <a href="./index.php"><img class="nav-logo" src="./images/gh.png"></a>
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -53,6 +53,7 @@
               <li><a href="#team">Team</a></li>
               <li><a href="#blogs">Blogs</a></li>
               <li><a href="#footer">Contacts</a></li>
+              <li><a href="./geekhaven/login.php">Login</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

@@ -32,7 +32,7 @@
 </head>
 <body>
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
-        <div class="container-fullwidth">
+        <div class="container-fullwidth" style="padding: 0 5%;">
           <a href="../index.html"><img class="nav-logo" src="../../images/gh.png"></a>
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
