@@ -192,9 +192,11 @@
         <div class="row" style="margin-right: 0px;">
             <div class="blogs col-lg-6 col-xl-6">
                 <h2>Get some good reads!</h2>
-                <button class="btn btn-default text-left">
-                    <span>Blogs by us <i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i><i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i></span>
-                </button>
+                <a href="https://medium.com/nybles" style="text-decordation:none">
+                    <button class="btn btn-default text-left">
+                        <span>Blogs by us <i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i><i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i></span>
+                    </button>
+                </a>
             </div>
             <div class="contacts col-12 col-lg-6 col-xl-6">
                 <h2 style="padding-top:15px ;padding-right:0px;" >Contact us</h2>

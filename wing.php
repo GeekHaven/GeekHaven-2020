@@ -52,7 +52,7 @@
               <li><a href="#projects">Projects</a></li>
               <li><a href="#team">Team</a></li>
               <li><a href="#blogs">Blogs</a></li>
-              <li><a href="#footer">Contacts</a></li>
+              <li><a href="./geekhaven/contact.php">Contacts</a></li>
               <li><a href="./geekhaven/login.php">Login</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
@@ -396,21 +396,29 @@
         ?>
         </div>
       </section>  
+      <div class="whats-new texta">
+      <?php
+      echo "<a href='./complete_list/blogs/blog.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
+      ?>
+      </div>
       <section class="footer" id="footer">
         <div class="row" style="margin-right: 0px;">
             <div class="blogs col-lg-6 col-xl-6">
                 <h2>Get some good reads!</h2>
-                <button class="btn btn-default text-left">
-                    <span>Blogs by us <i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i><i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i></span>
-                </button>
+                <a href="https://medium.com/nybles" style="text-decordation:none">
+                    <button class="btn btn-default text-left">
+                        <span>Blogs by us <i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i><i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i></span>
+                    </button>
+                </a>
             </div>
             <div class="contacts col-12 col-lg-6 col-xl-6">
                 <h2 style="padding-top:15px ;padding-right:0px;" >Contact us</h2>
                 <div class="icons">
-                    <a href="#"><i class="fa fa-facebook" style="padding: 5px 3px;" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/geekhaveniiita"><i class="fa fa-facebook" style="padding: 5px 3px;" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/geekhaveniiita"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://github.com/GeekHaven"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/geekhaven_iiita/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="mailto:geekhaven@iiita.ac.in"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>

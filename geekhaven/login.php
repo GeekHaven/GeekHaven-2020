@@ -36,11 +36,9 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../index.php">Home</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="#blogs">Blogs</a></li>
-              <li><a href="#footer">Contacts</a></li>
+              <li><a href="./home.php">Home</a></li>
+              <li><a href="https://medium.com/nybles">Blog Us</a></li>
+              <li><a href="./contact.php">Contacts</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

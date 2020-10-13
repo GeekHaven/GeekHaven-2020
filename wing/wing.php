@@ -36,7 +36,7 @@
 <body>
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
         <div class="container-fullwidth">
-          <a href="../../index.html"><img class="nav-logo" src="../../images/gh.png"></a>
+          <a href="../../index.php"><img class="nav-logo" src="../../images/gh.png"></a>
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -48,7 +48,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../../index.php">Home</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#team">Team</a></li>
               <li><a href="#blogs">Blogs</a></li>
@@ -391,7 +391,7 @@
         ?>
         </div>
       </section>  
-      <div div class="whats-new texta">
+      <div class="whats-new texta">
       <?php
       echo "<a href='../../complete_list/blogs/blog.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
       ?>
