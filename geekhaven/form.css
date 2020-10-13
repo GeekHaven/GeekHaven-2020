@@ -256,7 +256,7 @@ input,select{
     font-weight: 600;
     font-size: 16px;
     color: #707070;
-    border: 2px solid #707070;
+    border: 2px solid #10c5a7;
     box-sizing: border-box;
     border-radius: 8px;
     padding: 10px;
@@ -266,7 +266,7 @@ input,select{
 input:focus {  
     color: #fff; 
     outline: none;
-    border-color: #13F7D2;
+    border-color: #707070;
     /* border-top: none; */
 }  
 select:focus{
@@ -337,4 +337,11 @@ textarea:focus + span{
 .button:hover{
     background: #13F7D2;
     color: #171717;
+}
+
+@media only screen and (max-width: 480px) {
+    .contactUs{
+        font-size: 40px;
+        line-height: 50px;
+    }
 }
