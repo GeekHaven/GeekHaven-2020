@@ -319,3 +319,20 @@ nav{
 .completed{
     color:#D2C555;
 }
+
+@media screen and (max-width:480px)
+{
+    .upper-block{
+        width: -webkit-fill-available;
+        right:0px;
+        display: inline-block;
+    }
+    .upper-block p{
+        float:left;
+        right:-21px;
+    }
+
+    .lower-block p{
+        color: #FFFFFF !important;
+    }
+}
