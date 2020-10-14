@@ -270,21 +270,63 @@
                                 COORDINATOR
                               </p>
                               <div class="overall-icon-div" style="height:50px; display:inline-block;">
-                                <a href="<?php echo $face;?>">
+                              <?php 
+                                if($face){
+
+                                  ?>                       
+                                  <a href="<?php echo $face;?>">
+                                      <div class="overall-icon fb-icon">
+                                          <i class="fa fa-facebook" aria-hidden="true" ></i>
+                                      </div>
+                                  </a>
+                                  <?php 
+                                }
+                                else{
+                                  ?>
                                     <div class="overall-icon fb-icon">
-                                        <i class="fa fa-facebook" aria-hidden="true" ></i>
+                                    <i class="fa fa-facebook" aria-hidden="true" ></i>
                                     </div>
-                                </a>
-                                <a href="<?php echo $twi;?>">
+                                  <?php
+                                }
+                              ?>
+                              <?php 
+                                if($git){
+
+                                  ?>                       
+                                  <a href="<?php echo $git;?>">
+                                      <div class="overall-icon fb-icon">
+                                          <i class="fa fa-github" aria-hidden="true" ></i>
+                                      </div>
+                                  </a>
+                                  <?php 
+                                }
+                                else{
+                                  ?>
                                     <div class="overall-icon">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-github" aria-hidden="true" ></i>
                                     </div>
-                                </a>
-                                <a href="<?php echo $insta;?>">
+                                  <?php
+                                }
+                              ?>
+                              <?php 
+                                if($insta){
+
+                                  ?>                       
+                                  <a href="<?php echo $insta;?>">
+                                      <div class="overall-icon">
+                                          <i class="fa fa-instagram" aria-hidden="true" ></i>
+                                      </div>
+                                  </a>
+                                  <?php 
+                                }
+                                else{
+                                  ?>
                                     <div class="overall-icon">
-                                        <i class="fa fa-instagram" aria-hidden="true" href=""></i>
+                                    <i class="fa fa-instagram" aria-hidden="true" ></i>
                                     </div>
-                                </a>
+                                  <?php
+                                }
+                              ?>
                                 </div>
                               </div>
                         <?php
@@ -333,21 +375,63 @@
                             MEMBER
                           </p>
                           <div class="overall-icon-div" style="height:50px; display:inline-block;">
-                            <a href="<?php echo $face;?>">
-                                <div class="overall-icon fb-icon">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </div>
-                            </a>
-                            <a href="<?php echo $twi;?>">
-                                <div class="overall-icon">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </div>
-                            </a>
-                            <a href="<?php echo $insta;?>">
-                                <div class="overall-icon">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </div>
-                            </a>
+                          <?php 
+                                if($face){
+
+                                  ?>                       
+                                  <a href="<?php echo $face;?>">
+                                      <div class="overall-icon fb-icon">
+                                          <i class="fa fa-facebook" aria-hidden="true" ></i>
+                                      </div>
+                                  </a>
+                                  <?php 
+                                }
+                                else{
+                                  ?>
+                                    <div class="overall-icon fb-icon">
+                                    <i class="fa fa-facebook" aria-hidden="true" ></i>
+                                    </div>
+                                  <?php
+                                }
+                              ?>
+                              <?php 
+                                if($git){
+
+                                  ?>                       
+                                  <a href="<?php echo $git;?>">
+                                      <div class="overall-icon fb-icon">
+                                          <i class="fa fa-github" aria-hidden="true" ></i>
+                                      </div>
+                                  </a>
+                                  <?php 
+                                }
+                                else{
+                                  ?>
+                                    <div class="overall-icon">
+                                    <i class="fa fa-github" aria-hidden="true" ></i>
+                                    </div>
+                                  <?php
+                                }
+                              ?>
+                              <?php 
+                                if($insta){
+
+                                  ?>                       
+                                  <a href="<?php echo $insta;?>">
+                                      <div class="overall-icon">
+                                          <i class="fa fa-instagram" aria-hidden="true" ></i>
+                                      </div>
+                                  </a>
+                                  <?php 
+                                }
+                                else{
+                                  ?>
+                                    <div class="overall-icon">
+                                    <i class="fa fa-instagram" aria-hidden="true" ></i>
+                                    </div>
+                                  <?php
+                                }
+                              ?>
                           </div>
                         </div>
                         <?php

@@ -155,26 +155,77 @@
                             
                             <?php 
                                 if($social_array = mysqli_fetch_assoc($resultSocial)){
-                                    $fb=$social_array['facebook'];
-                                    $insta=$social_array['instagram'];
-                                    $twitter=$social_array['twitter'];
+                                    $git = $social_array['github'];
+                                    $mail = $social_array['mail'];
+                                    $face = $social_array['facebook'];
+                                    $insta = $social_array['instagram'];
+                                    $chef = $social_array['codechef'];
+                                    $force = $social_array['codeforces'];
+                                    $linkedin = $social_array['linkedin'];
+                                    $rank = $social_array['hackerrank'];
+                                    $earth = $social_array['hackerearth'];
+                                    $twi = $social_array['twitter'];
                                     ?>
                                     <div class="overall-icon-div">
-                                        <a href="<?php echo $fb; ?>">
-                                            <div class="overall-icon fb-icon">
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                            </div>
-                                        </a>
-                                        <a href="<?php echo $twitter; ?>">
-                                            <div class="overall-icon">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                        </a>
-                                        <a href="<?php echo $insta; ?>">
-                                            <div class="overall-icon">
-                                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                                            </div>
-                                        </a>
+                                    <?php
+                                        if($face){
+
+                                            ?>
+                                            <a href="<?php echo $face; ?>">
+                                                <div class="overall-icon fb-icon">
+                                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                </div>
+                                            </a>
+                                            <?php
+                                        }
+                                        else{
+                                            ?>
+                                                <div class="overall-icon fb-icon">
+                                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                </div>
+                                            <?php
+                                        }
+                                    ?>
+
+                                    <?php
+                                        if($git){
+
+                                            ?>
+                                            <a href="<?php echo $git; ?>">
+                                                <div class="overall-icon">
+                                                    <i class="fa fa-github" aria-hidden="true"></i>
+                                                </div>
+                                            </a>
+                                            <?php
+                                        }
+                                        else{
+                                            ?>
+                                                <div class="overall-icon ">
+                                                    <i class="fa fa-github" aria-hidden="true"></i>
+                                                </div>
+                                            <?php
+                                        }
+                                    ?>
+
+                                    <?php
+                                        if($insta){
+
+                                            ?>
+                                            <a href="<?php echo $insta; ?>">
+                                                <div class="overall-icon">
+                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                                </div>
+                                            </a>
+                                            <?php
+                                        }
+                                        else{
+                                            ?>
+                                                <div class="overall-icon ">
+                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                                </div>
+                                            <?php
+                                        }
+                                    ?>
                                         </div>
                                     <?php
                                 }
