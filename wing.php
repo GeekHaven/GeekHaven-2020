@@ -99,12 +99,19 @@
                 $details = $row['details'];
                 $image = $row['image'];
                 ?>
-                <div class="col-12 col-sm-12 col-md-6 event-1">
+                <div class="col-12 col-sm-12 col-md-6 event-1" style="padding: 0;margin:0;">
                   <div class="row">
-                    <div class="col-md-4 event-date">
-                      <p class="blacktowhite"><?php echo $months[$mon];?></p>
-                      <p class="number blacktowhite"><?php echo $date[2];?></p>
+
+                    <div class="col-md-4 event-date" style="position: relative;text-align: center;padding: 0;margin:0;" id="event-box">
+                      <img src="images/logo.png" alt="" id="event-card-image" style="width:100%;filter: blur(3px);-webkit-filter: blur(3px);padding:0;margin:0;">
+
+                      <div id="date-box" style="position: absolute;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);padding:0; margin:0;">
+                          <p class="blacktowhite"><?php echo $months[$mon];?></p>
+                          <p class="number blacktowhite"><?php echo $date[2];?></p>
+                      </div>
+
                     </div>
+
                     <div class="col-md-8 event-desc">
                       <h1 class="whiteToBlack"><?php echo $ann_name;?></h1>
                       <p class="whiteToBlack"><?php echo $ann_info;?>  .</p>
