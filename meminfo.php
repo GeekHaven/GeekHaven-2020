@@ -1,9 +1,37 @@
+<?php
+  if(isset($_GET['id'])){
+    require "./database/member_info.php";
+    $id=mysqli_real_escape_string($connection,$_GET['id']);
+    $query = "SELECT * FROM member WHERE `member_id`='$id'";
+    $result = mysqli_query($connection,$query);
+    while($row = mysqli_fetch_assoc($result)){
+        $name = $row['name'];
+        $info = $row['description'];
+        $image = $row['image'];
+        $wing =$row['wing'];
+        $post = $row['post'];
+        $session = $row['session'];
+        $roll_no = $row['roll_no'];
+        $social_handles_id = $row['social_handles'];
+    }
+
+    $query = "SELECT * FROM social_handles WHERE `social_handles_id`='$social_handles_id'";
+    $result = mysqli_query($connection,$query);
+    while($row = mysqli_fetch_assoc($result)){
+        $face = $row['facebook'];
+        $git = $row['github'];
+        $insta = $row['instagram'];
+    }
+  }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title><?php echo $wingName;?></title>
+    <title><?php echo $name;?>|<?php echo $wing;?></title>
     <link rel="shortcut icon" href="./images/gh.svg" type="image/png" />
     <link rel="stylesheet" href="./wing/webd.css" type="text/css">
     <link rel="stylesheet" href="./wing/style.css" type="text/css">
@@ -38,39 +66,81 @@
         </div><!-- /.container-fluid -->
       </nav>
 
-      <section style="margin: 60px">
-      <div class="col-12 col-sm-12 col-md-12 coordi-div" style="padding:0px;">
-                            <!-- <div class="images-coordi"> -->
-                              <img src="GeekHaven-1.png" class="images-coordi"/>
-                              <!-- </div> -->
-                              <p class="coordi-name whiteToBlack">
-                                Anonymous
-                              </p>
-                              <p class="coordi-post">
-                                COORDINATOR
-                              </p>
-                              <div class="overall-icon-div">
-                                <a href="#">
-                                    <div class="overall-icon fb-icon">
-                                        <i class="fa fa-facebook" aria-hidden="true" ></i>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="overall-icon">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                                    </div>
-                                </a>
-                                <a href="#">
-                                    <div class="overall-icon">
-                                        <i class="fa fa-instagram" aria-hidden="true" href=""></i>
-                                    </div>
-                                </a>
-                                </div>
-            </div>
+      <section style="padding: 20px">
+        <div class="container">
+          <div class="col-12 col-sm-12 col-md-6 coordi-div" style="padding:0px;">
+              <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="images-coordi"/>'; ?>
+              <p class="coordi-name whiteToBlack">
+              <?php echo $name?>
+              </p>
+              <p class="coordi-post">
+              <?php echo $post?>
+              </p>
+              <div class="overall-icon-div">
+              <?php 
+                                if($face){
 
-            <div class="col-12 col-sm-12 col-md-12 whiteToBlack coordi-div">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo dolores, tempora aperiam est libero cum delectus cumque. Sit nisi dolores tempore nulla eum eveniet pariatur, debitis veniam, illum obcaecati molestiae.</p>
+                                  ?>                       
+                                  <a href="<?php echo $face;?>">
+                                      <div class="overall-icon fb-icon">
+                                          <i class="fa fa-facebook" aria-hidden="true" ></i>
+                                      </div>
+                                  </a>
+                                  <?php 
+                                }
+                                else{
+                                  ?>
+                                    <div class="overall-icon fb-icon">
+                                    <i class="fa fa-facebook" aria-hidden="true" ></i>
+                                    </div>
+                                  <?php
+                                }
+                              ?>
+                              <?php 
+                                if($git){
+
+                                  ?>                       
+                                  <a href="<?php echo $git;?>">
+                                      <div class="overall-icon fb-icon">
+                                          <i class="fa fa-github" aria-hidden="true" ></i>
+                                      </div>
+                                  </a>
+                                  <?php 
+                                }
+                                else{
+                                  ?>
+                                    <div class="overall-icon">
+                                    <i class="fa fa-github" aria-hidden="true" ></i>
+                                    </div>
+                                  <?php
+                                }
+                              ?>
+                              <?php 
+                                if($insta){
+
+                                  ?>                       
+                                  <a href="<?php echo $insta;?>">
+                                      <div class="overall-icon">
+                                          <i class="fa fa-instagram" aria-hidden="true" ></i>
+                                      </div>
+                                  </a>
+                                  <?php 
+                                }
+                                else{
+                                  ?>
+                                    <div class="overall-icon">
+                                    <i class="fa fa-instagram" aria-hidden="true" ></i>
+                                    </div>
+                                  <?php
+                                }
+                              ?>
+                </div>
             </div>
+            <div class="col-12 col-sm-12 col-md-6 whiteToBlack coordi-div">
+            <p><?php echo $info?></p>
+            </div>
+        </div>
+            
 </section>
 
 
@@ -78,17 +148,20 @@
         <div class="row" style="margin-right: 0px;">
             <div class="blogs col-lg-6 col-xl-6">
                 <h2>Get some good reads!</h2>
-                <button class="btn btn-default text-left">
-                    <span>Blogs by us <i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i><i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i></span>
-                </button>
+                <a href="https://medium.com/nybles" style="text-decordation:none">
+                    <button class="btn btn-default text-left">
+                        <span>Blogs by us <i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i><i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i></span>
+                    </button>
+                </a>
             </div>
             <div class="contacts col-12 col-lg-6 col-xl-6">
                 <h2 style="padding-top:15px ;padding-right:0px;" >Contact us</h2>
                 <div class="icons">
-                    <a href="#"><i class="fa fa-facebook" style="padding: 5px 3px;" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/geekhaveniiita"><i class="fa fa-facebook" style="padding: 5px 3px;" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/geekhaveniiita"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://github.com/GeekHaven"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/geekhaven_iiita/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="mailto:geekhaven@iiita.ac.in"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
