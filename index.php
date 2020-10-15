@@ -46,7 +46,6 @@
                     <ul class="nav navbar-nav navbar-right">
                       <li><a href="#wings-section">Wings</a></li>
                       <li><a href="#overall">Coordinators</a></li>
-                      <li><a href="#footer">Blogs</a></li>
                       <li><a href="#footer">Contacts</a></li>
                       <li><a href="./geekhaven/login.php">Login</a></li>
                     </ul>
