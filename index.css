@@ -795,6 +795,9 @@ nav{
     #particles-js{
         height: 80%;
     }
+    #wing-dis-index{
+        height: 5.7em !important;
+    }
 }
 
 .b1{

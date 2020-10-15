@@ -105,7 +105,7 @@
                     text-overflow: ellipsis;
                     display: -webkit-box;
                     -webkit-line-clamp: 4; 
-                    height: 4.7em;
+                    height: 5em;
                     -webkit-box-orient: vertical;">
                     <?php echo $winginfo; ?>
                 </p>
