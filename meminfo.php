@@ -73,7 +73,7 @@
               <p class="coordi-name whiteToBlack">
               <?php echo $name?>
               </p>
-              <p class="coordi-post">
+              <p class="coordi-post" style="text-transform: capitalize;">
               <?php echo $post?>
               </p>
               <div class="overall-icon-div">
