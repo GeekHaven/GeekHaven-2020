@@ -269,9 +269,11 @@
                               <p class="coordi-post">
                                 COORDINATOR
                               </p>
+                              <div style="font-size: 20px;padding: 5px;">
                               <?php
                                 echo "<a href='./meminfo.php?id={$row['member_id']}' class='more'>More</a>" ;
                                 ?>
+                              </div>
                               <div class="overall-icon-div" style="height:50px; display:inline-block;">
                               <?php 
                                 if($face){
@@ -377,9 +379,11 @@
                           <p class="coordi-post">
                             MEMBER
                           </p>
+                          <div style="font-size: 20px;padding: 5px;">
                           <?php
                           echo "<a href='./meminfo.php?id={$row['member_id']}' class='more'>More</a>" ;
                           ?>
+                          </div>
                           <div class="overall-icon-div" style="height:50px; display:inline-block;">
                           <?php 
                                 if($face){

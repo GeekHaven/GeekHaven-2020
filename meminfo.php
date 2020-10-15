@@ -31,7 +31,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title><?php echo $name;?>|<?php echo $wing;?></title>
+    <title><?php echo $name;?> | <?php echo $wing;?></title>
     <link rel="shortcut icon" href="./images/gh.svg" type="image/png" />
     <link rel="stylesheet" href="./wing/webd.css" type="text/css">
     <link rel="stylesheet" href="./wing/style.css" type="text/css">
