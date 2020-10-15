@@ -801,7 +801,7 @@ nav{
 }
 
 .b1{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: #252628;
