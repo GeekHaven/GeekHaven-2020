@@ -17,12 +17,14 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
-    <!-- <div class="loader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div> -->
+
+    <!--CSS Spinner-->
+    <div class="con1">
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
+        <div class="item item-4"></div>
+      </div>
     <div id="particles-js"></div>
 
     <div class="wrapper">
@@ -268,7 +270,11 @@
 <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
+
 <script>
+
+            
+
     $(function () {
   $(document).scroll(function () {
 
@@ -919,6 +925,16 @@
             $(this).children(".more").css('color','#13F7D2');
             $(this).children('p').css('color','white');
         }
+    });
+
+    $(document).ready(function() {
+        //Preloader
+        preloaderFadeOutTime = 500;
+        function hidePreloader() {
+        var preloader = $('.con1');
+        preloader.fadeOut(preloaderFadeOutTime);
+        }
+        hidePreloader();
     });
     
 
