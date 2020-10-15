@@ -40,9 +40,9 @@
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                      <li><a href="#footer">Blogs</a></li>
                       <li><a href="#wings-section">Wings</a></li>
                       <li><a href="#overall">Coordinators</a></li>
+                      <li><a href="#footer">Blogs</a></li>
                       <li><a href="#footer">Contacts</a></li>
                       <li><a href="./geekhaven/login.php">Login</a></li>
                     </ul>
