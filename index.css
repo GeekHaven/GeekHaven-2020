@@ -807,6 +807,8 @@ nav{
     left: 0;
     right: 0;
     margin: auto;
+    background: #252628;
+    z-index:999;
   }
   
   .item {
