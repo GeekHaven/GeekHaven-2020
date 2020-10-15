@@ -47,7 +47,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="../../index.php">Home</a></li>
               <li><a href="https://medium.com/nybles">Blog Us</a></li>
-              <li><a href="../../geekhaven/contact.php">Contacts</a></li>
+              <!-- <li><a href="../../geekhaven/contact.php">Contacts</a></li> -->
               <li><a href="../../geekhaven/login.php">Login</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->

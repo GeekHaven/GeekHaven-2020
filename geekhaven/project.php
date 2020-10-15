@@ -36,7 +36,7 @@
                 <li><a href="./home.php">Home</a></li>
                 <li><a href="https://medium.com/nybles">Blog Us</a></li>
                 <li><a href="./updateProfile.php">Update Profile</a></li>
-                <li><a href="./contact.php">Contacts</a></li>
+                <!-- <li><a href="./contact.php">Contacts</a></li> -->
                 <li><a href="./logout.php">Logout</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
