@@ -100,7 +100,7 @@
                 <p class="wing-title">
                     <?php echo $wingname; ?>
                 </p>
-                <p class="wing-dis" style="
+                <p class="wing-dis wing-dis-index" style="
                     overflow: hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;
