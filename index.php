@@ -19,12 +19,14 @@
 <body>
 
     <!--CSS Spinner-->
-    <div class="con1">
-        <div class="item item-1"></div>
-        <div class="item item-2"></div>
-        <div class="item item-3"></div>
-        <div class="item item-4"></div>
-      </div>
+    <div class="b1">
+        <div class="con1">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+        </div>
+    </div>
     <div id="particles-js"></div>
 
     <div class="wrapper">
@@ -931,7 +933,7 @@
         //Preloader
         preloaderFadeOutTime = 500;
         function hidePreloader() {
-        var preloader = $('.con1');
+        var preloader = $('.b1');
         preloader.fadeOut(preloaderFadeOutTime);
         }
         hidePreloader();
