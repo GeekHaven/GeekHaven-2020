@@ -490,7 +490,7 @@
         ?>
         </div>
       </section>  
-      <div class="whats-new texta">
+      <div class="whats-new texta padding-t-0">
       <?php
       echo "<a href='./complete_list/blogs/blog.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
       ?>
