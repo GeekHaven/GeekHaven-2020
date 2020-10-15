@@ -38,7 +38,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="./home.php">Home</a></li>
                 <li><a href="https://medium.com/nybles">Blog Us</a></li>
-                <li><a href=".#">Update Profile</a></li>
+                <li><a href="#">Update Profile</a></li>
                 <!-- <li><a href="./contact.php">Contacts</a></li> -->
                 <li><a href="./logout.php">Logout</a></li>
             </ul>
