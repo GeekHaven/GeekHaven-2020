@@ -104,3 +104,13 @@ $('.contacts a').attr('style','color: #13F7D2; border-color:#13F7D2')
 $('.footer').attr('style','background-color: #1D1D1F')
 $('.whiteToblackBg').attr('style', 'background-color: #252628 ')
 } 
+
+$(document).ready(function() {
+    //Preloader
+    preloaderFadeOutTime = 500;
+    function hidePreloader() {
+    var preloader = $('.b1');
+    preloader.fadeOut(preloaderFadeOutTime);
+    }
+    hidePreloader();
+});

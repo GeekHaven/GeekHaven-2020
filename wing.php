@@ -34,6 +34,17 @@
 
 </head>
 <body>
+
+    <!--CSS Spinner-->
+    <div class="b1">
+        <div class="con1">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+        </div>
+    </div>
+
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
         <div class="container-fullwidth" style="padding: 0 5%;">
           <a href="./index.php"><img class="nav-logo" src="./images/gh.png"></a>
