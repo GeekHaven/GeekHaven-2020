@@ -769,8 +769,8 @@ nav{
     .footer{
         padding-top: -20px;
         height: 420px;
-        padding-right: 0px;
-        padding-left: 20px;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
         text-align: center;
     }
 
@@ -784,12 +784,16 @@ nav{
 
     .contacts{
         margin: 0 auto;
-        transform: scale(0.7);
+        transform: scale(0.8);
         padding-bottom: 50px;
     }
 
     .contacts a{
         margin: 0 5px;
+    }
+
+    #cont{
+       width:200px; 
     }
 
     #particles-js{
