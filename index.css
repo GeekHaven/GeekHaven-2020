@@ -808,6 +808,7 @@ nav{
     position: fixed;
     width: 100%;
     height: 100%;
+    top: 0;
     background-color: #252628;
     z-index: 1999;
 }
