@@ -26,7 +26,7 @@
     <title><?php echo $wingName;?></title>
     <link rel="shortcut icon" href="./images/gh.svg" type="image/png" />
     <link rel="stylesheet" href="./wing/webd.css" type="text/css">
-    <link rel="stylesheet" href="./wing/style.css" type="text/css">
+    <!-- <link rel="stylesheet" href="./wing/style.css" type="text/css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     

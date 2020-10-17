@@ -220,6 +220,12 @@ nav{
     line-height: 15px;
     padding-left: 10px;
     color: #FFFFFF;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    height: 2.5em;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .coordi-name{
