@@ -264,6 +264,11 @@
             </div>
         </div>
     </section>
+    <div style="text-align:center">
+        <p class="overall-post more" style="padding-top: 30px;">
+        © Copyright, Geekhaven IIITA · <a href="./credits.html" style="color: inherit;border-color:#15C4A8;border-radius: 5px;padding: 5px;">Credits</a>
+        </p>
+    </div>
 
 
 <script type="text/javascript" src="particles.js"></script>
