@@ -44,7 +44,7 @@ if(isset($_GET['id'])){
 
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
         <div class="container-fullwidth" style="padding: 0 5%;">
-          <a href="../index.php"><img class="nav-logo" src="../../images/gh.png"></a>
+          <a href="../../index.php"><img class="nav-logo" src="../../images/gh.png"></a>
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -129,8 +129,7 @@ if(isset($_GET['id'])){
 
       </section>
 
-      <p class="banner">Thanks For Watching!!!</p>
-
+      <p class="banner">Thanks For Reading!!!</p>
 
       <section class="footer" id="footer">
         <div class="row" style="margin-right: 0px;">
@@ -154,7 +153,11 @@ if(isset($_GET['id'])){
             </div>
         </div>
     </section>
-
+    <div style="text-align:center">
+        <p class="overall-post more" style="padding-top: 30px;">
+        © Copyright, Geekhaven IIITA · <a href="./credits.html" style="color: inherit;border-color:#15C4A8;border-radius: 5px;padding: 5px;">Credits</a>
+        </p>
+    </div>
       <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
       <script src="../assets/owlcarousel/owl.carousel.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>

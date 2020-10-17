@@ -44,7 +44,7 @@
 
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
         <div class="container-fullwidth" style="padding: 0 5%;">
-          <a href="../index.php"><img class="nav-logo" src="../../images/gh.png"></a>
+          <a href="../../index.php"><img class="nav-logo" src="../../images/gh.png"></a>
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
