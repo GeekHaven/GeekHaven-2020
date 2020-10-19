@@ -144,7 +144,7 @@
                               ?>
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 whiteToBlack coordi-div">
+            <div class="col-12 col-sm-12 col-md-6 whiteToBlack coordi-div text-center">
             <p><?php echo $info?></p>
             </div>
         </div>
