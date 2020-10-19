@@ -59,14 +59,14 @@
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
 		<div class="container" style="background: #171717;border-radius: 16px;">
 			<form method='post'  style="text-align: center;" enctype="multipart/form-data" action='../data_game/profileupdate.php'>
-                <p class="contactUs" >Change Password</p> 
+        <p class="contactUs" >Change Password</p> 
 
 				<div class="form-group col-lg-12">
-					<input name="name" type="text" required></input>
+					<input name="pass" type="password" required></input>
 					<span class="floating-label">Password</span>
 				</div>
-                <div class="form-group col-lg-12">
-					<input name="name" type="text" required></input>
+        <div class="form-group col-lg-12">
+					<input name="pass2" type="password" required></input>
 					<span class="floating-label">Confirm Password</span>
 				</div>
 				

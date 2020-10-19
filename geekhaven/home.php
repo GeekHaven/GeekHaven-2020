@@ -79,17 +79,16 @@
         <form action='wing.php' class="form-group col-lg-12">
             <input type="submit" value="wings" style="color: aliceblue;">
         </form>
-        <form action='project.php' class="form-group col-lg-4">
+        <form action='project.php' class="form-group col-lg-6">
             <input type="submit" value="Projects" style="color: aliceblue;">
         </form>
-        
-        
-        <form action='blog.php' class="form-group col-lg-4">
+        <form action='blog.php' class="form-group col-lg-6">
             <input type="submit" value="Blogs" style="color: aliceblue;">
         </form>
-        
-        
-        <form action='announcement.php' class="form-group col-lg-4">
+        <form action='changePass.php' class="form-group col-lg-6">
+            <input type="submit" value="Change Password" style="color: aliceblue;">
+        </form>
+        <form action='announcement.php' class="form-group col-lg-6">
             <input type="submit" value="Announcements" style="color: aliceblue;">
         </form>
         <div class="col-lg-4">
