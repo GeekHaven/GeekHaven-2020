@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Wing Name</title>
-    <link rel="shortcut icon" href="../../images/gh.svg" type="image/png" />
+    <link rel="shortcut icon" href="../images/gh.svg" type="image/png" />
     <link rel="stylesheet" href="form.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -46,7 +46,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="./home.php">Home</a></li>
-                <li><a href="https://medium.com/nybles">Blog Us</a></li>
+                <li><a href="https://medium.com/nybles">Blogs</a></li>
                 <li><a href="./updateProfile.php">Update Profile</a></li>
                 <!-- <li><a href="./contact.php">Contacts</a></li> -->
                 <li><a href="./logout.php">Logout</a></li>

@@ -42,7 +42,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="./home.php">Home</a></li>
-              <li><a href="https://medium.com/nybles">Blog Us</a></li>
+              <li><a href="https://medium.com/nybles">Blogs</a></li>
               <li><a href="#">Contacts</a></li>
               <li><a href="./login.php">Login</a></li>
             </ul>
