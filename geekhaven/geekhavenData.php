@@ -4,6 +4,9 @@
     session_start();
     include 'auth.php';
     $res = callCheck();
+    if($res<1){
+        header('location:login.php');        
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
