@@ -54,17 +54,25 @@
 	  <style>
 		  
 	  </style>
+      <?php
+      $query = 'SELECT * FROM geekhavenInfo';
+      $query_run = mysqli_query($connection,$query);
+      while($row = mysqli_fetch_assoc($query_run)){
+          $name =$row['name'];   
+          $des =$row['description']; 
+      }
+      ?>
 	  
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
 		<div class="container" style="background: #171717;border-radius: 16px;">
-			<form method='post'  style="text-align: center;" enctype="multipart/form-data">
+			<form method='post'  style="text-align: center;" enctype="multipart/form-data" action = '../data_game/ghDataUpdate.php'>
             <p class="contactUs" >Geekhaven Data</p> 
             <div class="form-group col-lg-12">
-				<input name="name" type="text" required></input>
+				<input name="name" type="text" value="<?php echo $name?>"required></input>
 				<span class="floating-label">Name</span>
 			</div>
             <div class="form-group col-lg-12">
-                <textarea  name="description" type="text"><?php echo $des;?></textarea>
+                <textarea  name="description" type="text" ><?php echo $des?></textarea>
                 <span class="floating-label">Description</span>
             </div> 
 				
@@ -73,9 +81,6 @@
 				</div>   	
 			</form>
             <?php
-            if(isset($_POST['submit'])){
-                
-            }
         ?>
         </div>   
 

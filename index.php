@@ -67,8 +67,16 @@
                 </div>
 
                 <!-- <i class="fa fa-sun-o theme" style="color: #13F7D2;padding: 10px;" aria-hidden="true"></i>   -->
-                <h1 class="main-heading">GeekHaven</h1>
-                <p class="intro-heading"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <?php
+                    $query = 'SELECT * FROM geekhavenInfo';
+                    $query_run = mysqli_query($connection,$query);
+                    while($row = mysqli_fetch_assoc($query_run)){
+                        $name =$row['name'];   
+                        $des =$row['description']; 
+                    }
+                ?>
+                <h1 class="main-heading"><?php echo $name;?></h1>
+                <p class="intro-heading"><?php echo $des;?></p>
             </div>
         </div>
 
