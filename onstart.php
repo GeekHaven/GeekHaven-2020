@@ -137,6 +137,13 @@
     );";
 
     mysqli_query($connection,$query) ;
+
+    $query = "CREATE TABLE geekhavenInfo (
+        `name`varchar(255),
+        `description`varchar(12000)             
+    );";
+
+    mysqli_query($connection,$query) ;
     
     $query = "INSERT INTO social_handles VALUES('00000','','','','','','','','','','')";
     $query_run = mysqli_query($connection,$query);                             
