@@ -58,8 +58,19 @@
 	  
       <section class="form" style="margin-top: 200px;;margin-bottom: 50px;">
 		<div class="container" style="background: #171717;border-radius: 16px;">
-			<form method='post'  style="text-align: center;" enctype="multipart/form-data" action='../data_game/profileupdate.php'>
+			<form method='post'  style="text-align: center;" enctype="multipart/form-data">
         <p class="contactUs" >Change Password</p> 
+                <div class="form-group col-lg-12">
+                Current Password : <?php 
+                    $mem_id = $_SESSION['member_id'];                                    
+                    $query = "SELECT * FROM credentials WHERE `member_id` = '$mem_id'";
+                    $query_run = mysqli_query($connection,$query);       
+                    while($row = mysqli_fetch_assoc($query_run)){
+                        $pass =$row['password'];   
+                    }             
+                    echo $pass;
+                ?>
+				</div>
 
 				<div class="form-group col-lg-12">
 					<input name="pass" type="password" required></input>
@@ -76,7 +87,16 @@
 			</form>
             <?php
             if(isset($_POST['submit'])){
-                
+                $pass = $_POST['pass'];
+                $cpass = $_POST['pass2'];
+                $mem_id = $_SESSION['member_id'];                
+                if($pass == $cpass){
+                    $query = "UPDATE credentials SET `password`='$pass' WHERE `member_id` = '$mem_id'";
+                    $query_run = mysqli_query($connection,$query);                    
+                    echo "Password Updated Successfully";
+                }else{
+                    echo "Password and Confirm Password are not same";
+                }
             }
         ?>
         </div>   
