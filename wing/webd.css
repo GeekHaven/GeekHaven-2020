@@ -350,10 +350,24 @@ nav{
 
 .event-date{
     font-family: Montserrat;
-    padding:20px;
-    border: 1px solid #13F7D2;
-    background-color: #13F7D2;
+    /*padding:20px;*/
+    /*border: 1px solid #13F7D2;*/
+    /*background-color: #13F7D2;*/
+    
 }
+#event-box{
+    padding: 0;
+}
+
+/*
+#event-card-image{
+    
+}
+#date-box{
+    
+}
+*/
+
 
 .event-date .number{
     color: #191A1B;
@@ -527,7 +541,8 @@ nav{
     position: relative;
     margin:0 auto;
     margin-top: 200px;
-    width: 100%;
+    width: 70%;
+    float: right;
 }
 
 .footer{
@@ -762,6 +777,7 @@ nav{
 
     .webd-logo img{
         margin-top: 10px;
+        width: 100%;
     }
 
     .announcements p{

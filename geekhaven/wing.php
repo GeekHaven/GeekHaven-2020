@@ -65,7 +65,6 @@
 				<input type="text" name="wing" required></input>
 				<span class="floating-label">Wing Name</span>
 			</div>
-
 			<div class="form-group col-lg-12">
 				<textarea  name="info" ></textarea>
 				<span class="floating-label">Information</span>

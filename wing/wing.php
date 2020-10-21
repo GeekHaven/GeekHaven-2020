@@ -1,6 +1,6 @@
 <?php
   if(isset($_GET['id'])){
-    require "./database/member_info.php";
+    require "../../database/member_info.php";
     $id=mysqli_real_escape_string($connection,$_GET['id']);
     $wing_id = $id;
     $query = "SELECT * FROM wings WHERE `wing_id`='$wing_id'";
@@ -24,9 +24,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title><?php echo $wingName;?></title>
-    <link rel="shortcut icon" href="./images/gh.svg" type="image/png" />
-    <link rel="stylesheet" href="./wing/webd.css" type="text/css">
-    <!-- <link rel="stylesheet" href="./wing/style.css" type="text/css"> -->
+    <link rel="shortcut icon" href="../../images/gh.svg" type="image/png" />
+    <link rel="stylesheet" href="webd.css" type="text/css">
+    <link rel="stylesheet" href="../style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     
@@ -34,20 +34,9 @@
 
 </head>
 <body>
-
-    <!--CSS Spinner-->
-    <div class="b1">
-        <div class="con1">
-            <div class="item item-1"></div>
-            <div class="item item-2"></div>
-            <div class="item item-3"></div>
-            <div class="item item-4"></div>
-        </div>
-    </div>
-
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
-        <div class="container-fullwidth" style="padding: 0 5%;">
-          <a href="./index.php"><img class="nav-logo" src="./images/gh.png"></a>
+        <div class="container-fullwidth">
+          <a href="../../index.html"><img class="nav-logo" src="../../images/gh.png"></a>
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -59,12 +48,11 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="./index.php">Home</a></li>
+              <li><a href="../../index.html">Home</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#team">Team</a></li>
               <li><a href="#blogs">Blogs</a></li>
               <li><a href="#footer">Contacts</a></li>
-              <li><a href="./geekhaven/login.php">Login</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -73,7 +61,7 @@
       <div class="wrapper">
             <div class="intro-header col-sm-6">
                 <div class="heading main-heading"><?php echo $wing;?></div>
-                <p class="intro-heading"><?php echo $info;?>.</p>
+                <p class="intro-heading"><?php echo $info;?></p>
             </div>
             <div class="webd-logo col-sm-6">
                 <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?>
@@ -95,11 +83,9 @@
 
             <?php
               $query = "SELECT * FROM announcements WHERE `organizer`='$wing'";
-              $j = 0;
 
               $result = mysqli_query($connection,$query);
-              while(($row = mysqli_fetch_assoc($result))&&($j<2)){
-                $j = $j+1;
+              while($row = mysqli_fetch_assoc($result)){
                 $ann_name = $row['name'];
                 $ann_info = $row['details'];
                 $venue = $row['venue'];
@@ -113,19 +99,12 @@
                 $details = $row['details'];
                 $image = $row['image'];
                 ?>
-                <div class="col-12 col-sm-12 col-md-6 event-1" style="padding: 0;margin:0;">
+                <div class="col-12 col-sm-12 col-md-6 event-1">
                   <div class="row">
-
-                    <div class="col-md-4 event-date" style="position: relative;text-align: center;padding: 0;margin:0;" id="event-box">
-                      <img src="images/logo.png" alt="" id="event-card-image" style="width:100%;filter: blur(3px);-webkit-filter: blur(3px);padding:0;margin:0;">
-
-                      <div id="date-box" style="position: absolute;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);padding:0; margin:0;">
-                          <p class="blacktowhite"><?php echo $months[$mon];?></p>
-                          <p class="number blacktowhite"><?php echo $date[2];?></p>
-                      </div>
-
+                    <div class="col-md-4 event-date">
+                      <p class="blacktowhite"><?php echo $months[$mon];?></p>
+                      <p class="number blacktowhite"><?php echo $date[2];?></p>
                     </div>
-
                     <div class="col-md-8 event-desc">
                       <h1 class="whiteToBlack"><?php echo $ann_name;?></h1>
                       <p class="whiteToBlack"><?php echo $ann_info;?>  .</p>
@@ -152,7 +131,7 @@
       </div>
       <div div class="whats-new texta">
       <?php
-      echo "<a href='./complete_list/announcements/announcements.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
+      echo "<a href='../../complete_list/announcements/announcements.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
       ?>
       
       </div>
@@ -165,11 +144,9 @@
         <section class="container title-cards">
         <?php
           $query = "SELECT * FROM Projects WHERE `wing_id`='$wing_id'";
-          $i=0;
 
           $result = mysqli_query($connection,$query);
-          while(($row = mysqli_fetch_assoc($result))&&($i<3)){
-            $i = $i+1;
+          while($row = mysqli_fetch_assoc($result)){
             $pro_name = $row['project_name'];
             $pro_link = $row['project_link'];
             $code = $row['source_code_link'];
@@ -178,7 +155,7 @@
             $pro_blog_link = $row['blog_link'];
             ?>
             <div class="col-12 col-sm-12 col-md-12" style="margin-top: 100px;"> 
-                <img src="./images/circle.png" class="circle-card-1 c1" style="left: -90px;"/> 
+                <img src="../../images/circle.png" class="circle-card-1 c1" style="left: -90px;"/> 
                 <div class="col-md-12 card-title">
                   <p class="whiteToBlack date">2020</p>
                   <hr class="line">
@@ -234,7 +211,7 @@
     </div>
     <div div class="whats-new texta">
       <?php
-      echo "<a href='./complete_list/announcements/projects.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
+      echo "<a href='../../complete_list/announcements/projects.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
       ?>
       
       </div>
@@ -244,9 +221,9 @@
         </p>
         <hr class="line">
           <div class="container-fluid">
-              <div class="row" style="text-align:center">
+              <div class="row">
               <div class="col-12 col-sm-12 col-md-1">
-                <img src="./images/zigzag.png" class="zigzag-team">
+                <img src="../../images/zigzag.png" class="zigzag-team">
               </div>
                 <?php
                     $query = "SELECT * FROM member WHERE `wing`='$wing' AND `post`='coordinator'";
@@ -277,7 +254,7 @@
                         ?>
                          
                         
-                            <div class="col-12 col-sm-12 col-md-5 coordi-div" style="padding:0px; display:inline-block; float:none;">
+                            <div class="col-12 col-sm-12 col-md-5 coordi-div" style="padding:0px;">
                               <!-- <div class="images-coordi"> -->
                               <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="images-coordi"/>'; ?>
                               <!-- </div> -->
@@ -287,76 +264,29 @@
                               <p class="coordi-post">
                                 COORDINATOR
                               </p>
-                              <div style="font-size: 20px;padding: 5px;">
-                              <?php
-                                echo "<a href='./meminfo.php?id={$row['member_id']}' class='more'>More</a>" ;
-                                ?>
-                              </div>
-                              <div class="overall-icon-div" style="height:50px; display:inline-block;">
-                              <?php 
-                                if($face){
-
-                                  ?>                       
-                                  <a href="<?php echo $face;?>">
-                                      <div class="overall-icon fb-icon">
-                                          <i class="fa fa-facebook" aria-hidden="true" ></i>
-                                      </div>
-                                  </a>
-                                  <?php 
-                                }
-                                else{
-                                  ?>
+                              <div class="overall-icon-div">
+                                <a href="<?php echo $face;?>">
                                     <div class="overall-icon fb-icon">
-                                    <i class="fa fa-facebook" aria-hidden="true" ></i>
+                                        <i class="fa fa-facebook" aria-hidden="true" ></i>
                                     </div>
-                                  <?php
-                                }
-                              ?>
-                              <?php 
-                                if($git){
-
-                                  ?>                       
-                                  <a href="<?php echo $git;?>">
-                                      <div class="overall-icon fb-icon">
-                                          <i class="fa fa-github" aria-hidden="true" ></i>
-                                      </div>
-                                  </a>
-                                  <?php 
-                                }
-                                else{
-                                  ?>
+                                </a>
+                                <a href="<?php echo $twi;?>">
                                     <div class="overall-icon">
-                                    <i class="fa fa-github" aria-hidden="true" ></i>
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
                                     </div>
-                                  <?php
-                                }
-                              ?>
-                              <?php 
-                                if($insta){
-
-                                  ?>                       
-                                  <a href="<?php echo $insta;?>">
-                                      <div class="overall-icon">
-                                          <i class="fa fa-instagram" aria-hidden="true" ></i>
-                                      </div>
-                                  </a>
-                                  <?php 
-                                }
-                                else{
-                                  ?>
+                                </a>
+                                <a href="<?php echo $insta;?>">
                                     <div class="overall-icon">
-                                    <i class="fa fa-instagram" aria-hidden="true" ></i>
+                                        <i class="fa fa-instagram" aria-hidden="true" href=""></i>
                                     </div>
-                                  <?php
-                                }
-                              ?>
+                                </a>
                                 </div>
                               </div>
                         <?php
                     }
                 ?> 
               </div>
-              <div class="row" style="text-align:center">
+              <div class="row">
               <?php
                     $query = "SELECT * FROM member WHERE `wing`='$wing' AND `post`='member'";
                     $result = mysqli_query($connection,$query);
@@ -384,7 +314,7 @@
                         $sess = $row['session'];
                         $post = $row['post'];
                         ?>
-                        <div class="col-12 col-sm-12 col-md-4 member-div" style="display:inline-block; float:none;">
+                        <div class="col-12 col-sm-12 col-md-4 member-div">
                           <div class="images-cover">
                             <!-- <div class="images-member"> -->
                             <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"class="images-coordi"/>'; ?>
@@ -397,69 +327,22 @@
                           <p class="coordi-post">
                             MEMBER
                           </p>
-                          <div style="font-size: 20px;padding: 5px;">
-                          <?php
-                          echo "<a href='./meminfo.php?id={$row['member_id']}' class='more'>More</a>" ;
-                          ?>
-                          </div>
-                          <div class="overall-icon-div" style="height:50px; display:inline-block;">
-                          <?php 
-                                if($face){
-
-                                  ?>                       
-                                  <a href="<?php echo $face;?>">
-                                      <div class="overall-icon fb-icon">
-                                          <i class="fa fa-facebook" aria-hidden="true" ></i>
-                                      </div>
-                                  </a>
-                                  <?php 
-                                }
-                                else{
-                                  ?>
-                                    <div class="overall-icon fb-icon">
-                                    <i class="fa fa-facebook" aria-hidden="true" ></i>
-                                    </div>
-                                  <?php
-                                }
-                              ?>
-                              <?php 
-                                if($git){
-
-                                  ?>                       
-                                  <a href="<?php echo $git;?>">
-                                      <div class="overall-icon fb-icon">
-                                          <i class="fa fa-github" aria-hidden="true" ></i>
-                                      </div>
-                                  </a>
-                                  <?php 
-                                }
-                                else{
-                                  ?>
-                                    <div class="overall-icon">
-                                    <i class="fa fa-github" aria-hidden="true" ></i>
-                                    </div>
-                                  <?php
-                                }
-                              ?>
-                              <?php 
-                                if($insta){
-
-                                  ?>                       
-                                  <a href="<?php echo $insta;?>">
-                                      <div class="overall-icon">
-                                          <i class="fa fa-instagram" aria-hidden="true" ></i>
-                                      </div>
-                                  </a>
-                                  <?php 
-                                }
-                                else{
-                                  ?>
-                                    <div class="overall-icon">
-                                    <i class="fa fa-instagram" aria-hidden="true" ></i>
-                                    </div>
-                                  <?php
-                                }
-                              ?>
+                          <div class="overall-icon-div">
+                            <a href="<?php echo $face;?>">
+                                <div class="overall-icon fb-icon">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <a href="<?php echo $twi;?>">
+                                <div class="overall-icon">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <a href="<?php echo $insta;?>">
+                                <div class="overall-icon">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </div>
+                            </a>
                           </div>
                         </div>
                         <?php
@@ -474,7 +357,7 @@
         
       </section>
       <section class="container-fluid" style="margin-top: 100px;margin-bottom: 100px;" id="blogs">
-        <img src="./images/circle.png" class="circle-blog">
+        <img src="../../images/circle.png" class="circle-blog">
         <p class="wing-heading whiteToBlack">
           <span>BL</span><span class="texta" style="color: #13F7D2;">O</span><span>GS</span>
         </p>
@@ -508,42 +391,139 @@
         ?>
         </div>
       </section>  
-      <div class="whats-new texta padding-t-0">
-      <?php
-      echo "<a href='./complete_list/blogs/blog.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
-      ?>
-      </div>
       <section class="footer" id="footer">
         <div class="row" style="margin-right: 0px;">
             <div class="blogs col-lg-6 col-xl-6">
                 <h2>Get some good reads!</h2>
-                <a href="https://medium.com/nybles" style="text-decordation:none">
-                    <button class="btn btn-default text-left">
-                        <span>Blogs by us <i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i><i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i></span>
-                    </button>
-                </a>
+                <button class="btn btn-default text-left">
+                    <span>Blogs by us <i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i><i class="fa fa-angle-right" style="font-weight: bold;" aria-hidden="true"></i></span>
+                </button>
             </div>
-            <div class="contacts col-12 col-lg-6 col-xl-6" style="padding-left: 0px;">
+            <div class="contacts col-12 col-lg-6 col-xl-6">
                 <h2 style="padding-top:15px ;padding-right:0px;" >Contact us</h2>
                 <div class="icons">
-                    <a href="https://www.facebook.com/geekhaveniiita"><i class="fa fa-facebook" style="padding: 5px 3px;" aria-hidden="true"></i></a>
-                    <a href="https://twitter.com/geekhaveniiita"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="https://github.com/GeekHaven"><i class="fa fa-github" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/geekhaven_iiita/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="mailto:geekhaven@iiita.ac.in"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-facebook" style="padding: 5px 3px;" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </section>
-    <div style="text-align:center">
-        <p class="overall-post more" style="padding-top: 30px;">
-        © Copyright, Geekhaven IIITA · <a href="./credits.html" style="color: inherit;border-color:#15C4A8;border-radius: 5px;padding: 5px;">Credits</a>
-        </p>
-    </div>
+
       <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
       
-      <script type="text/javascript" src="wing.js"></script>
+      <script>
+
+            $(function () {
+            $(document).scroll(function () {
+
+                var $logo = $(".nav-logo");
+                $logo.toggleClass('scroll-img', $(this).scrollTop() > 10);
+
+                var $nav_links = $(".navbar-nav li a")
+                var $bars = $(".fa-bars");
+
+                if(localStorage.getItem("theme")=="0") //light mode
+                {
+                    $logo.toggleClass('mode-change-color', $(this).scrollTop() > $logo.height());
+                    $bars.toggleClass('mode-change-color', $(this).scrollTop() > $logo.height());   
+                    $nav_links.toggleClass('link-change-color', $(this).scrollTop() > $logo.height()); 
+
+                    if (window.matchMedia('(max-width: 768px)').matches)
+                    {
+                        $nav_links.toggleClass('link2-change-color', $(this).scrollTop() > $logo.height()); 
+                    }
+
+                }
+
+                var $nav = $(".navbar-fixed-top");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
+
+            });
+            });
+
+            if(localStorage.getItem("theme")=="0"){
+    
+    $(document.body).attr('style', 'background-color: white !important');
+    $(".margin-div-bottom").children('p').css('color','black'); 
+    $(".navbar-nav li a").css('color','#000000')
+    $('.slider').css('background-color','black');           
+    $('.sub-heading').attr('style','color: #0D9C85')
+    $('.intro-heading').css('color','black')
+    $('.main-heading').css('color','black')
+    $('.nav-logo').attr('src','../../images/gh.svg')
+    $('.texta').attr('style', 'color: #0D9C85')
+    $('.coordi-post').attr('style', 'color: #0D9C85')
+    $('.arrow-down').attr('style','color: #0D9C85')
+    $(".more").css('color','#0D9C75')
+    $('.whiteToBlack').attr('style', 'color: black')
+    $('.blacktowhite').attr('style', 'color: white')
+    $('.arrow').attr('src','images/arrow-light.png')
+    $('.fa-bars').css('color','#000000')
+    $('.event-date').attr('style','background-color: #0D9C85; border-color: #0D9C85')
+    $('.card-title').attr('style','background:linear-gradient(90deg, #F2A3A3 50%, #FFFFFF 50%);box-shadow: 0 0 10px #ccc')
+    $('.card-2').attr('style','background:linear-gradient(90deg, #FFFFFF 50%, #BBB6F3 50%);box-shadow: 0 0 10px #ccc')   
+    $('.card-3').attr('style','background:linear-gradient(90deg, #EDBDF4 50%, #FFFFFF 50%);box-shadow: 0 0 10px #ccc')   
+
+    if (window.matchMedia('(max-width: 480px)').matches)
+    {
+      $('.card-title').attr('style','background:linear-gradient(to bottom, #F2A3A3 50%, #FFFFFF 50%) !important;box-shadow: 0 0 10px #ccc')
+      $('.card-2').attr('style','background:linear-gradient(to bottom, #BBB6F3 50%, #FFFFFF 50%) !important;box-shadow: 0 0 10px #ccc')   
+      $('.card-3').attr('style','background:linear-gradient(to bottom, #EDBDF4 50%, #FFFFFF 50%) !important;box-shadow: 0 0 10px #ccc') 
+    }
+
+    $('.card-btn').attr('style','background-color: #0D9C85 !important; border-color: #0D9C85 !important')
+    $('.blogs h2').attr('style','color: #000000')
+    $('.blogs button').attr('style','background-color: #15C4A8; border-color: #15C4A8')
+    $('.blogs span').attr('style','color: #FFFFFF')
+    $('.contacts h2').attr('style','color: #000000')
+    $('.contacts a').attr('style','color: #15C4A8; border-color:#15C4A8')
+    $('.footer').attr('style','background-color: #E7E7E7')
+    $('.whiteToblackBg').attr('style', 'background-color: white')
+
+}else{  
+
+$(document.body).attr('style', 'background-color: #252628 !important');
+    $(".margin-div-bottom").children('p').css('color','white');
+    $(".navbar-nav li a").css('color','#13F7D2')
+    $('.sub-heading').attr('style','color: #13F7D2')
+    $('.intro-heading').css('color','white')
+    $('.main-heading').css('color','white')
+    $('.nav-logo').attr('src','../../images/gh.png')
+    $('.texta').attr('style', 'color: #13F7D2')
+    $('.coordi-post').attr('style', 'color: #13F7D2')
+    $('.arrow-down').attr('style','color: #13F7D2')
+    $(".more").css('color','#13F7D2')
+    $('.arrow').attr('src','../../images/arrow.png')
+    $('.fa-bars').css('color','#FFFFFF')
+    $('.slider').css('background-color','white');
+    $('.whiteToBlack').attr('style', 'color: white')
+    $('.blacktowhite').attr('style', 'color: black')
+    $('.event-date').attr('style','background-color: #13F7D2; border-color: #13F7D2')
+    $('.card-title').attr('style','background:linear-gradient(90deg, #d52b2b 50%, #27282b 50%);box-shadow: 0')
+    $('.card-2').attr('style','background:linear-gradient(90deg, #27282B 50%, #4C40D2 50%);box-shadow: 0')    
+    $('.card-3').attr('style','background:linear-gradient(90deg, #A823BD 50%, #27282B 50%);box-shadow: 0')  
+
+    if (window.matchMedia('(max-width: 480px)').matches)
+    {
+      $('.card-title').attr('style','background:linear-gradient(to bottom, #d52b2b 50%, #27282b 50%) !important;box-shadow: 0 0 10px #ccc')
+      $('.card-2').attr('style','background:linear-gradient(to bottom, #4c40d2 50%, #27282b 50%) !important;box-shadow: 0 0 10px #ccc')   
+      $('.card-3').attr('style','background:linear-gradient(to bottom, #a823bd 50%, #27282b 50%) !important;box-shadow: 0 0 10px #ccc') 
+    }
+
+    $('.card-btn').attr('style','background-color: #13F7D2 !important; border-color: #13F7D2 !important')
+    $('.blogs h2').attr('style','color: #FFFFFF')
+    $('.blogs button').attr('style','background-color: #13F7D2; border-color: #13F7D2')
+    $('.blogs span').attr('style','color: #000000')
+    $('.contacts h2').attr('style','color: #FFFFFF')
+    $('.contacts a').attr('style','color: #13F7D2; border-color:#13F7D2')
+    $('.footer').attr('style','background-color: #1D1D1F')
+    $('.whiteToblackBg').attr('style', 'background-color: #252628 ')
+} 
+
+      </script>
 
 </body>
 </html>

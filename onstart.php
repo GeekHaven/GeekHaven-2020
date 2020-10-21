@@ -153,8 +153,6 @@
     $query_run = mysqli_query($connection,$query);
     $query = "INSERT INTO wings VALUES('33333','X','Only for Overall coordinators','','')";
     $query_run = mysqli_query($connection,$query);
-    $query = "INSERT INTO geekhavenInfo VALUES('GeekHaven','Lorem Ipsum  simply dummy  of the printing  typesetting industry.')"; 
-    $query_run = mysqli_query($connection,$query);
     echo "Database created";
 
 ?>
