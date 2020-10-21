@@ -476,7 +476,9 @@
         <?php
           $query = "SELECT * FROM blogs WHERE `wing_id`='$wing_id' ";
           $result = mysqli_query($connection,$query);
-          while($row = mysqli_fetch_assoc($result)){
+          $j=0;
+          while(($row = mysqli_fetch_assoc($result))&&($j<3)){
+              $j = $j+1;
               $title = $row['blog_title'];
               $des = $row['description'];
               $image = $row['image'];
