@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @-webkit-keyframes outerRotate1 {
+	 0% {
+		 transform: translate(-50%, -50%) rotate(0);
+	}
+	 100% {
+		 transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+ @-moz-keyframes outerRotate1 {
+	 0% {
+		 transform: translate(-50%, -50%) rotate(0);
+	}
+	 100% {
+		 transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+ @-o-keyframes outerRotate1 {
+	 0% {
+		 transform: translate(-50%, -50%) rotate(0);
+	}
+	 100% {
+		 transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+ @keyframes outerRotate1 {
+	 0% {
+		 transform: translate(-50%, -50%) rotate(0);
+	}
+	 100% {
+		 transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+ @-webkit-keyframes outerRotate2 {
+	 0% {
+		 transform: translate(-50%, -50%) rotate(0);
+	}
+	 100% {
+		 transform: translate(-50%, -50%) rotate(-360deg);
+	}
+}
+ @-moz-keyframes outerRotate2 {
+	 0% {
+		 transform: translate(-50%, -50%) rotate(0);
+	}
+	 100% {
+		 transform: translate(-50%, -50%) rotate(-360deg);
+	}
+}
+ @-o-keyframes outerRotate2 {
+	 0% {
+		 transform: translate(-50%, -50%) rotate(0);
+	}
+	 100% {
+		 transform: translate(-50%, -50%) rotate(-360deg);
+	}
+}
+ @keyframes outerRotate2 {
+	 0% {
+		 transform: translate(-50%, -50%) rotate(0);
+	}
+	 100% {
+		 transform: translate(-50%, -50%) rotate(-360deg);
+	}
+}
+ @-webkit-keyframes textColour {
+	 0% {
+		 color: #0D9C85;
+	}
+	 100% {
+		 color: #13F7D2;
+	}
+}
+ @-moz-keyframes textColour {
+	 0% {
+		 color: #0D9C85;
+	}
+	 100% {
+		 color: #13F7D2;
+	}
+}
+ @-o-keyframes textColour {
+	 0% {
+		 color: #0D9C85;
+	}
+	 100% {
+		 color: #13F7D2;
+	}
+}
+ @keyframes textColour {
+	 0% {
+		 color: #0D9C85;
+	}
+	 100% {
+		 color: #13F7D2;
+	}
+}
+ html {
+	 font-size: 62.5%;
+}
+ body {
+	 margin: 0;
+	 padding: 0;
+	 font-family: 'Open Sans', sans-serif;
+	 width: 100vw;
+	 height: 100vh;
+	 background: #222;
+}
+ .e-loadholder {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 -webkit-transform: translate(-51%, -50%);
+	 -moz-transform: translate(-51%, -50%);
+	 -ms-transform: translate(-51%, -50%);
+	 -o-transform: translate(-51%, -50%);
+	 transform: translate(-51%, -50%);
+	 width: 240px;
+	 height: 240px;
+	 border: 5px solid #13F7D2;
+	 border-radius: 120px;
+	 box-sizing: border-box;
+}
+ .e-loadholder:after {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 -webkit-transform: translate(-51%, -50%);
+	 -moz-transform: translate(-51%, -50%);
+	 -ms-transform: translate(-51%, -50%);
+	 -o-transform: translate(-51%, -50%);
+	 transform: translate(-51%, -50%);
+	 content: " ";
+	 display: block;
+	 background: #222;
+	 transform-origin: center;
+	 z-index: 0;
+}
+ .e-loadholder:after {
+	 width: 100px;
+	 height: 200%;
+	 -webkit-animation: outerRotate2 30s infinite linear;
+	 -moz-animation: outerRotate2 30s infinite linear;
+	 -o-animation: outerRotate2 30s infinite linear;
+	 animation: outerRotate2 30s infinite linear;
+}
+ .e-loadholder .m-loader {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 -webkit-transform: translate(-51%, -50%);
+	 -moz-transform: translate(-51%, -50%);
+	 -ms-transform: translate(-51%, -50%);
+	 -o-transform: translate(-51%, -50%);
+	 transform: translate(-51%, -50%);
+	 width: 200px;
+	 height: 200px;
+	 color: #888;
+	 text-align: center;
+	 border: 5px solid #13F7D2;
+	 border-radius: 100px;
+	 box-sizing: border-box;
+	 z-index: 20;
+	 text-transform: uppercase;
+}
+ .e-loadholder .m-loader:after {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 -webkit-transform: translate(-51%, -50%);
+	 -moz-transform: translate(-51%, -50%);
+	 -ms-transform: translate(-51%, -50%);
+	 -o-transform: translate(-51%, -50%);
+	 transform: translate(-51%, -50%);
+	 content: " ";
+	 display: block;
+	 background: #222;
+	 transform-origin: center;
+	 z-index: -1;
+}
+ .e-loadholder .m-loader:after {
+	 width: 100px;
+	 height: 106%;
+	 -webkit-animation: outerRotate1 15s infinite linear;
+	 -moz-animation: outerRotate1 15s infinite linear;
+	 -o-animation: outerRotate1 15s infinite linear;
+	 animation: outerRotate1 15s infinite linear;
+}
+ .e-loadholder .m-loader .e-text {
+	 font-size: 14px;
+	 font-size: 1.4rem;
+	 line-height: 130px;
+   font-weight:bold;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 -webkit-transform: translate(-51%, -50%);
+	 -moz-transform: translate(-51%, -50%);
+	 -ms-transform: translate(-51%, -50%);
+	 -o-transform: translate(-51%, -50%);
+	 transform: translate(-51%, -50%);
+	 -webkit-animation: textColour 1s alternate linear infinite;
+	 -moz-animation: textColour 1s alternate linear infinite;
+	 -o-animation: textColour 1s alternate linear infinite;
+	 animation: textColour 1s alternate linear infinite;
+	 display: block;
+	 width: 140px;
+	 height: 140px;
+	 text-align: center;
+	 border: 5px solid #13F7D2;
+	 border-radius: 70px;
+	 box-sizing: border-box;
+	 z-index: 20;
+}
+ .e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 -webkit-transform: translate(-51%, -50%);
+	 -moz-transform: translate(-51%, -50%);
+	 -ms-transform: translate(-51%, -50%);
+	 -o-transform: translate(-51%, -50%);
+	 transform: translate(-51%, -50%);
+	 content: " ";
+	 display: block;
+	 background: #222;
+	 transform-origin: center;
+	 z-index: -1;
+}
+ .e-loadholder .m-loader .e-text:before {
+	 width: 110%;
+	 height: 40px;
+	 -webkit-animation: outerRotate2 3.5s infinite linear;
+	 -moz-animation: outerRotate2 3.5s infinite linear;
+	 -o-animation: outerRotate2 3.5s infinite linear;
+	 animation: outerRotate2 3.5s infinite linear;
+}
+ .e-loadholder .m-loader .e-text:after {
+	 width: 40px;
+	 height: 110%;
+	 -webkit-animation: outerRotate1 8s infinite linear;
+	 -moz-animation: outerRotate1 8s infinite linear;
+	 -o-animation: outerRotate1 8s infinite linear;
+	 animation: outerRotate1 8s infinite linear;
+}
+ #particleCanvas-White {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 -webkit-transform: translate(-51%, -50%);
+	 -moz-transform: translate(-51%, -50%);
+	 -ms-transform: translate(-51%, -50%);
+	 -o-transform: translate(-51%, -50%);
+	 transform: translate(-51%, -50%);
+	 width: 100%;
+	 height: 50%;
+	 opacity: 0.1;
+}
+ #particleCanvas-Blue {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 -webkit-transform: translate(-51%, -50%);
+	 -moz-transform: translate(-51%, -50%);
+	 -ms-transform: translate(-51%, -50%);
+	 -o-transform: translate(-51%, -50%);
+	 transform: translate(-51%, -50%);
+	 width: 300px;
+	 height: 300px;
+}
+ 
+    </style>
+    <div class="e-loadholder">
+        <div class="m-loader">
+            <span class="e-text">Geekhaven</span>
+        </div>
+    </div>
+    
+</body>
+</html>
