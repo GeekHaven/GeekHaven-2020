@@ -566,7 +566,7 @@ nav{
     position: relative;
     background-color: #13F7D2;
     border-color: #13F7D2;
-    top:20px;
+    margin-top:20px;
     height: 55px;
     width: 400px;
 }
@@ -887,4 +887,10 @@ nav{
         margin: 0 5px;
     }
 
+}
+.credit-text{
+    color: #13F7D2;
+}
+.padding-t-0{
+    padding-top:0px;
 }

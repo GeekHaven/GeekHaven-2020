@@ -31,9 +31,21 @@ if(isset($_GET['id'])){
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+
+    <!--CSS Spinner-->
+    <div class="b1">
+        <div class="con1">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+        </div>
+    </div>
+
+
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
-        <div class="container-fullwidth">
-          <a href="../index.html"><img class="nav-logo" src="../../images/gh.png"></a>
+        <div class="container-fullwidth" style="padding: 0 5%;">
+          <a href="../../index.php"><img class="nav-logo" src="../../images/gh.png"></a>
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -45,11 +57,10 @@ if(isset($_GET['id'])){
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../../index.html">Home</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="#blogs">Blogs</a></li>
-              <li><a href="#footer">Contacts</a></li>
+              <li><a href="../../index.php">Home</a></li>
+              <li><a href="https://medium.com/nybles">Blogs</a></li>
+              <!-- <li><a href="../../geekhaven/contact.php">Contacts</a></li> -->
+              <li><a href="../../geekhaven/login.php">Login</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -112,6 +123,15 @@ if(isset($_GET['id'])){
         });
         });
 
+        $(document).ready(function() {
+//Preloader
+preloaderFadeOutTime = 500;
+function hidePreloader() {
+var preloader = $('.b1');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
 
       </script>
 

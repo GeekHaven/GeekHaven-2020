@@ -1,7 +1,11 @@
 <?php
-    $connection = mysqli_connect("localhost","root","");
-    mysqli_query($connection,"CREATE DATABASE geekhav") ;
-    mysqli_select_db($connection,'geekhav');
+    $server = "sql208.epizy.com";
+    $username = "epiz_26360820";
+    $password = "jJABjoAiW6OqP";
+    $dbname = "epiz_26360820_geekhav";
+    $connection = mysqli_connect($server,$username,$password,$dbname);
+    mysqli_select_db($connection,$dbname);
+    echo $connection;
     $query = "CREATE TABLE social_handles (
         `social_handles_id` varchar(255),
         `github` varchar(255),
@@ -133,6 +137,13 @@
     );";
 
     mysqli_query($connection,$query) ;
+
+    $query = "CREATE TABLE geekhavenInfo (
+        `name`varchar(255),
+        `description`varchar(12000)             
+    );";
+
+    mysqli_query($connection,$query) ;
     
     $query = "INSERT INTO social_handles VALUES('00000','','','','','','','','','','')";
     $query_run = mysqli_query($connection,$query);                             
@@ -142,7 +153,8 @@
     $query_run = mysqli_query($connection,$query);
     $query = "INSERT INTO wings VALUES('33333','X','Only for Overall coordinators','','')";
     $query_run = mysqli_query($connection,$query);
-
+    $query = "INSERT INTO geekhavenInfo VALUES('GeekHaven','Lorem Ipsum  simply dummy  of the printing  typesetting industry.')"; 
+    $query_run = mysqli_query($connection,$query);
     echo "Database created";
 
 ?>

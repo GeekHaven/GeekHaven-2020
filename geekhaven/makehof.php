@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Add Member</title>
-    <link rel="shortcut icon" href="../../images/gh.svg" type="image/png" />
+    <link rel="shortcut icon" href="../images/gh.svg" type="image/png" />
     <link rel="stylesheet" href="form.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -22,9 +22,20 @@
 
 </head>
 <body >
+
+        <!--CSS Spinner-->
+        <div class="b1">
+        <div class="con1">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+        </div>
+    </div>
+
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
-        <div class="container-fullwidth">
-          <a href="../index.html"><img class="nav-logo" src="../images/gh.png"></a>
+        <div class="container-fullwidth" style="padding: 0 5%;">
+          <a href="../index.php"><img class="nav-logo" src="../images/gh.png"></a>
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -36,11 +47,11 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="./home.php">Home</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="#blogs">Blogs</a></li>
-              <li><a href="#footer">Contacts</a></li>
+                <li><a href="./home.php">Home</a></li>
+                <li><a href="https://medium.com/nybles">Blogs</a></li>
+                <li><a href="./updateProfile.php">Update Profile</a></li>
+                <!-- <li><a href="./contact.php">Contacts</a></li> -->
+                <li><a href="./logout.php">Logout</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -130,21 +141,7 @@
 		<script src="https://code.jquery.com/jquery-2.1.3.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
       
-        <script>
+        <script type="text/javascript" src="form.js"></script>
 
-          $(function () {
-          $(document).scroll(function () {
-              var $logo = $(".nav-logo");
-              $logo.toggleClass('scroll-img', $(this).scrollTop() > 10);
-
-              var $nav_links = $(".navbar-nav li a")
-
-              var $nav = $(".navbar-fixed-top");
-              $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
-          });
-          });
-
-
-        </script>
 </body>
 </html>      
