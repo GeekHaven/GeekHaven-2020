@@ -34,13 +34,12 @@ if(isset($_GET['id'])){
 
          <!--CSS Spinner-->
       <div class="b1">
-        <div class="con1">
-            <div class="item item-1"></div>
-            <div class="item item-2"></div>
-            <div class="item item-3"></div>
-            <div class="item item-4"></div>
+        <div class="e-loadholder">
+            <div class="m-loader">
+                <span class="e-text">Geekhaven</span>
+            </div>
         </div>
-      </div>
+    </div>
 
     <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
         <div class="container-fullwidth" style="padding: 0 5%;">
@@ -161,7 +160,7 @@ if(isset($_GET['id'])){
       <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
       <script src="../assets/owlcarousel/owl.carousel.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-    
+      <script type="text/javascript" src="list.js"></script>
 
       <script>
 
@@ -187,6 +186,8 @@ if(isset($_GET['id'])){
             loop:true,
             margin:10,
             responsiveClass:true,
+            autoplay: true,
+		        smartSpeed: 1000,
             responsive:{
                 0:{
                     items:1,

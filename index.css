@@ -813,7 +813,7 @@ nav{
     z-index: 1999;
 }
 
-.con1 {
+/* .con1 {
     position: absolute;
     width: 200px;
     height: 200px;
@@ -828,9 +828,8 @@ nav{
     width: 100px;
     height: 100px;
     position: absolute;
-  }
-  
-  /* .item-1 {
+  } 
+  .item-1 {
     background-color: rgb(19, 247, 210);
     top: 0;
     left: 0;
@@ -858,8 +857,8 @@ nav{
     bottom: 0;
     left: 0;
     animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
-  } */
-  .item-1 {
+  } 
+    .item-1 {
     background-color: #FA5667;
     top: 0;
     left: 0;
@@ -914,7 +913,9 @@ nav{
     25% {transform: translate(100px, 0)} 
     50% {transform: translate(100px, -100px)} 
     75% {transform: translate(0, -100px)} 
-  }
+  } */
+
+
   @-webkit-keyframes outerRotate1 {
     0% {
         transform: translate(-50%, -50%) rotate(0);

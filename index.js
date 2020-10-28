@@ -71,16 +71,7 @@ $(function () {
               $('.contacts a').attr('style','color: #15C4A8; border-color:#15C4A8')
               $('.footer').attr('style','background-color: #FFFFFF')
 
-              $(document).append('<style>.e-loadholder .m-loader:after{background: white;}.e-loadholder:after{background: white;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: white;}</style>');
-
-              $('.b1').css("background-color", "white")  
-              $('.e-loadholder .m-loader').attr('style','border: 5px solid #0D9C85')  
-            //   $('.e-loadholder .m-loader').after().attr('style','background: white')  
-              $('.e-loadholder').attr('style','border: 5px solid #0D9C85')  
-            //   $('.e-loadholder').after().attr('style','background: white')  
-              $('.e-loadholder .m-loader .e-text').attr('style','border: 5px solid #0D9C85')  
-            //   $('.e-loadholder .m-loader .e-text').before().attr('style','background: white')  
-            //   $('.e-loadholder .m-loader .e-text').after().attr('style','background: white')  
+              $(document.body).append('<style>.e-loadholder .m-loader .e-text{border: 5px solid #0D9C85;}.e-loadholder{border: 5px solid #0D9C85;}.e-loadholder .m-loader{border: 5px solid #0D9C85;}.b1{background: white;}.e-loadholder .m-loader:after{background: white;}.e-loadholder:after{background: white;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: white;}</style>');
 
               particlesJS('particles-js',
     
@@ -225,14 +216,7 @@ $(function () {
               $('.contacts a').attr('style','color: #13F7D2; border-color:#13F7D2')
               $('.footer').attr('style','background-color: #1D1D1F')
   
-              $('.b1').css("background-color", "#252628")  
-              $('.e-loadholder .m-loader').attr('style','border: 5px solid #13F7D2')  
-            //   $('.e-loadholder .m-loader').after().attr('style','background: #252628')  
-              $('.e-loadholder').attr('style','border: 5px solid #13F7D2')  
-            //   $('.e-loadholder').after().attr('style','background: #252628')  
-              $('.e-loadholder .m-loader .e-text').attr('style','border: 5px solid #13F7D2')  
-            //   $('.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after').attr('style','background: #252628')  
-            $(document).append('<style>.e-loadholder .m-loader:after{background: #252628;}.e-loadholder:after{background: #252628;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: #252628;}</style>');
+            $(document.body).append('<style>.e-loadholder .m-loader .e-text{border: 5px solid #13F7D2;}.e-loadholder{border: 5px solid #13F7D2;}.e-loadholder .m-loader{border: 5px solid #13F7D2;}.b1{background: #252628;}.e-loadholder .m-loader:after{background: #252628;}.e-loadholder:after{background: #252628;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: #252628;}</style>');
 
               particlesJS('particles-js',
     
@@ -382,14 +366,7 @@ $(function () {
               $('.contacts a').attr('style','color: #13F7D2; border-color:#13F7D2')
               $('.footer').attr('style','background-color: #1D1D1F')
              
-              $('.b1').css("background-color", "#252628")  
-              $('.e-loadholder .m-loader').attr('style','border: 5px solid #13F7D2')  
-            //   $('.e-loadholder .m-loader:after').after().attr('style','background: #252628')  
-              $('.e-loadholder').attr('style','border: 5px solid #13F7D2')  
-            //   $('.e-loadholder:after').attr('style','background: #252628')  
-              $('.e-loadholder .m-loader .e-text').attr('style','border: 5px solid #13F7D2')  
-            //   $('.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after').attr('style','background: #252628')  
-              $(document).append('<style>.e-loadholder .m-loader:after{background: #252628;}.e-loadholder:after{background: #252628;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: #252628;}</style>');
+            $(document.body).append('<style>.e-loadholder .m-loader .e-text{border: 5px solid #13F7D2;}.e-loadholder{border: 5px solid #13F7D2;}.e-loadholder .m-loader{border: 5px solid #13F7D2;}.b1{background: #252628;}.e-loadholder .m-loader:after{background: #252628;}.e-loadholder:after{background: #252628;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: #252628;}</style>');
   
               particlesJS('particles-js',
     
@@ -536,14 +513,7 @@ $(function () {
               $('.contacts a').attr('style','color: #15C4A8; border-color:#15C4A8')
               $('.footer').attr('style','background-color: #e7e7e7')
               
-              $('.b1').css("background-color", "white")  
-              $('.e-loadholder .m-loader').attr('style','border: 5px solid #0D9C85')  
-            //   $('.e-loadholder .m-loader:after').after().attr('style','background: white')  
-              $('.e-loadholder').attr('style','border: 5px solid #0D9C85')  
-            //   $('.e-loadholder:after').attr('style','background: white')  
-              $('.e-loadholder .m-loader .e-text').attr('style','border: 5px solid #0D9C85')  
-            //   $('.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after').attr('style','background: white') 
-              $(document).append('<style>.e-loadholder .m-loader:after{background: white;}.e-loadholder:after{background: white;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: white;}</style>');
+              $(document.body).append('<style>.e-loadholder .m-loader .e-text{border: 5px solid #0D9C85;}.e-loadholder{border: 5px solid #0D9C85;}.e-loadholder .m-loader{border: 5px solid #0D9C85;}.b1{background: white;}.e-loadholder .m-loader:after{background: white;}.e-loadholder:after{background: white;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: white;}</style>');
 
               particlesJS('particles-js',
     
@@ -694,6 +664,17 @@ $(function () {
           function hidePreloader() {
           var preloader = $('.b1');
           preloader.fadeOut(preloaderFadeOutTime);
+          }
+          if(localStorage.getItem("theme")=="0"){
+            $(document.body).append('<style>.e-loadholder .m-loader:after{background: white;}.e-loadholder:after{background: white;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: white;}</style>');
+              $('.e-loadholder .m-loader').attr('style','border: 5px solid #0D9C85')  
+              $('.e-loadholder').attr('style','border: 5px solid #0D9C85')  
+              $('.e-loadholder .m-loader .e-text').attr('style','border: 5px solid #0D9C85')  
+          }else{
+            $('.e-loadholder .m-loader').attr('style','border: 5px solid #13F7D2')  
+            $('.e-loadholder').attr('style','border: 5px solid #13F7D2')  
+            $('.e-loadholder .m-loader .e-text').attr('style','border: 5px solid #13F7D2')  
+            $(document.body).append('<style>.e-loadholder .m-loader:after{background: #252628;}.e-loadholder:after{background: #252628;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: #252628;}</style>');
           }
           hidePreloader();
       });

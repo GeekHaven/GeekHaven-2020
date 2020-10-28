@@ -48,6 +48,7 @@ $('.event-date').attr('style','background-color: #0D9C85; border-color: #0D9C85'
 $('.card-title').attr('style','background:linear-gradient(90deg, #F2A3A3 50%, #FFFFFF 50%);box-shadow: 0 0 10px #ccc')
 $('.card-2').attr('style','background:linear-gradient(90deg, #FFFFFF 50%, #BBB6F3 50%);box-shadow: 0 0 10px #ccc')   
 $('.card-3').attr('style','background:linear-gradient(90deg, #EDBDF4 50%, #FFFFFF 50%);box-shadow: 0 0 10px #ccc')   
+$(document.body).append('<style>.e-loadholder .m-loader .e-text{border: 5px solid #0D9C85;}.e-loadholder{border: 5px solid #0D9C85;}.e-loadholder .m-loader{border: 5px solid #0D9C85;}.b1{background: white;}.e-loadholder .m-loader:after{background: white;}.e-loadholder:after{background: white;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: white;}</style>');
 
 if (window.matchMedia('(max-width: 480px)').matches)
 {
@@ -87,6 +88,7 @@ $('.event-date').attr('style','background-color: #13F7D2; border-color: #13F7D2'
 $('.card-title').attr('style','background:linear-gradient(90deg, #d52b2b 50%, #27282b 50%);box-shadow: 0')
 $('.card-2').attr('style','background:linear-gradient(90deg, #27282B 50%, #4C40D2 50%);box-shadow: 0')    
 $('.card-3').attr('style','background:linear-gradient(90deg, #A823BD 50%, #27282B 50%);box-shadow: 0')  
+$(document.body).append('<style>.e-loadholder .m-loader .e-text{border: 5px solid #13F7D2;}.e-loadholder{border: 5px solid #13F7D2;}.e-loadholder .m-loader{border: 5px solid #13F7D2;}.b1{background: #252628;}.e-loadholder .m-loader:after{background: #252628;}.e-loadholder:after{background: #252628;}.e-loadholder .m-loader .e-text:before, .e-loadholder .m-loader .e-text:after{background: #252628;}</style>');
 
 if (window.matchMedia('(max-width: 480px)').matches)
 {

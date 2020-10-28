@@ -34,11 +34,10 @@ if(isset($_GET['id'])){
 
     <!--CSS Spinner-->
     <div class="b1">
-        <div class="con1">
-            <div class="item item-1"></div>
-            <div class="item item-2"></div>
-            <div class="item item-3"></div>
-            <div class="item item-4"></div>
+        <div class="e-loadholder">
+            <div class="m-loader">
+                <span class="e-text">Geekhaven</span>
+            </div>
         </div>
     </div>
 
@@ -134,6 +133,6 @@ hidePreloader();
 });
 
       </script>
-
+      <script type="text/javascript" src="list.js"></script>
       </body>
       </html>

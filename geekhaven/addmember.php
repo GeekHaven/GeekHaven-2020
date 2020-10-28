@@ -23,13 +23,12 @@
 </head>
 <body>
 
-        <!--CSS Spinner-->
-        <div class="b1">
-        <div class="con1">
-            <div class="item item-1"></div>
-            <div class="item item-2"></div>
-            <div class="item item-3"></div>
-            <div class="item item-4"></div>
+    <!--CSS Spinner-->
+    <div class="b1">
+        <div class="e-loadholder">
+            <div class="m-loader">
+                <span class="e-text">Geekhaven</span>
+            </div>
         </div>
     </div>
 
