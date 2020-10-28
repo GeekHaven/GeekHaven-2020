@@ -797,3 +797,19 @@ nav{
 .more{
     text-decoration: none;
 }
+.blog-heading-height{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    height: 1.5em;
+    -webkit-box-orient: vertical;
+}
+.blog-subtitle-height{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    height: 3em;
+    -webkit-box-orient: vertical;
+}

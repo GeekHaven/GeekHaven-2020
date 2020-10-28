@@ -84,11 +84,11 @@ if(isset($_GET['id'])){
               
                 <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="images-blog blog-1" style="padding:0;"/>'; ?>
                 <!-- </div> -->
-                <p class="blog-heading whiteToBlack">
+                <p class="blog-heading whiteToBlack blog-heading-height">
                   <?php echo $title;?>
                 </p>
               
-                <p class="blog-subtitle whiteToBlack">
+                <p class="blog-subtitle whiteToBlack blog-subtitle-height">
                   <?php echo $des;?>
                 </p>
                 <a class="more-blog texta" href=<?php echo $link?>>Read More</a>
@@ -160,7 +160,7 @@ if(isset($_GET['id'])){
       <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
       <script src="../assets/owlcarousel/owl.carousel.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="list.js"></script>
+      <script type="text/javascript" src="../announcements/list.js"></script>
 
       <script>
 
