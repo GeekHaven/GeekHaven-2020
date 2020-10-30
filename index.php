@@ -133,7 +133,7 @@
         </div>
     </section>
     
-    <section id="overall" class="overall-section" style="border-radius: 20px;">
+    <section id="overall" class="overall-section" style="border-radius: 20px;border: 3.5px solid rgb(13, 156, 133);">
             <p class="overall-heading row">
                 Overall <br>Coordinators 
             </p>
