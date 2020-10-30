@@ -66,7 +66,12 @@ $('.contacts h2').attr('style','color: #000000')
 $('.contacts a').attr('style','color: #15C4A8; border-color:#15C4A8')
 $('.footer').attr('style','background-color: #E7E7E7')
 $('.whiteToblackBg').attr('style', 'background-color: white')
-
+$('.ann-title').attr('style', 'color: black')
+$('.upper-block').attr('style', 'background-color: #E7E7E7;')
+$('.lower-block').attr('style', 'background-color: #E7E7E7;')
+$('.fa').attr('style', 'color: #0D9C85;')
+$('.lower-block p').attr('style', 'color: #333333;')
+$('.upper-block p').attr('style', 'color: #333333;')
 }else{  
 
 $(document.body).attr('style', 'background-color: #252628 !important');
@@ -105,6 +110,12 @@ $('.contacts h2').attr('style','color: #FFFFFF')
 $('.contacts a').attr('style','color: #13F7D2; border-color:#13F7D2')
 $('.footer').attr('style','background-color: #1D1D1F')
 $('.whiteToblackBg').attr('style', 'background-color: #252628 ')
+$('.ann-title').attr('style', 'color: #FFFFFF')
+$('.upper-block').attr('style', 'background-color: #333333;')
+$('.lower-block').attr('style', 'background-color: #333333;')
+$('.fa').attr('style', 'color: #13F7D2;')
+$('.lower-block p').attr('style', 'color: #FFFFFF;')
+$('.upper-block p').attr('style', 'color: #FFFFFF;')
 } 
 
 
