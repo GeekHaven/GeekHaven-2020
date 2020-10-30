@@ -72,7 +72,7 @@
       <div class="wrapper">
             <div class="intro-header col-sm-6">
                 <div class="heading main-heading"><?php echo $wing;?></div>
-                <p class="intro-heading"><?php echo $info;?>.</p>
+                <p class="intro-heading"><?php echo $info;?></p>
             </div>
             <div class="webd-logo col-sm-6">
                 <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?>
@@ -127,7 +127,7 @@
 
                     <div class="col-md-8 event-desc">
                       <h1 class="whiteToBlack"><?php echo $ann_name;?></h1>
-                      <p class="whiteToBlack"><?php echo $ann_info;?>  .</p>
+                      <p class="whiteToBlack"><?php echo $ann_info;?></p>
                     </div>
                   </div>
                 </div>
@@ -183,7 +183,7 @@
                   <hr class="line">
                   <h1 class="whiteToBlack"><?php echo $pro_name;?></h1>
                   <div class="col-md-6">
-                    <p class="card-text whiteToBlack"><?php echo $pro_des;?>.</p>
+                    <p class="card-text whiteToBlack"><?php echo $pro_des;?></p>
                     <?php echo"
                     <a href='{$pro_link}'>";?>
                       <button class="btn btn-default col-md-6 card-btn">
@@ -535,7 +535,7 @@
         </div>
     </section>
     <div style="text-align:center">
-        <p class="overall-post more" style="padding-top: 30px;">
+        <p class="overall-post more" style="color: rgb(19, 247, 210);font-family: Montserrat;font-weight: 600;font-size: 18px;padding: 10px;line-height: 22px;">
         © Copyright, Geekhaven IIITA · <a href="./credits.html" style="color: inherit;border-color:#15C4A8;border-radius: 5px;padding: 5px;">Credits</a>
         </p>
     </div>
