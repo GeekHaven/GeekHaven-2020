@@ -35,17 +35,19 @@ $(function () {
           $(this).children('img').css("margin","auto" );
           $(this).children('p').css("text-align","center" );
           $(this).children('a').css("margin-left","45%" );
-          $(this).css("box-shadow","0 0 0 2pt #13F7D2" );
+          $(this).css("box-shadow","0 2px 8px rgba(153, 153, 153, 0.3)");
+          $(this).css("border-radius","4px");
         })
         .mouseout(function() {
           $(this).children('img').css("margin-left","0%" );
           $(this).children('p').css("text-align","left" );
           $(this).children('a').css("margin-left","0%" );
-          $(this).css("box-shadow","0 0 0 0pt #13F7D2" );
+          $(this).css("box-shadow","0 0 0 rgba(153, 153, 153, 0.3)");
+          $(this).css("border-radius","0");
         });
   
   
-        if(localStorage.getItem("theme")=="0"){
+        if(localStorage.getItem("theme")=="0"){ //light mode
   
           $(document).ready(function(){
                   $('.theme').click()
@@ -63,7 +65,10 @@ $(function () {
               $(".more").css('color','#0D9C75')
               $('.arrow').attr('src','images/arrow-light.png')
               $('.fa-bars').css('color','#000000')
-              $('.overall-section').css('background-color','#343538');
+              $('.overall-section').css('background-color','#FFFFFF');
+              $('.overall-heading').css('color','#000000');
+              $('.overall-title').css('color','#000000');
+              $('.overall-post').css('color','#0D9C85');
               $('.blogs h2').attr('style','color: #000000')
               $('.blogs button').attr('style','background-color: #15C4A8; border-color: #15C4A8')
               $('.blogs span').attr('style','color: #FFFFFF')
@@ -209,6 +214,9 @@ $(function () {
               $('.fa-bars').css('color','#FFFFFF')
               $('.slider').css('background-color','white');
               $('.overall-section').css('background-color','#27282B');
+              $('.overall-heading').css('color','#13F7D2');
+              $('.overall-title').css('color','#FFFFFF');
+              $('.overall-post').css('color','#13F7D2');
               $('.blogs h2').attr('style','color: #FFFFFF')
               $('.blogs button').attr('style','background-color: #13F7D2; border-color: #13F7D2')
               $('.blogs span').attr('style','color: #000000')
@@ -359,6 +367,9 @@ $(function () {
               $('.fa-bars').css('color','#FFFFFF')
               $('.slider').css('background-color','white');
               $('.overall-section').css('background-color','#27282B');
+              $('.overall-heading').css('color','#13F7D2');
+              $('.overall-title').css('color','#FFFFFF');
+              $('.overall-post').css('color','#13F7D2');
               $('.blogs h2').attr('style','color: #FFFFFF')
               $('.blogs button').attr('style','background-color: #13F7D2; border-color: #13F7D2')
               $('.blogs span').attr('style','color: #000000')
@@ -505,7 +516,10 @@ $(function () {
               $(".more").css('color','#0D9C75')
               $('.arrow').attr('src','images/arrow-light.png')
               $('.fa-bars').css('color','#000000')
-              $('.overall-section').css('background-color','#343538');
+              $('.overall-section').css('background-color','#FFFFFF');
+              $('.overall-heading').css('color','#000000');
+              $('.overall-title').css('color','#000000');
+              $('.overall-post').css('color','#0D9C85');
               $('.blogs h2').attr('style','color: #000000')
               $('.blogs button').attr('style','background-color: #15C4A8; border-color: #15C4A8')
               $('.blogs span').attr('style','color: #FFFFFF')
@@ -641,8 +655,8 @@ $(function () {
   
       $(".margin-div-bottom").hover(function(){
           if(j==1){
-              $(this).children(".more").css('color','#13F7D2');
-              $(this).children('p').css('color','white');
+              $(this).children(".more").css('color','#0D9C85');
+              $(this).children('p').css('color','black');
           }else{
               $(this).children(".more").css('color','#13F7D2');
               $(this).children('p').css('color','white');

@@ -465,10 +465,14 @@ nav{
     transition: all 0.3s ease;
 }
 
+    /* background-color: #343538; */
+        /* transition:ease 0.3s ; */
+
+
+
 .margin-div-bottom:hover{
-    background-color: #343538;
+    /* background-color: #343538; */
     transform: scale(1.02);
-    /*transition:ease 0.3s ;*/
 }
 .margin-div-bottom>img{
     transition: 1s ease;
@@ -483,6 +487,7 @@ nav{
     text-decoration: none;
     /* transition:1s ease ; */
 }
+
 
 .footer{
     display: inline-block;
