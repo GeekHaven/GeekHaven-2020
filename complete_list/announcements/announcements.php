@@ -67,13 +67,13 @@ if(isset($_GET['id'])){
       
       <div class="container" style="margin-top:150px">
           <p class="contactUs ann-title">Announcements</p>
-          <div class="upper-block">
-              <p class="col-lg-3 col-sm-4"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>   Date</p>
-              <p class="col-lg-3 col-sm-4"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>   Time</p>
-              <p class="col-lg-3 col-sm-4"><i class="fa fa-map-marker" aria-hidden="true"></i>    Venue</p>
+          <div class="upper-block row">
+              <p class="col-lg-3 col-sm-12"><i class="fa fa-circle" aria-hidden="true"></i> Title</p>
+              <p class="col-lg-3 col-sm-12"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Date</p>
+              <p class="col-lg-3 col-sm-12"><i class="fa fa-clock-o" aria-hidden="true"></i> Time</p>
+              <p class="col-lg-3 col-sm-12"><i class="fa fa-map-marker" aria-hidden="true"></i> Venue</p>
           </div>
-
-
+          
           <?php
               $query = "SELECT * FROM announcements WHERE `organizer`='$wing'";
 
@@ -91,11 +91,11 @@ if(isset($_GET['id'])){
                 $topic = $row['topic'];
                 $details = $row['details'];
                 ?>
-                <div class="lower-block">
-                    <p class="col-lg-3 col-sm-4 title"><i class="fa fa-circle" aria-hidden="true"></i> &nbsp;&nbsp; <?php echo $ann_name;?></p>
-                    <p class="col-lg-3 col-sm-4 date" style="padding-left: 90px;"><?php echo $date[2]; echo "   "; echo $months[$mon]; echo ", "; echo $date[0]; ?></p>
-                    <p class="col-lg-3 col-sm-4 date" style="padding-left: 90px;"><?php echo $time;?></p>
-                    <p class="col-lg-3 col-sm-4 date" style="padding-left: 90px;"><?php echo $venue;?></p>
+                <div class="lower-block row">
+                    <p class="col-lg-3 col-sm-12 title"><i class="fa fa-circle" aria-hidden="true"></i> &nbsp;&nbsp; <?php echo $ann_name;?></p>
+                    <p class="col-lg-3 col-sm-12 date" style="padding-left: 90px;"><?php echo $date[2]; echo "   "; echo $months[$mon]; echo ", "; echo $date[0]; ?></p>
+                    <p class="col-lg-3 col-sm-12 date" style="padding-left: 90px;"><?php echo $time;?></p>
+                    <p class="col-lg-3 col-sm-12 date" style="padding-left: 90px;"><?php echo $venue;?></p>
                 </div>
                 <?php
               }
