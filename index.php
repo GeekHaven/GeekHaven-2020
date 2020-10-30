@@ -164,7 +164,9 @@
                             <p class="overall-post">
                                 OVERALL COORDINATOR
                             </p>
-                            
+                            <?php
+                                echo "<a href='./meminfo.php?id={$member['member_id']}' class='more'>More</a>" ;
+                                ?>
                             <?php 
                                 if($social_array = mysqli_fetch_assoc($resultSocial)){
                                     $git = $social_array['github'];

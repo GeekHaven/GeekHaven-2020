@@ -244,9 +244,7 @@
         <hr class="line">
           <div class="container-fluid">
               <div class="row" style="text-align:center">
-              <div class="col-12 col-sm-12 col-md-1">
-                <img src="./images/zigzag.png" class="zigzag-team">
-              </div>
+                <img src="./images/zigzag.png" class="zigzag-team" style="position:absolute;left:0;">
                 <?php
                     $query = "SELECT * FROM member WHERE `wing`='$wing' AND `post`='coordinator'";
                     $result = mysqli_query($connection,$query);
