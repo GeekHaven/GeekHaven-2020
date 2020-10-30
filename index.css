@@ -366,7 +366,7 @@ nav{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 23px;
+    font-size: 20px;
     line-height: 34px;
     text-decoration: none;
     color: #13F7D2;
@@ -418,6 +418,7 @@ nav{
     font-weight: 600;
     font-size: 18px;
     padding: 10px;
+    margin-bottom: 0;
     line-height: 22px;
     color: #13F7D2;
 }
