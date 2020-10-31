@@ -122,7 +122,7 @@
 
             <form method='post' action='../data_game/projectdata.php' style="text-align: center;">
                     <p class="contactUs" >Remove Project</p>
-                    <select name="projects">
+                    <select name="projects" style="display: block;">
                     <option selected="selected">Choose one</option>
                     <?php
                         $query = 'SELECT * FROM Projects';
@@ -136,6 +136,7 @@
                         }
                     ?>
                     </select>
+                    <br>
                     <div class="form-group form-button">             
                         <button name="select_pro_btn" type="submit" class="form-submit button" >Remove</button>
                     </div>   

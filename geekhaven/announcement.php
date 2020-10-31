@@ -126,7 +126,7 @@
 			<form method='post' action='../data_game/ann.php' style="text-align: center;">
 				<p class="contactUs" >Remove Announcement</p>
 
-				<select name="announcements">
+				<select name="announcements" style="display: block;">
 				<option selected="selected">Choose one</option>
 				<?php
 					$query = 'SELECT * FROM announcements';
@@ -140,6 +140,7 @@
 					}
             	?>
 				</select>
+				<br>
 				<div class="form-group form-button">             
 					<button name="select_btn" type="submit" class="form-submit button" >Delete</button>
 				</div>   

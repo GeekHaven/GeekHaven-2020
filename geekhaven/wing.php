@@ -53,40 +53,36 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
 	  </nav>
-	  <style>
-		  
-	  </style>
       <section class="form" style="margin-top: 200px;margin-bottom: 50px;">
         <div class="container" style="background: #171717;border-radius: 16px;">
           <form method="post" id="uploader" action='../data_game/savewing.php' style="text-align: center;" enctype="multipart/form-data">
-            <p class="contactUs" >Add Wing</p>
-			<div class="form-group col-lg-12">
-				<input type="text" name="wing" required></input>
-				<span class="floating-label">Wing Name</span>
-			</div>
-			<div class="form-group col-lg-12">
-				<textarea  name="info" ></textarea>
-				<span class="floating-label">Information</span>
-			</div> 
-			<div class="form-group col-lg-12">
-				<input accept="image/*" id="file" style="outline: none;" type="file" name="logo"/>
-				<span class="floating-label">Logo</span>
-			</div>
-      <div class="form-group col-lg-12">
-				<input accept="image/*" style="outline: none;" type="file" name="image"/>
-				<span class="floating-label">Image</span>        
-			</div>
-			<div class="form-group form-button">             
-				<button name="add_btn" type="submit" class="form-submit button" >Add Wing</button>
-			</div>                             
-</form>
+                <p class="contactUs" >Add Wing</p>
+                <div class="form-group col-lg-12">
+                  <input type="text" name="wing" required></input>
+                  <span class="floating-label">Wing Name</span>
+                </div>
+                <div class="form-group col-lg-12">
+                  <textarea  name="info" ></textarea>
+                  <span class="floating-label">Information</span>
+                </div> 
+                <div class="form-group col-lg-12">
+                  <input accept="image/*" id="file" style="outline: none;" type="file" name="logo"/>
+                  <span class="floating-label">Logo</span>
+                </div>
+                <div class="form-group col-lg-12">
+                  <input accept="image/*" style="outline: none;" type="file" name="image"/>
+                  <span class="floating-label">Image</span>        
+                </div>
+                <div class="form-group form-button">             
+                  <button name="add_btn" type="submit" class="form-submit button" >Add Wing</button>
+                </div>                             
+          </form>
 
-          <form method='post' class="container" style="text-align: center;">
-          <div class="row">
+          <form method='post' style="text-align: center;">
             <div class="col-lg-12">
               <p class="contactUs" >Update/Remove Wing</p>
               <div class="form-group form-button">             
-                <select name="wings" style="color:#707070">
+                <select name="wings" style="color:#707070;display: block;">
                 <option selected="selected">Choose one</option>
                         <?php
                             $query = 'SELECT * FROM wings';
@@ -102,15 +98,11 @@
                 </select>
         			</div> 
               <div class="form-group form-button">     
-              <br>        
-              <button name="select_btn" type="submit" class="form-submit button" >Go</button>
-            </div>
-          </div>
-            
-				</div>   
-				
-
-            </form>
+                <br>        
+                <button name="select_btn" type="submit" class="form-submit button" >Go</button>
+              </div>
+				    </div>   
+          </form>
             <?php
             if(isset($_POST['select_btn'])){
                 $wingID = $_POST['wings'];
@@ -156,8 +148,8 @@
                 <?php
             }    
             ?>
-
         </div>   
+      </section>  
 
         <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>

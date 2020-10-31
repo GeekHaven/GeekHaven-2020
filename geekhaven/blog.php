@@ -113,7 +113,7 @@
 
             <form method='post' action='../data_game/saveblog.php' style="text-align: center;">
 				<p class="contactUs" >Remove Blog</p>
-				<select name="blogs">
+				<select name="blogs" style="display: block;">
 				<option selected="selected">Choose one</option>
                 <?php
                     $query = 'SELECT * FROM blogs';
@@ -126,6 +126,7 @@
                     }
                 ?>
                 </select>
+                <br>
 				<div class="form-group form-button">             
 					<button name="select_blog_btn" type="submit" class="form-submit button" >Delete</button>
 				</div>   

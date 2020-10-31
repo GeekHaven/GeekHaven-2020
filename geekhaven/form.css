@@ -341,7 +341,7 @@ textarea:focus + span{
 
 @media only screen and (max-width: 480px) {
     .contactUs{
-        font-size: 40px;
+        font-size: 30px;
         line-height: 50px;
     }
 }
