@@ -67,7 +67,7 @@ if(isset($_GET['id'])){
       <section class="container-fluid" style="margin-top: 150px;margin-bottom: 100px;" id="blogs">
         <!-- <img src="../../images/circle.png" class="circle-blog"> -->
 
-        <p class="contactUs">BLOGS</p>
+        <p class="contactUs whiteToBlack">BLOGS</p>
 
           <div class="row div-blog owl-carousel" style="display: flex;justify-content: space-evenly;margin-left: 16px;margin-right: 0px;">
 
