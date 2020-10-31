@@ -66,7 +66,7 @@ if(isset($_GET['id'])){
       </nav>
       
       <div class="container" style="margin-top:150px">
-          <p class="contactUs ann-title">Announcements</p>
+          <p class="contactUs ann-title">ANNOU<span class="texta">N</span>CEMENTS</p>
           <div class="upper-block row">
               <p class="col-lg-3 col-sm-12"><i class="fa fa-circle" aria-hidden="true"></i> Title</p>
               <p class="col-lg-3 col-sm-12"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Date</p>

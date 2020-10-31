@@ -493,7 +493,7 @@
                 <!-- <div class="images-blog blog-1" style="background-color: #D52B2B;"> -->
                 <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="images-blog blog-1" style="padding:0;"/>'; ?>
                 <!-- </div> -->
-                <p class="blog-heading whiteToBlack">
+                <p class="blog-heading whiteToBlack blog-heading-height">
                   <?php echo $title;?>
                 </p>
               
