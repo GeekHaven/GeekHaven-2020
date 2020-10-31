@@ -151,7 +151,7 @@
       </div>
       <div div class="whats-new texta">
       <?php
-      echo "<a href='./complete_list/announcements/announcements.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
+      echo "<a href='./complete_list/announcements/announcements.php?id={$wing_id}' class='viewall' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
       ?>
       
       </div>
@@ -233,7 +233,7 @@
     </div>
     <div div class="whats-new texta">
       <?php
-      echo "<a href='./complete_list/announcements/projects.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
+      echo "<a href='./complete_list/announcements/projects.php?id={$wing_id}' class='viewall' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
       ?>
       
       </div>
@@ -509,7 +509,7 @@
       </section>  
       <div class="whats-new texta padding-t-0">
       <?php
-      echo "<a href='./complete_list/blogs/blog.php?id={$wing_id}' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
+      echo "<a href='./complete_list/blogs/blog.php?id={$wing_id}' class='viewall' style='text-decoration:none;color: #13F7D2;'><p>View All</p></a>";
       ?>
       </div>
       <section class="footer" id="footer">
