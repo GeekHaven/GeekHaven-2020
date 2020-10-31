@@ -1187,6 +1187,7 @@ nav{
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
+    padding-left:60px;
     margin-top: 50px;
     color: white;
     text-align: left;
@@ -1211,7 +1212,7 @@ nav{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 16px;
     padding:5px;
     background-color: white;
     color:black;
@@ -1221,10 +1222,13 @@ nav{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 16px;
     padding:5px;
-    color:white ;
+    color:black ;
     background-color: #13F7D2;
+}
+.name-wing{
+    width: 200px;
 }
 .image-mem-container{
     margin-left: -100px;
@@ -1251,6 +1255,10 @@ nav{
     .mem-page-container{
         margin-bottom: 0px;
         margin-top:200px;
+    }
+
+    .image-mem-container{
+        margin-left:40px;
     }
 }
 @media screen and (max-width: 1200px){

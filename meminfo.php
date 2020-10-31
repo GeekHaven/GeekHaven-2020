@@ -79,8 +79,10 @@
             <div class="col-lg-6 contacts mem-container">
                 <div class="image-mem-container">
                     <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="image-mem"/>'; ?>
-                    <p class="name-mem"><?php echo $name?></p>
-                    <p class="wing-mem"><?php echo $post?></p>
+                    <div class="name-wing">
+                        <p class="name-mem"><?php echo $name?></p>
+                        <p class="wing-mem"><?php echo $post?></p>
+                    </div>
                 </div>
                 <div class="icons text-center">
                     <?php 
