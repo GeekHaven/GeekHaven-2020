@@ -1182,3 +1182,79 @@ nav{
     height: 1.3em;
     -webkit-box-orient: vertical;
 }
+.description-mem{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 50px;
+    color: white;
+    text-align: left;
+}
+.roll-mem{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 30px;
+    color: white;
+    text-align: left;
+}
+.cross-image{
+    width: 20px;
+    height: 20px;
+    margin-top: -12px;
+    position: absolute;
+    margin-left: -18px;
+}
+.wing-mem{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    padding:5px;
+    background-color: white;
+    color:black;
+    text-transform:capitalize;
+}
+.name-mem{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    padding:5px;
+    color:white ;
+    background-color: #13F7D2;
+}
+.image-mem-container{
+    margin-left: -100px;
+    margin-top: -100px;
+}
+.image-mem{
+    width: 200px;
+    border-radius: 55px 0px;
+}
+.icon-mem{
+    display: inline-block;
+    margin-top: 20px;
+}
+.mem-container{
+    border-radius:20px;
+    background-color: #171717;
+    border-right: 5px solid #13F7D2;
+}
+.mem-page-container{
+    margin-bottom: 50px;
+    margin-top:250px;
+}
+@media screen and (max-width: 480px){
+    .mem-page-container{
+        margin-bottom: 0px;
+        margin-top:200px;
+    }
+}
+@media screen and (max-width: 1200px){
+.mem-container {
+    transform: scale(0.7);
+}
+}

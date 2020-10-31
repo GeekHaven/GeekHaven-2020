@@ -19,8 +19,11 @@
     $result = mysqli_query($connection,$query);
     while($row = mysqli_fetch_assoc($result)){
         $face = $row['facebook'];
-        $git = $row['github'];
+        $github = $row['github'];
         $insta = $row['instagram'];
+        $twitter = $row['twitter'];
+        $linkedin = $row['linkedin'];
+        $mail = $row['mail'];
     }
   }
     
@@ -42,115 +45,109 @@
 
 </head>
 <body>
-
-     <!--CSS Spinner-->
-     <div class="b1">
+    <nav class="navbar navbar-fixed-top"style="opacity: 0.9;">
+        <div class="container-fullwidth" style="padding: 0 5%;">
+          <a href="./index.php"><img class="nav-logo" src="./images/gh.png"></a>
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="./index.php">Home</a></li>
+              <li><a href="#footer">Contacts</a></li>
+              <li><a href="./geekhaven/login.php">Login</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      <div class="b1">
         <div class="e-loadholder">
             <div class="m-loader">
                 <span class="e-text">Geekhaven</span>
             </div>
         </div>
     </div>
-      <nav class="navbar navbar-fixed-top" style="opacity: 0.9;">
-          <div class="container-fullwidth" style="padding: 0 5%;">
-          <a href="./index.php"><img class="nav-logo" src="./images/gh.png"></a>
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <i class="fa fa-bars" aria-hidden="true"></i>
-              </button>
-            </div>
-        
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="./index.php">Home</a></li>
-                <li><a href="https://medium.com/nybles">Blogs</a></li>
-                <li><a href="./geekhaven/login.php">Login</a></li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
-
-      <section style="padding: 20px">
-        <div class="container">
-          <div class="col-12 col-sm-12 col-md-6 coordi-div" style="padding:0px;">
-              <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="images-coordi"/>'; ?>
-              <p class="coordi-name whiteToBlack">
-              <?php echo $name?>
-              </p>
-              <p class="coordi-post" style="text-transform: capitalize;">
-              <?php echo $post?>
-              </p>
-              <div class="overall-icon-div">
-              <?php 
-                                if($face){
-
-                                  ?>                       
-                                  <a href="<?php echo $face;?>">
-                                      <div class="overall-icon fb-icon">
-                                          <i class="fa fa-facebook" aria-hidden="true" ></i>
-                                      </div>
-                                  </a>
-                                  <?php 
-                                }
-                                else{
-                                  ?>
-                                    <div class="overall-icon fb-icon">
-                                    <i class="fa fa-facebook" aria-hidden="true" ></i>
-                                    </div>
-                                  <?php
-                                }
-                              ?>
-                              <?php 
-                                if($git){
-
-                                  ?>                       
-                                  <a href="<?php echo $git;?>">
-                                      <div class="overall-icon fb-icon">
-                                          <i class="fa fa-github" aria-hidden="true" ></i>
-                                      </div>
-                                  </a>
-                                  <?php 
-                                }
-                                else{
-                                  ?>
-                                    <div class="overall-icon">
-                                    <i class="fa fa-github" aria-hidden="true" ></i>
-                                    </div>
-                                  <?php
-                                }
-                              ?>
-                              <?php 
-                                if($insta){
-
-                                  ?>                       
-                                  <a href="<?php echo $insta;?>">
-                                      <div class="overall-icon">
-                                          <i class="fa fa-instagram" aria-hidden="true" ></i>
-                                      </div>
-                                  </a>
-                                  <?php 
-                                }
-                                else{
-                                  ?>
-                                    <div class="overall-icon">
-                                    <i class="fa fa-instagram" aria-hidden="true" ></i>
-                                    </div>
-                                  <?php
-                                }
-                              ?>
+    <div class="container mem-page-container">
+        <div class="row" style="margin-right: 0;margin-left: 0;">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 contacts mem-container">
+                <div class="image-mem-container">
+                    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="image-mem"/>'; ?>
+                    <p class="name-mem"><?php echo $name?></p>
+                    <p class="wing-mem"><?php echo $post?></p>
                 </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 whiteToBlack coordi-div text-center">
-            <p><?php echo $info?></p>
-            </div>
-        </div>
-            
-</section>
+                <div class="icons text-center">
+                    <?php 
+                    if($insta){
+                        ?>                       
+                        <div class="icon-mem">
+                            <a href="<?php echo $insta;?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </div> 
+                        <?php 
+                    }
+                    ?>
+                    <?php 
+                    if($face){
+                        ?>      
+                        <div class="icon-mem">
+                            <a href="<?php echo $face;?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </div> 
+                        <?php 
+                    }
+                    ?>
+                    <?php 
+                    if($twitter){
+                        ?>      
+                        <div class="icon-mem">
+                            <a href="<?php echo $twitter;?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </div> 
+                        <?php 
+                    }
+                    ?>
+                    <?php 
+                    if($github){
+                        ?>      
+                        <div class="icon-mem">
+                            <a href="<?php echo $github;?>"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </div> 
+                        <?php 
+                    }
+                    ?>
+                    <?php 
+                    if($mail){
+                        ?>      
+                        <div class="icon-mem">
+                            <a href="mailto:<?php echo $mail;?>"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        </div> 
+                        <?php 
+                    }
+                    ?>
+                    <?php 
+                    if($linkedin){
+                        ?>      
+                        <div class="icon-mem">
+                            <a href="<?php echo $linkedin;?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div> 
+                        <?php 
+                    }
+                    ?>
 
-
+                </div>
+                <p class="description-mem"><?php echo $info?></p>
+                    <p class="roll-mem"><span class="texta">Roll Number:</span> <?php echo $roll_no;?></p>
+                    <img src="./images/cross.png" class="cross-image">
+            </div>               
+            <div class="col-lg-3"></div>
+          </div>
+    </div>
+      
+      
       <section class="footer" id="footer">
         <div class="row" style="margin-right: 0px;">
             <div class="blogs col-lg-6 col-xl-6">
@@ -174,7 +171,7 @@
         </div>
     </section>
     <div style="text-align:center">
-        <p class="overall-post more" style="padding-top: 30px;">
+        <p class="overall-post more" style="padding-top: 30px;font-family: Montserrat;font-style: normal;font-weight: 600;font-size: 18px;">
         © Copyright, Geekhaven IIITA · <a href="./credits.html" style="color: inherit;border-color:#15C4A8;border-radius: 5px;padding: 5px;">Credits</a>
         </p>
     </div>
