@@ -109,13 +109,7 @@
                 <p class="wing-title">
                     <?php echo $wingname; ?>
                 </p>
-                <p class="wing-dis wing-dis-index" style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 4; 
-                    height: 5em;
-                    -webkit-box-orient: vertical;">
+                <p class="wing-dis wing-dis-index">
                     <?php echo $winginfo; ?>
                 </p>
                 <?php

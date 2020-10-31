@@ -355,8 +355,16 @@ nav{
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 20px;
     color: #FFFFFF;
+}
+.wing-dis-index{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    height: 6em;
+    -webkit-box-orient: vertical;
 }
 .wing-image{
     width: 80px;
@@ -451,25 +459,10 @@ nav{
 }
 .margin-div-bottom{
     margin-bottom: 50px;
-    padding: 20px;
-    border-radius: 17px;
-}
-.margin-div-bottom1{
-    margin-bottom: 50px;
-    padding: 20px;
-    border-radius: 17px;
-}
-.margin-div-bottom{
-    margin-bottom: 50px;
-    padding: 20px;
+    padding: 30px 20px;
     border-radius: 17px;
     transition: all 0.3s ease;
 }
-
-    /* background-color: #343538; */
-        /* transition:ease 0.3s ; */
-
-
 
 .margin-div-bottom:hover{
     /* background-color: #343538; */
@@ -806,7 +799,7 @@ nav{
         height: 80%;
     }
     .wing-dis-index{
-        height: 5.7em !important;
+        height: 6.7em !important;
     }
 }
 
