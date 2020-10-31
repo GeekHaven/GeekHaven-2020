@@ -106,7 +106,7 @@ if(isset($_GET['id'])){
       </section>  
 
       <section class="rm container">
-        <p class="read-more">Read More...</p>
+        <p class="read-more whiteToBlack">Read More...</p>
 
         <?php
           $query = "SELECT * FROM blogs WHERE `wing_id`='$wing_id' ";
