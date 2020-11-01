@@ -1266,7 +1266,7 @@ nav{
 @media screen and (max-width: 480px){
     .mem-page-container{
         margin-bottom: 0px;
-        margin-top:200px;
+        /* margin-top:200px; */
     }
 
     .image-mem-container{
