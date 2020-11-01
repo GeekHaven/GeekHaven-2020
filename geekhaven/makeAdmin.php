@@ -4,7 +4,7 @@
     session_start();
     include 'auth.php';
     $res = callCheck();
-    if($res<1){
+    if($res<2){
         header('location:login.php');        
     }
 ?>
