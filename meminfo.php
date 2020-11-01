@@ -84,6 +84,8 @@
                         <p class="wing-mem"><?php echo $post?></p>
                     </div>
                 </div>
+
+                <div class="other-cont">
                 <div class="icons text-center">
                     <?php 
                     if($insta){
@@ -144,6 +146,7 @@
                 <p class="description-mem"><?php echo $info?></p>
                     <p class="roll-mem"><span class="texta">Roll Number:</span> <?php echo $roll_no;?></p>
                     <img src="./images/cross.png" class="cross-image">
+                    </div>
             </div>               
             <div class="col-lg-3"></div>
           </div>

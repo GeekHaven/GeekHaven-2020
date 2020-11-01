@@ -1198,6 +1198,7 @@ nav{
     font-weight: bold;
     font-size: 15px;
     margin: 30px;
+    padding-left:30px;
     color: white;
     text-align: left;
 }
@@ -1206,7 +1207,7 @@ nav{
     height: 20px;
     margin-top: -12px;
     position: absolute;
-    margin-left: -18px;
+    margin-left: 455px;
 }
 .wing-mem{
     font-family: 'Montserrat', sans-serif;
@@ -1241,9 +1242,12 @@ nav{
 .icon-mem{
     display: inline-block;
     margin-top: 20px;
+    margin-left: -10px;
+    margin-right:-10px;
+    transform: scale(0.7);
 }
 .mem-container{
-    border-radius:20px;
+    border-radius:10px;
     background-color: #171717;
     border-right: 5px solid #13F7D2;
 }
@@ -1251,6 +1255,13 @@ nav{
     margin-bottom: 50px;
     margin-top:250px;
 }
+
+.other-cont{
+    margin-top:-170px;
+    margin-left:87px;
+}
+
+
 @media screen and (max-width: 480px){
     .mem-page-container{
         margin-bottom: 0px;
@@ -1259,6 +1270,23 @@ nav{
 
     .image-mem-container{
         margin-left:40px;
+    }
+
+    .other-cont{
+        margin-top:0px;
+        margin-left:0px;
+    }
+
+    .description-mem{
+        padding-left:50px;
+    }
+
+    .roll-mem{
+        padding-left: 0px;
+    }
+
+    .cross-image{
+        visibility: hidden;
     }
 }
 @media screen and (max-width: 1200px){
