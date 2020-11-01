@@ -31,7 +31,7 @@
             $n_image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
             
             
-            $query = "UPDATE wings SET `wing`='$wing',`info`='$info',`logo`='$n_logo',`image`='$n_image'  WHERE `wing_id`='$wing_id'" ;  
+            $query = "UPDATE wings SET `wing`='$wing',`info`='$info' WHERE `wing_id`='$wing_id'" ;  
             $query_run = mysqli_query($connection,$query);
 
             if($n_logo){
