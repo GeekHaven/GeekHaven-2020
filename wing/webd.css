@@ -1250,7 +1250,7 @@ nav{
     border-radius:10px;
     background-color: #171717;
     border-right: 5px solid #13F7D2;
-    min-height: 200px;
+    min-height: 200px !important;
 }
 .mem-page-container{
     margin-bottom: 50px;
