@@ -1197,7 +1197,7 @@ nav{
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
-    margin: 30px;
+    margin: 30px 30px 50px 30px;
     padding-left:30px;
     color: white;
     text-align: left;
@@ -1250,7 +1250,7 @@ nav{
     border-radius:10px;
     background-color: #171717;
     border-right: 5px solid #13F7D2;
-    min-height: 200px;
+    min-height: 200px !important;
 }
 .mem-page-container{
     margin-bottom: 50px;
@@ -1266,7 +1266,7 @@ nav{
 @media screen and (max-width: 480px){
     .mem-page-container{
         margin-bottom: 0px;
-        margin-top:200px;
+        /* margin-top:200px; */
     }
 
     .image-mem-container{
@@ -1284,6 +1284,7 @@ nav{
 
     .roll-mem{
         padding-left: 0px;
+        margin: 30px;
     }
 
     .cross-image{
