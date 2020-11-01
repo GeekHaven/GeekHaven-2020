@@ -1197,7 +1197,7 @@ nav{
     font-style: normal;
     font-weight: bold;
     font-size: 15px;
-    margin: 30px;
+    margin: 30px 30px 50px 30px;
     padding-left:30px;
     color: white;
     text-align: left;
@@ -1284,6 +1284,7 @@ nav{
 
     .roll-mem{
         padding-left: 0px;
+        margin: 30px;
     }
 
     .cross-image{
