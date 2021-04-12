@@ -13,7 +13,7 @@
 A complete revamp of the official website of GeekHaven(IIIT-A), with an aim for a dynamic and unique website that can be used in upcoming sessions too.
 
 ## 💻 Live-Link
-[GeekHaven](https://geekhaven.github.io/GeekHaven-2020/)
+[GeekHaven](https://geekhaven.iiita.ac.in/)
 
 ## 📷 Few snaps of the site
 ![](https://raw.githubusercontent.com/GeekHaven/GeekHaven-2020/master/images/Screenshot%20(85).png)
