@@ -1,6 +1,14 @@
 <?php
     require "../database/member_info.php";
     session_start();
+
+    include 'auth.php';
+    $res = callCheck();
+
+    // only an admin can modify the post of the low ranked members (coordinator and/or member)
+    if ($res != 2) {
+        exit();
+    }
 ?>
 
 <?php
@@ -21,6 +29,7 @@
             $query_run = mysqli_query($connection,$query);
             // echo $admin_value;
             header('location:../geekhaven/makeAdmin.php');
+            die();
         }else{
             echo 'error';
         }

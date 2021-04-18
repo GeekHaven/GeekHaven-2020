@@ -1,6 +1,14 @@
 <?php
     require "../database/member_info.php";
     session_start();
+
+    include 'auth.php';
+    $res = callCheck();
+
+    // admin or coordinators can add members
+    if (!($res == 2 || $res == 1)) {
+        exit();
+    }
 ?>
 
 <?php
@@ -34,6 +42,7 @@
                         $query = "INSERT INTO credentials VALUES('$cred_id','$username','$pass','0','$member_id')";
                         $query_run = mysqli_query($connection,$query);
                         header('location:../geekhaven/addmember.php');
+                        die();
                     }
                 }
             }
@@ -68,6 +77,7 @@
                     
                     echo $query;
                     header('location:../geekhaven/addmember.php');
+                    die();
                 }else{
                     echo "CANNOT REMOVE";
                 }
@@ -88,5 +98,6 @@
                 $query = "DELETE FROM social_handles WHERE `social_handles_id`='$handle_id'";
                 $query_run = mysqli_query($connection,$query);
                 header('location:../geekhaven/addmember.php');
+                die();
             }
 ?>

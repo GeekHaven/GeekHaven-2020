@@ -23,6 +23,7 @@
                     $query = "INSERT INTO announcements VALUES('$member_id','$name','$organiser','$venue','$date','$time','$topic','$details','$link','$attach','$image')";
                     $query_run = mysqli_query($connection,$query);
                     header('location:../geekhaven/announcement.php');                
+                    die();
                 }                
 
             }
@@ -34,6 +35,7 @@
                     $query = "DELETE FROM announcements WHERE `name`='$name'";
                     $query_run = mysqli_query($connection,$query);
                     header('location:../geekhaven/announcement.php');
+                    die();
                 }else{
                     echo "error : CANNOT DELETE";
                 }

@@ -11,6 +11,7 @@
             $query = "UPDATE member SET `hof`='$hof_value' WHERE `member_id`='$memID'";
             $query_run = mysqli_query($connection,$query);
             header('location:../geekhaven/makehof.php');
+            die();
         }else{
             echo 'error';
         }

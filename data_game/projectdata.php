@@ -19,6 +19,7 @@
                     $query_run = mysqli_query($connection,$query);
                     
                     header('location:../geekhaven/project.php');   
+                    die();
                 }
             }
             if(isset($_POST['select_pro_btn'])){
@@ -32,6 +33,7 @@
                     $query_run = mysqli_query($connection,$query);
                     
                     header('location:../geekhaven/project.php');                
+                    die();
                 }else{
                     echo "error : CANNOT REMOVE";
                 }

@@ -7,6 +7,7 @@
     
     if(isset($_COOKIE[$cookie_name])){
         header('location:home.php');
+        die();
     }
 ?>
 <!DOCTYPE html>
