@@ -5,7 +5,8 @@
     include 'auth.php';
     $res = callCheck();
     if($res<1){
-        header('location:login.php');        
+        header('location:login.php');
+        die();
     }
 ?>
 <!DOCTYPE html>

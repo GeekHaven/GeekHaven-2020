@@ -1,0 +1,32 @@
+# NOTE: there may still be some issues, I have patched or at least tried to patch the issues that I found
+
+# the issue here is that after the 'header(...)' call in the PHP files,
+# the user is redirected to the provided url but the rest of the page is still processed/rendered
+# so the user gets the response with the data that they shouldn't get but they are presented the later (redirected) page
+# the earlier processed response is also received but appended to the HTTP History - can easily be checked using BurpSuite (for example)
+
+# there are other issues as well other than this 'header(...)' vulnerability
+# I will inform accordingly
+
+## following are the files that I have checked and fixed the 'header' function vulnerability
+## egrep -i 'header *\(' `find . -type f | egrep -i '*.php'` 2>/dev/null | awk -F: '{print $1}' | uniq > vulnerable_files.log
+## code `cat vulnerable_files.log`
+
+./geekhaven/auth.php
+./geekhaven/geekhavenData.php
+./geekhaven/logout.php
+./geekhaven/makeAdmin.php
+./geekhaven/addmember.php
+./geekhaven/makehof.php
+./geekhaven/login.php
+./data_game/ghDataUpdate.php
+./data_game/profileupdate.php
+./data_game/ann.php
+./data_game/savemem.php
+./data_game/handle.php
+./data_game/hof.php
+./data_game/projectdata.php
+./data_game/savewing.php
+./data_game/announce.php
+./data_game/admin.php
+./data_game/saveblog.php

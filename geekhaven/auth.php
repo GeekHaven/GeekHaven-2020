@@ -11,9 +11,11 @@
                 return 0;
             }else{
                 header('location:login.php');
+                die();
             }
         }else{
             header('location:login.php');
+            die();
         }
     }
     function callCheck(){
