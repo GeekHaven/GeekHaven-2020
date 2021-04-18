@@ -16,6 +16,7 @@
                     $query = " INSERT INTO blogs VALUES('$wingID','$member_id','$blog_title','$des','$blog_link','$image')";
                     $query_run = mysqli_query($connection,$query);
                     header('location:../geekhaven/blog.php');
+                    die();
                 }
             }
             if(isset($_POST['select_blog_btn'])){
@@ -26,6 +27,7 @@
                     $query = "DELETE FROM blogs WHERE `blog_title`='$name'";
                     $query_run = mysqli_query($connection,$query);
                     header('location:../geekhaven/blog.php');
+                    die();
                 }else{
                     echo "error : CANNOT REMOVE";
                 }
