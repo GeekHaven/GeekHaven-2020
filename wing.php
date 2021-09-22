@@ -360,6 +360,7 @@
               <?php
                     $query = "SELECT * FROM member WHERE `wing`='$wing' AND `post`='member'";
                     $result = mysqli_query($connection,$query);
+                    
                     while($row = mysqli_fetch_assoc($result)){
                         $name = $row['name'];
                         $roll_no = $row['roll_no'];
@@ -387,7 +388,7 @@
                         <div class="col-12 col-sm-12 col-md-4 member-div" style="display:inline-block; float:none;">
                           <div class="images-cover">
                             <!-- <div class="images-member"> -->
-                            <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"class="images-coordi"/>'; ?>
+                            <?php if($image ===""){echo "<img src='images/default1.png' class='images-coordi'/>";} else{echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"class="images-coordi"/>';}?>
                             <!-- </div> -->
                           </div>
                           
@@ -483,9 +484,16 @@
         <?php
           $query = "SELECT * FROM blogs WHERE `wing_id`='$wing_id' ";
           $result = mysqli_query($connection,$query);
-          $j=0;
-          while(($row = mysqli_fetch_assoc($result))&&($j<3)){
-              $j = $j+1;
+          while ($row = mysqli_fetch_assoc($result)) {
+            $data[] = $row;
+          }
+          $data = array_reverse($data);
+          $j = 0;
+          foreach($data as $item) {
+              $row = $item;
+              if($j === 3)
+                break;
+              $j = $j + 1;
               $title = $row['blog_title'];
               $des = $row['description'];
               $image = $row['image'];

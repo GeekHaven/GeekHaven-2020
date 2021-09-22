@@ -112,6 +112,7 @@ if(isset($_GET['id'])){
         <?php
           $query = "SELECT * FROM blogs WHERE `wing_id`='$wing_id' ";
           $result = mysqli_query($connection,$query);
+          
           while($row = mysqli_fetch_assoc($result)){
               $title = $row['blog_title'];
               $des = $row['description'];
