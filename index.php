@@ -34,7 +34,7 @@
     <div class="wrapper">
             <nav class="navbar navbar-fixed-top" style="opacity: 0.9;">
                 <div class="container-fullwidth" style="padding: 0 5%;">
-                  <img class="nav-logo" src="./images/gh.png">
+                  <img class="nav-logo" src="../images/gh.png">
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" style="color: aliceblue !important;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -49,6 +49,7 @@
                       <li><a href="#wings-section">Wings</a></li>
                       <li><a href="#overall">Coordinators</a></li>
                       <li><a href="#footer">Contacts</a></li>
+                      <li><a href="./hall_of_fame/HOF.html">Hall of Fame</a></li>
                       <li><a href="./geekhaven/login.php">Login</a></li>
                     </ul>
                   </div><!-- /.navbar-collapse -->
