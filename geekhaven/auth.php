@@ -10,10 +10,13 @@
             }else if($_COOKIE[$cookie_name]==$t + $cookie_name){
                 return 0;
             }else{
+                // we can 'return -1' for any invalid user, I am not changing the logic here
                 header('location:login.php');
+                die();
             }
         }else{
             header('location:login.php');
+            die();
         }
     }
     function callCheck(){
