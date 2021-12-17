@@ -1,6 +1,15 @@
 <?php
     require "../database/wingsdb.php";    
     session_start();
+
+    include 'auth.php';
+    $res = callCheck();
+
+    // only an admin can add/modify a wing, conditionals can be used for specific tasks - add/update/remove
+    // like admin can add / remove a wing, and coordinators can update their respective wing
+    if ($res != 2) {
+        exit();
+    }
 ?>
 
 <?php
@@ -19,7 +28,7 @@
                 $query = "INSERT INTO wings VALUES('$wing_id','$wing','$info','$logo','$image')" ;
                 $query_run = mysqli_query($connection,$query); 
                 header('location:../geekhaven/wing.php'); 
-
+                die();
             }   
         }
 
@@ -47,7 +56,7 @@
             }
 
             header('location:../geekhaven/wing.php');     
-                  
+            die();
         }
         if(isset($_POST['remove_btn'])){
             $wing_id = $_SESSION['wingID'];
@@ -57,6 +66,6 @@
             $query = "DELETE FROM wings WHERE `wing_id`='$wing_id'" ;  
             $query_run = mysqli_query($connection,$query);
             header('location:../geekhaven/wing.php');     
-                  
+            die();
         }
 ?>
