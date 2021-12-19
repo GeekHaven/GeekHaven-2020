@@ -58,6 +58,7 @@
         </div><!-- /.container-fluid -->
       </nav>
 
+      
       <div class="wrapper">
             <div class="intro-header col-sm-6">
                 <div class="heading main-heading"><?php echo $wing;?></div>
@@ -253,10 +254,11 @@
                         $post = $row['post'];
                         ?>
                          
+                            
                         
                             <div class="col-12 col-sm-12 col-md-5 coordi-div" style="padding:0px;">
                               <!-- <div class="images-coordi"> -->
-                              <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'" class="images-coordi"/>'; ?>
+                              <?php if($image ===""){echo "<img src='images/default.png'/>";} else{echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"class="images-coordi"/>';}?>
                               <!-- </div> -->
                               <p class="coordi-name whiteToBlack">
                                 <?php echo $name?>

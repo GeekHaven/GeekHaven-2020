@@ -322,7 +322,7 @@ nav{
     text-align: center;
 }
 
-.footer{
+/* .footer{
     display: inline-block;
     background-color: #191A1B;
     width: 100%;
@@ -331,6 +331,20 @@ nav{
     text-align: center;
     padding-left: 40px;
     padding-top:60px;
+    height: 330px;
+} */
+
+.footer {
+    display: inline-block;
+    background-color: #1d1d1f;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    /* padding-left: 40px;
+    padding-top: 60px; */
+    justify-content: center;
+    align-items: center;
     height: 330px;
 }
 
@@ -401,8 +415,20 @@ nav{
         padding-top: -20px;
         height: 420px;
         padding-right: 0px;
-        padding-left: 20px;
+        /* padding-left: 20px; */
         text-align: center;
+    }
+    .footer .contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .icons {
+        width: 145%;
+    }
+    .footer .col-lg-6 {
+        position: relative;
+        min-height: 1px;
     }
 
     .blogs{
@@ -447,15 +473,16 @@ nav{
 
 
 
-.rm-head{
+.rm-head {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
     padding-top: 10px;
-    line-height: 49px;
+    /* line-height: 49px; */
     width: 100%;
     color: #FFFFFF;
+    font-size: 2rem;
 }
 
 .rm-sub{
@@ -481,10 +508,6 @@ nav{
 {
     .read-more{
         font-size:30px;
-    }
-
-    .rm-head{
-        font-size:29px;
     }
 
     .rm-sub{

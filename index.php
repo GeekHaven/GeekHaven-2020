@@ -106,7 +106,7 @@
             ?>
             <div class="col-12 col-sm-6 col-md-4 margin-div-bottom">
 <!-- image -->
-                <img src="data:image/jpeg;base64,<?php echo $logo ?>" class="wing-image webd-card" style="width: 100px;"/>
+                <img src="data:image/png;base64,<?php echo $logo ?>" class="wing-image webd-card" style="width: 100px;"/>  
                 <p class="wing-title">
                     <?php echo $wingname; ?>
                 </p>

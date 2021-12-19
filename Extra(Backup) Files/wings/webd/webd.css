@@ -524,7 +524,7 @@ nav{
     width: 100%;
 }
 
-.footer{
+/* .footer{
     display: inline-block;
     background-color: #191A1B;
     width: 100%;
@@ -533,6 +533,20 @@ nav{
     text-align: center;
     padding-left: 40px;
     padding-top:60px;
+    height: 330px;
+} */
+
+.footer {
+    display: inline-block;
+    background-color: #1d1d1f;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    /* padding-left: 40px;
+    padding-top: 60px; */
+    justify-content: center;
+    align-items: center;
     height: 330px;
 }
 
