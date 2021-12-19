@@ -22,6 +22,8 @@ A complete revamp of the official website of GeekHaven(IIIT-A), with an aim for 
 ## 🧾 Table of contents
 - Dependencies
 - Setup
+ *
+    *
 - Brief Repo Strucutre
 - Frontend Frameworks
 - Schema
@@ -64,7 +66,9 @@ Once downloaded, open the ```index.html``` file in your browser and you're good 
  |-- projects/        #listing of all projects
 |
 |-- database/         #for storing announcements,projects,members-details etc...
-| 
+|
+|-- hall_of_fame/     #files for hall of Fame section
+|
 |-- geekhaven/        #for dynamically entering/updating blogs,members-details and other credentials
 |
 |-- images/	      #SVGs and PNGs used in the project
@@ -114,3 +118,8 @@ Keeping in mind the aesthetic look of the website, the theme of website is **min
 
 ## ✒ Footnotes
 Aim of this project is to reduce the work for the upcoming years, so that the same website can be used without changing any piece of code, just simply update the members details dynamically and you're good to go.
+
+## Hall of Fame
+- The Hall of Fame is implemented using .csv file parsing thus the data can be updated by changing the HOF.csv file in hall_of_fame directory.
+- To store images, save them in the hall_of_fame/assets folder and specify the image name in the csv file, along with the extension.
+
