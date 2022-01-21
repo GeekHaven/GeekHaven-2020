@@ -385,12 +385,21 @@ nav{
     margin-left: 44%;
     margin-top: 100px;
 }
+#GSoC-section{
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: #27282B;
+    border-radius: 15px;
+    border-color: #0D9C85;
+}
 .overall-section{
     width: 90%;
     margin-left: 5%;
     display: inline-block;
     background-color: #343538;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 100px;
 }
 .overall-heading{
@@ -398,6 +407,7 @@ nav{
     font-style: normal;
     font-weight: bold;
     font-size: 65px;
+    text-align: center;
     line-height: 79px;
     color: #13F7D2;
     padding: 35px;

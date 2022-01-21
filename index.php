@@ -134,6 +134,17 @@
             <img class="dot-image" src="images/dots.png">
         </div>
     </section>
+
+    <section id="GSoC-section"">
+        <a href="./GSoC/index.html">
+            <div id="GSoC-info" style="height: 100px; width: 100px; margin-left: 55px;">
+                <img src="images/GSoC-Neon-logo.png" style="height: 200px; width: 200px;">
+                <p style="color: #FFFFFF; height: 200px; width: 200px; font-size: medium;">
+                    Check out some past GSoC & Outreachy participants from our college.
+                </p> 
+            </div>
+        </a>
+    </section>
     
     <section id="overall" class="overall-section" style="border-radius: 20px;">
             <p class="overall-heading row">
